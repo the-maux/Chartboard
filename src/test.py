@@ -7,7 +7,6 @@ from src.tipboard.app.properties import ALLOWED_TILES
 from src.tipboard.app.DefaultData.defaultTileControler import buildFakeDataFromTemplate
 from src.tipboard.app.parser import getDashboardName, getConfigNames, parseXmlLayout
 from src.tipboard.app.cache import MyCache
-from src.tipboard.app.utils import checkAccessToken
 from src.tipboard.app.cache import listOfTilesFromLayout
 from src.tipboard.app.applicationconfig import getRedisPrefix
 from src.sensors.sensors1_text import sonde1
@@ -160,13 +159,6 @@ class TestApp(SimpleTestCase):  # TODO: find a way to test the WebSocket inside 
         """ Test api /flipboard/getDashboardsPaths """
         reponse = self.fakeClient.get('/flipboard/getDashboardsPaths')
         self.assertTrue(reponse.status_code == 200)
-
-    def test_0104_api_checkToken(self):  # TODO
-        """ Test token mecanism """
-        request = self.fakeClient.get('')
-        checkAccessToken(method='GET', request=request, unsecured=False)
-        # self.assertTrue(checkAccessToken(method='GET', request=request, unsecured=True))
-        self.assertTrue(True)
 
     def test_0105_api_getHtmlDashboard(self):
         """ Test api getHtmlDashboard """

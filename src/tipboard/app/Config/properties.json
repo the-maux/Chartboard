@@ -5,6 +5,6 @@
   "REDIS_HOST": "0.0.0.0",
   "REDIS_PASSWORD": null,
   "REDIS_PORT": 6379,
-  "DEBUG": false,
+  "DEBUG": true,
   "LOG": true
 }

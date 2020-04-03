@@ -30,7 +30,7 @@ class WSConsumer(WebsocketConsumer):
         """ Create or update the tile with value and send to the client with websocket """
         tileData = MyCache().get(tile_id=getRedisPrefix(tile_id))
         if tileData is None:
-            print(f'[DEBUG] (-) Building fake data for {tile_id}. with template {template_name}', flush=True)
+            print(f'[DEBUG] Building fake data for {tile_id}. with template {template_name}', flush=True)
             tileData = buildFakeDataFromTemplate(tile_id, template_name, MyCache())
         self.send(text_data=tileData)
 

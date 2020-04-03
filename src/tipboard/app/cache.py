@@ -8,7 +8,6 @@ from src.tipboard.app.DefaultData.defaultTileControler import buildFakeDataFromT
 from src.tipboard.app.DefaultData.chartJsDatasetBuilder import buildGenericDataset
 from src.tipboard.app.parser import parseXmlLayout
 from src.tipboard.app.applicationconfig import getRedisPrefix
-from src.tipboard.app.utils import getTimeStr
 
 
 def listOfTilesFromLayout(layout_name='default_config'):
@@ -94,7 +93,7 @@ class MyCache(object):
                 inst.startedTime = datetime.now().strftime("%d %B %Y %T")
                 inst.lastUpdateTime = datetime.now().strftime("%d %B %Y %T")
             except Exception:
-                print(f'[DEBUG] {getTimeStr()} (+) Initializing cache: Redis not connected', flush=True)
+                print(f'[ERROR] Initializing cache: Redis not connected', flush=True)
                 inst.isRedisConnected = False
             return inst
         return cls.instance  # if already exist, return the instance already initialized :)
