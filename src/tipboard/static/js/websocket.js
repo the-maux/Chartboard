@@ -132,11 +132,11 @@ function initWebSocketManager() {
     };
     websocket.onmessage = function (evt) {
         let tileData = JSON.parse(evt.data);
-        console.log("Web socket received data: ", tileData);
+        console.log("[LOG] Web socket received data: ", tileData);
         updateTile(tileData, websocket.lastDashboard);
     };
     websocket.onerror = function (evt) {
-        console.log("WebSocket error: ", evt.data);
+        console.log("[ERROR] WebSocket error: ", evt.data);
     };
     return websocket;
 }

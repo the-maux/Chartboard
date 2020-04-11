@@ -6,7 +6,7 @@ def getTilesConfigFromCols(tiles, dashboard_config):
     """ Build a dict with all tiles present in dashboard.yml with the configs of this tiles """
     for tile_dict in tiles:
         if tile_dict['tile_id'] not in dashboard_config:
-            tile_config = dict(tile_id='unknown', tile_template='unknown', title='No title', weight=1)
+            tile_config = dict(tile_id='unknown', tile_template='unknown', title='None', weight=1)
             for key in tile_config:
                 if key not in tile_dict:  # setting default value when not present
                     tile_dict[key] = tile_config[key]
