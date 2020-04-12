@@ -137,7 +137,6 @@ function changeElements(elementName, value, type) {
 }
 
 function hidethistitlefuckers() {
-    //$('.tile-header').hide();
     let tile_headers = $('.tile-header');
     $.each(tile_headers, function (idx, tile_header) {
         let textHeader = $(tile_header).find('h3').text();
