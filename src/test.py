@@ -24,7 +24,6 @@ from src.sensors.sensors15_polarchart import sonde15
 from src.sensors.sensors16_dougnutchart import sonde16
 from src.sensors.sensors17_halfdougnutchart import sonde17
 from src.sensors.sensors_main import scheduleYourSensors, test_sensors
-from src.tipboard.app.views.flipboard import demo_controller
 from src.tipboard.app.views.wshandler import WSConsumer
 
 
@@ -273,13 +272,6 @@ class TestApp(SimpleTestCase):  # TODO: find a way to test the WebSocket inside 
         afterUpdate = json.loads(MyCache().get(tilePrefix))['data']['big_value']
         isDiff = beforeUpdate != afterUpdate
         self.assertTrue(isDiff)
-
-    def test_1027_test_demo_mode(self):
-        response = demo_controller(None, flagSensors='on', tester=self)
-        self.assertTrue(response.status_code == 302)
-        time.sleep(10)
-        response = demo_controller(None, flagSensors='off', tester=self)
-        self.assertTrue(response.status_code == 302)
 
     def test_1030_checkmanage(self):
         """ Test just_value tile update by api """
