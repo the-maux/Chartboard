@@ -68,7 +68,7 @@ def buildFakeDataFromTemplate(tile_id, template_name, cache):
             tileData = json.dumps(tileData)
             cache.redis.set(name=getRedisPrefix(tile_id), value=tileData)
             return tileData
-        print(f'[ERROR] (-) with tile:{template_name}', flush=True)
+        print(f'[ERROR] with tile:{template_name}', flush=True)
     else:
-        print(f'[ERROR] (-) Error no update function for tile: {template_name}', flush=True)
+        print(f'[ERROR] Error no update function for tile: {template_name}', flush=True)
     return None

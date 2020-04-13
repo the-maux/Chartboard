@@ -69,4 +69,4 @@ def demo_controller(request, flagSensors=None, tester=None):
 
 
 def getAdeline(request):
-    return render(request, 'tmplinear.html')
+    return render(request, 'tmplinear_radial.html')

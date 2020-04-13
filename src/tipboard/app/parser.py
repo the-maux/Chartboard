@@ -1,13 +1,12 @@
 import glob, os, yaml
 from src.tipboard.app.properties import CONF_DIR, BASIC_CONFIG
-from src.tipboard.app.utils import getTimeStr
 
 
 def getTilesConfigFromCols(tiles, dashboard_config):
     """ Build a dict with all tiles present in dashboard.yml with the configs of this tiles """
     for tile_dict in tiles:
-        if tile_dict['tile_id'] not in dashboard_config:  # TODO: protect against double inclusion of same id for 2 tile
-            tile_config = dict(tile_id='unknown', tile_template='unknown', title='No title', weight=1)
+        if tile_dict['tile_id'] not in dashboard_config:
+            tile_config = dict(tile_id='unknown', tile_template='unknown', title='None', weight=1)
             for key in tile_config:
                 if key not in tile_dict:  # setting default value when not present
                     tile_dict[key] = tile_config[key]
@@ -15,7 +14,7 @@ def getTilesConfigFromCols(tiles, dashboard_config):
 
 
 def getTilesConfigFromXml(cols_data):
-    """ Find tile_template & tile_id in all cols of .yaml """
+    """ Find tile_template & tile_id in all cols inside the dashboard .yaml """
     dash_config = dict()
     for col_dict in cols_data:
         for tiles_dict in list(col_dict.values()):
@@ -74,12 +73,12 @@ def getDashboardName():
         else:  # if multiple file, need to have the .yaml displayed for the client
             title = 'Flipboard Mode'
     except KeyError:
-        print(f"[DEBUG] {getTimeStr()} (+) config {config_names[0]} has no key: details/page_title'", flush=True)
+        print(f"[ERROR] config {config_names[0]} has no key: details/page_title'", flush=True)
     return title
 
 
 def getFlipboardTitles():
-    """ Get title of all dashboard inside Config/ """
+    """ Get title(s) of all dashboard(s) inside Config/ directory (CONF_DIR) """
     config_names = getConfigNames()
     listNameDashboard = list()
     rcx = 1

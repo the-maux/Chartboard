@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 from src import __version__
 
 if sys.version_info < (3, 7):
-    print('Python 3.7+ required.', flush=True)
+    print('[INFO] Python 3.7+ required.', flush=True)
 
 sys.path.insert(0, os.getcwd())  # Import project to PYTHONPATH
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'src.tipboard.webserver.settings')

@@ -136,11 +136,23 @@ function changeElements(elementName, value, type) {
     }
 }
 
+function hidethistitlefuckers() {
+    let tile_headers = $('.tile-header');
+    $.each(tile_headers, function (idx, tile_header) {
+        let textHeader = $(tile_header).find('h3').text();
+        if (textHeader === "None" || textHeader === "undefined" || !textHeader.trim()) {
+            $(tile_header).hide();
+        } else {
+            $(tile_header).show();
+        }
+    });
+}
+
 /**
  * Change color of html element regarding color_mode
  */
 function loadStyleColor() {
-    // little hack to quick see what color_mode is on dashboard
+    // little hack to quickly check the color_mode type on dashboard
     let mode___titleDashboard = document.getElementsByClassName("grid")[0].id.split("___");
     let mode = mode___titleDashboard[0];
     document.title = mode___titleDashboard[1];
@@ -196,6 +208,7 @@ function showNextDashboard(nextDashboardPath, nextDashboardName) {
             loadStyleColor();
             initCardWithFlip();
             initCardWeight();
+            hidethistitlefuckers();
             Tipboard.websocket.sendmessage(nextDashboardPath);
         },
         error(request, textStatus, error) {
@@ -208,7 +221,6 @@ function showNextDashboard(nextDashboardPath, nextDashboardName) {
 
 /**
  * Start the flip beetween dashboard
- * @param isFlipingMode
  */
 function getDashboardsByApi() {
     $.ajax({
@@ -301,7 +313,7 @@ function initTipboardObject() {
             }
         }
     };
-    Tipboard.log("Build Tipboard object start");
+    Tipboard.log("[LOG] Build Tipboard object start");
 }
 
 (function ($) {
