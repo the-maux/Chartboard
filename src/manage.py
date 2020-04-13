@@ -64,5 +64,5 @@ if __name__ == '__main__':
         from src.sensors.sensors_main import scheduleYourSensors
         scheduleYourSensors()
     elif argv in ('test', 'runserver', 'migrate', 'shell', 'collectstatic', 'findstatic'):
-        exit(startDjango(isTest=argv is 'test'))
+        exit(startDjango(isTest='test' in argv))
     exit(show_help())
