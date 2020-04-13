@@ -2,7 +2,6 @@ import json, redis
 from datetime import datetime
 from asgiref.sync import async_to_sync
 from channels.layers import get_channel_layer
-from apscheduler.schedulers.background import BackgroundScheduler
 from src.tipboard.app.properties import REDIS_DB, REDIS_PASSWORD, REDIS_HOST, REDIS_PORT, DEBUG
 from src.tipboard.app.DefaultData.defaultTileControler import buildFakeDataFromTemplate
 from src.tipboard.app.DefaultData.chartJsDatasetBuilder import buildGenericDataset

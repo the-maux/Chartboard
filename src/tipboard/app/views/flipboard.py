@@ -1,10 +1,7 @@
-from django.http import JsonResponse, HttpResponse, HttpResponseRedirect
+from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
-from apscheduler.schedulers.background import BackgroundScheduler
 from src.tipboard.app.parser import parseXmlLayout, getConfigNames, getFlipboardTitles
 from src.tipboard.app.properties import TIPBOARD_CSS_STYLES, FLIPBOARD_INTERVAL, TIPBOARD_JAVASCRIPT_FILES
-from src.tipboard.app.cache import MyCache
-from src.sensors.sensors_main import scheduleYourSensors, stopTheSensors
 
 
 def renderFlipboardHtml(request):
