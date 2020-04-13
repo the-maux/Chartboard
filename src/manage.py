@@ -4,7 +4,7 @@ import subprocess
 import time
 
 
-def startRedisAgain():
+def startRedisAgain(isTest):
     try:
         output = subprocess.check_output(['redis-cli', 'ping'])
         if 'PONG' in str(output):
@@ -14,26 +14,28 @@ def startRedisAgain():
             print("[ERROR] can't execute redis")
         print(output)
     except FileNotFoundError:
+        if isTest is True:
+            return True
         print("[ERROR] Redis is not installed")
     return False
 
 
-def redis_sanity_check():
+def redis_sanity_check(isTest):
     try:
-        return startRedisAgain()
+        return startRedisAgain(isTest)
     except subprocess.CalledProcessError:
         print('[LOG] Trying to start Redis mannualy\n$>', flush=True)
         subprocess.check_output(['nohup', 'redis-server', '--protected-mode no'])
         time.sleep(3)
-        if startRedisAgain():
+        if startRedisAgain(isTest):
             return True
     print('[ERROR] Redis didnt answered, is redis installed ?', flush=True)
     return False
 
 
-def startDjango(settings_path='tipboard.webserver.settings'):
+def startDjango(settings_path='tipboard.webserver.settings', isTest=False):
     """ Start the django with DJANGO_SETTINGS_MODULE path added in env """
-    if redis_sanity_check():
+    if redis_sanity_check(isTest):
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings_path)
         from django.core.management import execute_from_command_line
         return execute_from_command_line(sys.argv)
@@ -62,5 +64,5 @@ if __name__ == '__main__':
         from src.sensors.sensors_main import scheduleYourSensors
         scheduleYourSensors()
     elif argv in ('test', 'runserver', 'migrate', 'shell', 'collectstatic', 'findstatic'):
-        exit(startDjango())
+        exit(startDjango(isTest=argv is 'test'))
     exit(show_help())

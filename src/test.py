@@ -278,7 +278,7 @@ class TestApp(SimpleTestCase):  # TODO: find a way to test the WebSocket inside 
         show_help()
 
     def test_4242_nohided_code(self):
-        """ Test if there is code hided from the coverage """
+        """ Test if there is code hided from the UnitTests/coverage """
         os.system("grep --exclude='*.pyc' -rnw ./src -e 'pr" + "agma' > dumpPragmaGulty")
         errors = len(open("dumpPragmaGulty", "r").read().splitlines())
         self.assertTrue(errors == 0)
