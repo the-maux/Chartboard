@@ -17,7 +17,7 @@ before_script:
   - ./cc-test-reporter before-build
 install:
     - pip install -r requirements.txt
-    - pip install lorem requests apscheduler pytest-django pytest pytest-asyncio  # Debug dependency
+    - pip install coverage lorem requests apscheduler pytest-django pytest pytest-asyncio  # Debug dependency
 script:
     - coverage run --source='.' --rcfile=.coverage src/manage.py test  -v 2
     - coverage report
