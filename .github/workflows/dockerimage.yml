@@ -12,4 +12,4 @@ jobs:
       run: docker build . --file Dockerfile --tag chartboard:test
     - uses: actions/checkout@v1
     - name: Unit Test inside docker
-      run: docker run -it --entrypoint=python chartboard:test src/manage.py test
+      run: docker run --entrypoint=python chartboard:test src/manage.py test
