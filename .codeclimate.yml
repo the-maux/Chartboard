@@ -14,11 +14,18 @@ plugins:
     checks:
       python:S1542:
         enabled: false
+      python:S3776:
+        enabled: false #TODO: Complexity to 20
   pylint:
     enabled: true
     channel: beta
     plugins:
       - django
+    checks:
+      no-member:
+        enabled: false
+      import-error:
+        enabled: false
   pep8:
     enabled: true
   fixme:
@@ -40,6 +47,8 @@ exclude_patterns:
   - "src/tipboard/static/js/chartjs-plugin-tsgauge.js"
   - "src/tipboard/static/js/jquery-3.4.1.min.js"
   - "src/tipboard/static/js/popper.min.js"
+  - "src/tipboard/static/css/bootstrap.min.css"
+  - "src/tipboard/test.py"
 
 
 #[flake8]

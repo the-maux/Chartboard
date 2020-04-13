@@ -137,9 +137,9 @@ function changeElements(elementName, value, type) {
 }
 
 function hidethistitlefuckers() {
-    let tile_headers = $('.tile-header');
-    $.each(tile_headers, function (idx, tile_header) {
-        let textHeader = $(tile_header).find('h3').text();
+    let tileHeaders = $(".tile-header");
+    $.each(tileHeaders, function (idx, tile_header) {
+        let textHeader = $(tile_header).find("h3").text();
         if (textHeader === "None" || textHeader === "undefined" || !textHeader.trim()) {
             $(tile_header).hide();
         } else {
