@@ -55,18 +55,3 @@ def getDashboardsPaths(request):
     paths = ['/' + config_name for config_name in getConfigNames()]
     names = getFlipboardTitles()
     return JsonResponse(dict(paths=paths, names=names), safe=False)
-
-
-def demo_controller(request, flagSensors=None, tester=None):
-    """ activate or not the sensors by api  """
-    cache = MyCache()
-    if flagSensors == 'on':
-        scheduleYourSensors(cache.scheduler_sensors, tester)
-    elif flagSensors == 'off':
-        stopTheSensors(cache.scheduler_sensors)
-        cache.scheduler_sensors = BackgroundScheduler()
-    return HttpResponseRedirect('/')
-
-
-def getAdeline(request):
-    return render(request, 'tmplinear_radial.html')

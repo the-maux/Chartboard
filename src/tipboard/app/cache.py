@@ -89,7 +89,6 @@ class MyCache(object):
                                                decode_responses=True, db=REDIS_DB)
                 inst.redis.time()
                 inst.isRedisConnected = True
-                inst.scheduler_sensors = BackgroundScheduler()
                 inst.startedTime = datetime.now().strftime("%d %B %Y %T")
                 inst.lastUpdateTime = datetime.now().strftime("%d %B %Y %T")
             except Exception:

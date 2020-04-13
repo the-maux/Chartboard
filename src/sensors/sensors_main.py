@@ -54,6 +54,8 @@ def test_sensors(tester):
 
 def scheduleYourSensors(scheduler=None, tester=None):
     """ Schedule the script tu updates all tiles, rax is here to control by unit-test, that we test all tiles """
+    if scheduler is None:
+        scheduler = BlockingScheduler()
     rax = 0
     if not scheduler.running:
         rax += addSchedule(scheduler, sonde1, args=[tester, 'txt_ex'])

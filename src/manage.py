@@ -1,12 +1,10 @@
-#!/bin/python
 import os
 import sys
 import subprocess
 import time
-from apscheduler.schedulers.blocking import BlockingScheduler
 
 
-def startRedisAgain(second_chance):
+def startRedisAgain():
     try:
         output = subprocess.check_output(['redis-cli', 'ping'])
         if 'PONG' in str(output):
@@ -20,14 +18,14 @@ def startRedisAgain(second_chance):
     return False
 
 
-def redis_sanity_check(second_chance=False):
+def redis_sanity_check():
     try:
-        return startRedisAgain(second_chance)
+        return startRedisAgain()
     except subprocess.CalledProcessError:
         print('[LOG] Trying to start Redis mannualy\n$>', flush=True)
-        subprocess.Popen(['nohup', 'redis-server', '--protected-mode no'])
+        subprocess.check_output(['nohup', 'redis-server', '--protected-mode no'])
         time.sleep(3)
-        if not second_chance and startRedisAgain(second_chance):
+        if startRedisAgain():
             return True
     print('[ERROR] Redis didnt answered, is redis installed ?', flush=True)
     return False
@@ -62,8 +60,7 @@ if __name__ == '__main__':
     sys.path.insert(0, os.getcwd())  # Import project to PYTHONPATH
     if argv in ('sensors', '-s'):
         from src.sensors.sensors_main import scheduleYourSensors
-
-        scheduleYourSensors(BlockingScheduler())
+        scheduleYourSensors()
     elif argv in ('test', 'runserver', 'migrate', 'shell', 'collectstatic', 'findstatic'):
         exit(startDjango())
     exit(show_help())
