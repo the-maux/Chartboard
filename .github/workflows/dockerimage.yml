@@ -1,4 +1,4 @@
-name: Docker Build Image Test
+name: Build & Test Docker Image
 
 on: [push]
 
@@ -9,4 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag tipboard-local:$(date +%s)
+      run: docker build . --file Dockerfile --tag chartboard:test
+    - uses: actions/checkout@v1
+    - name: Unit Test inside docker
+      run: docker run -it --entrypoint=python chartboard:test src/manage.py test
