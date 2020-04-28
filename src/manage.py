@@ -35,7 +35,7 @@ def redis_sanity_check(isTest):
 
 def startDjango(settings_path='tipboard.webserver.settings', isTest=False):
     """ Start the django with DJANGO_SETTINGS_MODULE path added in env """
-    if redis_sanity_check(isTest):
+    if redis_sanity_check(isTest) or os.name == 'nt':
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings_path)
         from django.core.management import execute_from_command_line
         return execute_from_command_line(sys.argv)

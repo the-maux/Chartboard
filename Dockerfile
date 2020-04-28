@@ -1,7 +1,7 @@
 FROM bitnami/python:3.8
 
-RUN apt-get update \
- && apt-get install redis-server -y --no-install-recommends \
+RUN apt-get update
+RUN apt-get install redis-server -y --no-install-recommends \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
