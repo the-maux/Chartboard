@@ -1,4 +1,4 @@
-redis==3.4.1
+redis==3.5.0
 asgiref==3.2.7
 django==3.0.5
 channels==2.4.0
