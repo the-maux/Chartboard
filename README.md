@@ -1,5 +1,3 @@
-"><img src="
- 
  <p align="center">
   <img alt="Tipboard" src="https://i.ibb.co/Fx6FykP/image-5.png"/>
   <p align="center">
@@ -20,11 +18,6 @@
 </br>
     <a href="https://travis-ci.com/the-maux/tipboard">
      <img alt="Travis" src="https://travis-ci.com/the-maux/tipboard.svg?branch=develop"></a>
-    <a href="https://gitlab.com/the-maux/tipboard/pipelines">
-     <img src="https://gitlab.com/the-maux/tipboard/badges/master/pipeline.svg" alt="Gitlab"></a>
-    <a href="https://tipboard.readthedocs.io/">
-     <img alt="ReadTheDocs" src="https://readthedocs.org/projects/tipboard/badge/?version=latest"></a>  
-</br>
    <a href="https://semaphoreci.com/the-maux/tipboard">
     <img alt="Semaphore" src="https://semaphoreci.com/api/v1/the-maux/tipboard/branches/wip/badge.svg"></a>
 <a href="https://codeclimate.com/github/the-maux/Chartboard/test_coverage"><img src="https://api.codeclimate.com/v1/badges/720aa7a9d0bbf3a10e25/test_coverage" /></a>
@@ -36,7 +29,8 @@
   <a href="https://www.codacy.com/manual/the-maux/Chartboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=the-maux/Chartboard&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/134c5656546240f5aa21d19583095de0"/></a>
    <a href="https://deepscan.io/dashboard#view=project&tid=6043&pid=10798&bid=154148">
      <img src="https://deepscan.io/api/teams/6043/projects/10798/branches/154148/badge/grade.svg" alt="DeepScan grade"></a>
-        <a href="https://pyup.io/account/repos/github/the-maux/tipboard/">
+ </br>
+<a href="https://pyup.io/account/repos/github/the-maux/tipboard/">
     <img alt="PyUp" src="https://pyup.io/repos/github/the-maux/tipboard/shield.svg"></a>
     <a href="https://snyk.io/test/github/the-maux/Chartboard?targetFile=requirements.txt"><img src="https://snyk.io/test/github/the-maux/Chartboard/badge.svg?targetFile=requirements.txt" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io/test/github/the-maux/Chartboard?targetFile=requirements.txt" style="max-width:100%;"></a>
 </br>
