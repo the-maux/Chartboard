@@ -53,6 +53,8 @@
 Introduction
 ------------
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3be4e4e77b0048a08e1d831e60478ade)](https://app.codacy.com/manual/the-maux/Chartboard?utm_source=github.com&utm_medium=referral&utm_content=the-maux/Chartboard&utm_campaign=Badge_Grade_Dashboard)
+
 #### Tipboard was create to simplify the creation of your dashboards  
 Automaticaly **by scripts** (called sensors) **or manually** (*to let everyone use it*)   
 Core code is written in JavaScript and Python, and used many technology (*django, flexbox, bootstrap*).  
