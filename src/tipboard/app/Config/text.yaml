@@ -24,8 +24,6 @@ layout:
           - tile_template: big_value
             tile_id: bv_ex
             title: Big value
-            value:
-              - big_value: 52
 
           - tile_template: custom
             tile_id: custom_ex

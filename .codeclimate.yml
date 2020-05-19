@@ -15,7 +15,7 @@ plugins:
       python:S1542:
         enabled: false
       python:S3776:
-        enabled: false #TODO: Complexity to 20
+        enabled: false
   pylint:
     enabled: true
     channel: beta

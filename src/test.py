@@ -179,21 +179,16 @@ class TestApp(SimpleTestCase):  # TODO: find a way to test the WebSocket inside 
         reponse = self.fakeClient.get('/api/tiledata/test_text')
         self.assertTrue(reponse.status_code == 200)
 
-    def test_0109_api_parseTitleHtmlFromDashboard(self):  # TODO: fix this by testing the flipboard.html
+    def test_0109_api_parseTitleHtmlFromDashboard(self):
         """ Test if Yaml to dashboard.html know how to parse title """
         reponse = self.fakeClient.get('/dashboard/' + self.layout)
-        title = b'__'  # TODO: need to put __ to test the split methode in template html
+        title = b'__'
         self.assertTrue(title in reponse.content)  # can't work cause it's made by ws
 
     def test_0110_api_parseConfigHtmlFromDashboard(self):  # test with other file when row
         reponse = self.fakeClient.get('/dashboard/' + self.layout)
         configInYaml = b'id="row"'
         self.assertTrue(configInYaml in reponse.content)
-
-    # def test_0111_api_parseConfigHtmlFromDashboard(self):  # TODO: take the tile id by yaml
-    #     reponse = self.fakeClient.get('/dashboard/' + self.layout)
-    #     IdTilePresenInYaml = b'id="' + bytes(self.layout, 'utf-8') + b'-pie_chartjs_ex"'
-    #     self.assertTrue(IdTilePresenInYaml in reponse.content)
 
     def test_1011_updatetile_PieChart(self):
         """ Test PieChart tile update by api """

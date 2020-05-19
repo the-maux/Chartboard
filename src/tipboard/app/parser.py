@@ -2,6 +2,16 @@ import glob, os, yaml
 from src.tipboard.app.properties import CONF_DIR, BASIC_CONFIG
 
 
+# def update_tile_data_from_xml(layoutName, listTiles):
+#     """ update value(dict) of tile with new data Recursiv & deep inside the tile """
+#     config = parseXmlLayout(layoutName)
+#     for row in config['layout']:
+#         for col in row:
+#             if col['template_id'] in listTiles:
+#
+#             # TODO: tu dois chercher tile_id(xml) pour comparer dans listTiles si tu dois set une valeur
+
+
 def getTilesConfigFromCols(tiles, dashboard_config):
     """ Build a dict with all tiles present in dashboard.yml with the configs of this tiles """
     for tile_dict in tiles:
