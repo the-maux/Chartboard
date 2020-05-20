@@ -22,4 +22,4 @@ RUN pip install --user -r requirements.txt
 EXPOSE 8080
 
 CMD ["python", "src/manage.py", "runserver", "0.0.0.0:8080", "--noreload"]
-#CMD ["python", "src/manage.py", "test"]
+
