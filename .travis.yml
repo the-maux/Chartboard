@@ -5,7 +5,7 @@ python:
   - 3.8
 env:
   global:
-    - CC_TEST_REPORTER_ID=08b43026fb188b3529d78e39eb5409b45b98a63888802dc8ca854478cd78b67d
+    - CC_TEST_REPORTER_ID=8c500a040860752f171624c5773eb693c9037ecb97016466d1757fd9d3b22c28
     - CODACY_PROJECT_TOKEN=7594b00e25614e438774aa123448975c
     - GIT_COMMITTED_AT=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git log -1 --pretty=format:%ct; else git log -1 --skip 1 --pretty=format:%ct; fi)
 services:
@@ -16,8 +16,8 @@ before_script:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 install:
-    - pip install -r requirements.txt
-    - pip install coverage lorem requests apscheduler pytest-django pytest pytest-asyncio  # Debug dependency
+    - pip install -r src/requirements-dev.txt
+    - pip install coverage  # Debug dependency
 script:
     - coverage run --source='.' --rcfile=.coverage src/manage.py test  -v 2
     - coverage report
