@@ -20,15 +20,15 @@
      <img alt="Travis" src="https://travis-ci.com/the-maux/tipboard.svg?branch=develop"></a>
    <a href="https://semaphoreci.com/the-maux/tipboard">
     <img alt="Semaphore" src="https://semaphoreci.com/api/v1/the-maux/tipboard/branches/wip/badge.svg"></a>
-<a href="https://codeclimate.com/github/the-maux/Chartboard/test_coverage"><img src="https://api.codeclimate.com/v1/badges/720aa7a9d0bbf3a10e25/test_coverage" /></a>
 </br>
 <a href="https://www.codefactor.io/repository/github/the-maux/chartboard"><img src="https://www.codefactor.io/repository/github/the-maux/chartboard/badge" alt="CodeFactor" /></a>
 <a href="https://codebeat.co/projects/github-com-the-maux-chartboard-develop"><img alt="codebeat badge" src="https://codebeat.co/badges/5509e541-1e34-4077-a056-2ebac5f6bd76" /></a>
-<a href="https://codeclimate.com/github/the-maux/Chartboard/maintainability"><img src="https://api.codeclimate.com/v1/badges/720aa7a9d0bbf3a10e25/maintainability" /></a>
-</br>
   <a href="https://www.codacy.com/manual/the-maux/Chartboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=the-maux/Chartboard&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/134c5656546240f5aa21d19583095de0"/></a>
    <a href="https://deepscan.io/dashboard#view=project&tid=6043&pid=10798&bid=154148">
      <img src="https://deepscan.io/api/teams/6043/projects/10798/branches/154148/badge/grade.svg" alt="DeepScan grade"></a>
+</br>
+<a href="https://codeclimate.com/github/the-maux/Chartboard/maintainability"><img src="https://api.codeclimate.com/v1/badges/720aa7a9d0bbf3a10e25/maintainability" /></a>
+<a href="https://codeclimate.com/github/the-maux/Chartboard/test_coverage"><img src="https://api.codeclimate.com/v1/badges/720aa7a9d0bbf3a10e25/test_coverage" /></a>
  </br>
 <a href="https://pyup.io/account/repos/github/the-maux/tipboard/">
     <img alt="PyUp" src="https://pyup.io/repos/github/the-maux/Chartboard/shield.svg"></a>
