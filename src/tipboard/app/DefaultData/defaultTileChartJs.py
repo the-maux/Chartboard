@@ -128,7 +128,7 @@ def getDefaultDoughnutChart():
 def getDefaultRadialGaugeChart():
     return {
         'data': {
-            'title': {'display': True, 'text': 'Radial Gauge Demo'}, 'labels': [f'Label 1'],
+            'title': {'display': True, 'text': 'Radial Gauge Demo'}, 'labels': ['Label 1'],
             'datasets': [{'data': [42], 'label': 'Label'}]
         },
         'meta': {
