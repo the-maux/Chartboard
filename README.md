@@ -31,7 +31,7 @@
      <img src="https://deepscan.io/api/teams/6043/projects/10798/branches/154148/badge/grade.svg" alt="DeepScan grade"></a>
  </br>
 <a href="https://pyup.io/account/repos/github/the-maux/tipboard/">
-    <img alt="PyUp" src="https://pyup.io/repos/github/the-maux/tipboard/shield.svg"></a>
+    <img alt="PyUp" src="https://pyup.io/repos/github/the-maux/Chartboard/shield.svg"></a>
     <a href="https://snyk.io/test/github/the-maux/Chartboard?targetFile=requirements.txt"><img src="https://snyk.io/test/github/the-maux/Chartboard/badge.svg?targetFile=requirements.txt" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io/test/github/the-maux/Chartboard?targetFile=requirements.txt" style="max-width:100%;"></a>
 </br>
 </p>
