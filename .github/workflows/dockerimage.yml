@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag chartboard:test
+      run: docker build . --file src/Dockerfile-dev --tag chartboard:test
     - uses: actions/checkout@v1
     - name: Unit Test inside docker
       run: docker run --entrypoint=python chartboard:test src/manage.py test
