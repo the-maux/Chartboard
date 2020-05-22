@@ -6,7 +6,7 @@ python:
 env:
   global:
     - CC_TEST_REPORTER_ID=8c500a040860752f171624c5773eb693c9037ecb97016466d1757fd9d3b22c28
-    - CODACY_PROJECT_TOKEN=7594b00e25614e438774aa123448975c
+    - CODACY_PROJECT_TOKEN=3be4e4e77b0048a08e1d831e60478ade
     - GIT_COMMITTED_AT=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git log -1 --pretty=format:%ct; else git log -1 --skip 1 --pretty=format:%ct; fi)
 services:
   - redis
