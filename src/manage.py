@@ -4,43 +4,40 @@ import subprocess
 import time
 
 
-def startRedisAgain(isTest):
-    try:
-        output = subprocess.check_output(['redis-cli', 'ping'])
-        if 'PONG' in str(output):
-            print('[LOG] Redis detected and running -> OK', flush=True)
-            return True
-        elif 'No such file or directory:' in str(output):
-            print("[ERROR] can't execute redis")
-        print(output)
-    except FileNotFoundError:
-        if isTest is True:
-            return True
-        print("[ERROR] Redis is not installed")
-    return False
-
-
-def redis_sanity_check(isTest):
-    try:
-        return startRedisAgain(isTest)
-    except subprocess.CalledProcessError:
-        print('[LOG] Trying to start Redis mannualy\n$>', flush=True)
-        subprocess.check_output(['nohup', 'redis-server', '--protected-mode no'])
-        time.sleep(3)
-        if startRedisAgain(isTest):
-            return True
-    print('[ERROR] Redis didnt answered, is redis installed ?', flush=True)
-    return False
+# def startRedisAgain(isTest):
+#     try:
+#         output = subprocess.check_output(['redis-cli', 'ping'])
+#         if 'PONG' in str(output):
+#             print('[LOG] Redis detected and running -> OK', flush=True)
+#             return True
+#         elif 'No such file or directory:' in str(output):
+#             print("[ERROR] can't execute redis")
+#         print(output)
+#     except FileNotFoundError:
+#         if isTest is True:
+#             return True
+#         print("[ERROR] Redis is not installed")
+#     return False
+#
+#
+# def redis_sanity_check(isTest):
+#     try:
+#         return startRedisAgain(isTest)
+#     except subprocess.CalledProcessError:
+#         print('[LOG] Trying to start Redis mannualy\n$>', flush=True)
+#         subprocess.check_output(['nohup', 'redis-server', '--protected-mode no'])
+#         time.sleep(3)
+#         if startRedisAgain(isTest):
+#             return True
+#     print('[ERROR] Redis didnt answered, is redis installed ?', flush=True)
+#     return False
 
 
 def startDjango(settings_path='tipboard.webserver.settings', isTest=False):
     """ Start the django with DJANGO_SETTINGS_MODULE path added in env """
-    if redis_sanity_check(isTest) or os.name == 'nt':
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings_path)
-        from django.core.management import execute_from_command_line
-        return execute_from_command_line(sys.argv)
-    else:
-        return 1
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings_path)
+    from django.core.management import execute_from_command_line
+    return execute_from_command_line(sys.argv)
 
 
 def show_help():
