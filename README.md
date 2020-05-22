@@ -14,6 +14,7 @@
         </br>
         <a href="https://travis-ci.com/the-maux/tipboard"> <img alt="Travis" src="https://travis-ci.com/the-maux/tipboard.svg?branch=develop"></a>
         <a href='https://semaphoreci.com/the-maux/chartboard'> <img src='https://semaphoreci.com/api/v1/the-maux/chartboard/branches/develop/badge.svg'></a>
+        <a> <img src="https://github.com/the-maux/Chartboard/workflows/Docker%20Unit-test/badge.svg">
         </br>
         <a href="https://www.codefactor.io/repository/github/the-maux/chartboard"><img src="https://www.codefactor.io/repository/github/the-maux/chartboard/badge" alt="CodeFactor"/></a>
         <a href="https://codebeat.co/projects/github-com-the-maux-chartboard-develop"><img alt="codebeat badge" src="https://codebeat.co/badges/5509e541-1e34-4077-a056-2ebac5f6bd76"/></a>
