@@ -16,8 +16,10 @@ before_script:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 install:
-    - pip install -r requirements-dev.txt coverage
+    - pip install -r requirements-dev.txt coverage flake8
 script:
+    - flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+    - flake8 . --count --max-complexity=10 --max-line-length=150 --statistics --ignore=E401,W605
     - coverage run --source='.' --rcfile=.coverage src/manage.py test -v 2
     - coverage report
 after_script:
