@@ -20,8 +20,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        pip install coverage lorem requests apscheduler pytest-django pytest pytest-asyncio  # Debug dependency
+        pip install -r requirements-dev.txt
     - name: Lint with flake8
       run: |
         pip install flake8
@@ -29,7 +28,9 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # The GitHub editor is 127 chars wide, but pycharm is not :D
         flake8 . --count --max-complexity=10 --max-line-length=150 --statistics --ignore=E401,W605
-    - name: Run coverage
-      run: |
-        coverage run --source='.' --rcfile=.coverage src/manage.py test  -v 2
-        coverage report
+    - uses: actions/checkout@v1
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile-dev --tag chartboard:test
+    - uses: actions/checkout@v1
+    - name: Unit Test inside docker
+      run: docker run --entrypoint=python chartboard:test src/manage.py test

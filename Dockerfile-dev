@@ -11,13 +11,13 @@ WORKDIR /home/app
 
 COPY src/ src/
 
-COPY src/requirements-dev.txt .
+COPY requirements-dev.txt .
 RUN chown -R 1001 /home/app
 
 ENV PATH="/home/app/.local/bin:${PATH}"
 USER 1001
 RUN pip install --upgrade pip
-RUN pip install --user -r src/requirements-dev.txt
+RUN pip install --user -r requirements-dev.txt
 
 EXPOSE 8080
 
