@@ -10,13 +10,13 @@
         <img src="http://hits.dwyl.io/themaux/tipboard.svg"></a>
     <a href=""> <img alt="pypi" src="https://img.shields.io/pypi/dm/tipboard.svg"></a>
     <a href=""><img alt="docker" src="https://img.shields.io/docker/pulls/themaux/tipboard"></a>
-    <a href="">
         </br>
         <a href="https://www.codefactor.io/repository/github/the-maux/chartboard"><img src="https://www.codefactor.io/repository/github/the-maux/chartboard/badge" alt="CodeFactor"/></a>
         <a href="https://codebeat.co/projects/github-com-the-maux-chartboard-develop"><img alt="codebeat badge" src="https://codebeat.co/badges/5509e541-1e34-4077-a056-2ebac5f6bd76"/></a>
-        <a href="https://www.codacy.com/manual/the-maux/Chartboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=the-maux/Chartboard&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/134c5656546240f5aa21d19583095de0"/></a>
+        <a href="https://www.codacy.com/manual/the-maux/Chartboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=the-maux/Chartboard&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/134c5656546240f5aa21d19583095de0"/></a>        
         <a href="https://deepscan.io/dashboard#view=project&tid=6043&pid=10798&bid=154148"> <img src="https://deepscan.io/api/teams/6043/projects/10798/branches/154148/badge/grade.svg"  alt="DeepScan grade"></a>
         </br>
+        <a href="https://g.codefresh.io/api/badges/pipeline/themaux/Tipboard-test%2Funit-test?key=eyJhbGciOiJIUzI1NiJ9.NWQ5NDkxYzg1YzI5YzVmOWQyODQ0MDc4.rDj-1Rn5DxSkv_oE8p87ijZhoTelE_WjvbbKWMCI3ZA&type=cf-1"> <img alt="Codefresh" src="https://camo.githubusercontent.com/1d15daeba4c049690fed2444c700b5dad74bc0ef/68747470733a2f2f672e636f646566726573682e696f2f6170692f6261646765732f706970656c696e652f7468656d6175782f546970626f6172642d74657374253246756e69742d746573743f6b65793d65794a68624763694f694a49557a49314e694a392e4e5751354e446b78597a6731597a4935597a566d4f5751794f4451304d4463342e72446a2d31526e354478536b765f6f4538703837696a5a686f54656c455f576a7662624b574d4349335a4126747970653d63662d31"></a>
         <a href="https://travis-ci.com/the-maux/tipboard"> <img alt="Travis" src="https://travis-ci.com/the-maux/tipboard.svg?branch=develop"></a>
         <a href='https://semaphoreci.com/the-maux/chartboard'> <img src='https://semaphoreci.com/api/v1/the-maux/chartboard/branches/develop/badge.svg'></a>
         <a> <img src="https://github.com/the-maux/Chartboard/workflows/Docker%20Unit-test/badge.svg">
