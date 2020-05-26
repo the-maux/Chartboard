@@ -2,21 +2,22 @@ import os
 import sys
 import subprocess
 import time
+from subprocess import DEVNULL
 
 
 def startRedisAgain(isTest):
     try:
-        output = subprocess.check_output(['/usr/bin/redis-cli', 'ping'])
+        output = subprocess.check_output(['redis-cli', 'ping'])  # Cant put full path for Windows compatibility
         if 'PONG' in str(output):
             print('[LOG] Redis detected and running -> OK', flush=True)
             return True
         elif 'No such file or directory:' in str(output):
-            print("[ERROR] can't execute redis")
+            print("[ERROR] can't execute redis: No such file or directory")
         print(output)
     except FileNotFoundError:
         if isTest is True:
             return True
-        print("[ERROR] Redis is not installed")
+        print("[ERROR] Redis is not installed or wasn't found on the system")
     return False
 
 
@@ -24,8 +25,8 @@ def redis_sanity_check(isTest):
     try:
         return startRedisAgain(isTest)
     except subprocess.CalledProcessError:
-        print('[LOG] Trying to start Redis mannualy\n$>', flush=True)
-        subprocess.check_output(['/usr/bin/nohup', '/usr/bin/redis-server', '--protected-mode no'])
+        print('[LOG] CalledProcessError but will try to start Redis mannualy', flush=True)
+        subprocess.Popen(['nohup', 'redis-server', '--protected-mode no'], stdout=DEVNULL)
         time.sleep(3)
         if startRedisAgain(isTest):
             return True
@@ -36,8 +37,10 @@ def redis_sanity_check(isTest):
 def startDjango(settings_path='tipboard.webserver.settings'):
     """ Start the django with DJANGO_SETTINGS_MODULE path added in env """
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings_path)
-    from django.core.management import execute_from_command_line
-    return execute_from_command_line(sys.argv)
+    if redis_sanity_check(isTest='test' in sys.argv[1]):
+        from django.core.management import execute_from_command_line
+        return execute_from_command_line(sys.argv)
+    return -1
 
 
 def show_help():

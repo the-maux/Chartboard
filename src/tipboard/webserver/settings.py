@@ -56,7 +56,7 @@ STATICFILES_FINDERS = (
 # local directory where to find the static ressources
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/'), ]
 # local directory where all statics ressources will be regrouped (in prod mode this file are on a CDN)
-STATIC_ROOT = os.path.join(BASE_DIR, 'collectTestStatic/')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'collectTestStatic/')
 STATIC_URL = '/static/'  # Url asked by the client to get the static ressources by HTTP
 
 CHANNEL_LAYERS = {
