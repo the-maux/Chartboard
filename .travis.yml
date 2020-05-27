@@ -11,10 +11,13 @@ env:
 services:
   - redis
 
+#First init CodeClimate report than Codacy
 before_script:
+  - sudo apt-get install jq
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
+  - curl -LSs "$(curl -LSs https://api.github.com/repos/codacy/codacy-coverage-reporter/releases/latest | jq -r '.assets | map({name, browser_download_url} | select(.name | endswith(".jar"))) | .[0].browser_download_url')" -o codacy-coverage-reporter-assembly.jar
 install:
     - pip install -r requirements-dev.txt coverage flake8
 script:
@@ -26,3 +29,4 @@ after_script:
   - coverage xml
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
   - python-codacy-coverage -r coverage.xml
+  - java -jar codacy-coverage-reporter-assembly.jar report -l Java -r build/reports/jacoco/test/jacocoTestReport.xml
