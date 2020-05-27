@@ -7,20 +7,20 @@ checks:
       threshold: 6
 plugins:
   duplication:
-#    enabled: true
+    #    enabled: true
     config:
       languages:
         python:
           python_version: 3
   sonar-python:
-#    enabled: true
+    #    enabled: true
     checks:
       python:S1542:
         enabled: false
       python:S3776:
         enabled: false
   pylint:
-#    enabled: true
+    #    enabled: true
     channel: beta
     plugins:
       - django
@@ -30,13 +30,13 @@ plugins:
       import-error:
         enabled: false
   pep8:
-#    enabled: true
+  #    enabled: true
   fixme:
-#    enabled: true
+    #    enabled: true
     config:
       strings:
-      - TOFIX
-      - TODO
+        - TOFIX
+        - TODO
   csslint:
 #    enabled: true
 
