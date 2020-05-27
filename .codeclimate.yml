@@ -1,23 +1,26 @@
 version: "2"
 checks:
   method-complexity:
-    enabled: false
+    enabled: true
+  nested-control-flow:
+    config:
+      threshold: 6
 plugins:
   duplication:
-    enabled: false
+#    enabled: true
     config:
       languages:
         python:
           python_version: 3
   sonar-python:
-    enabled: true
+#    enabled: true
     checks:
       python:S1542:
         enabled: false
       python:S3776:
         enabled: false
   pylint:
-    enabled: true
+#    enabled: true
     channel: beta
     plugins:
       - django
@@ -27,28 +30,18 @@ plugins:
       import-error:
         enabled: false
   pep8:
-    enabled: true
+#    enabled: true
   fixme:
-    enabled: true
+#    enabled: true
     config:
       strings:
       - TOFIX
       - TODO
   csslint:
-    enabled: true
+#    enabled: true
 
 exclude_patterns:
-  - "src/tipboard/static/js/bootstrap.js"
-  - "src/tipboard/static/js/chart.bundle.js"
-  - "src/tipboard/static/js/chart-plugin-test-linearradial.js"
-  - "src/tipboard/static/js/chartjs-plugin-labels.min.js"
-  - "src/tipboard/static/js/chartjs-plugin-radialgauge.js"
-  - "src/tipboard/static/js/chartjs-plugin-trendline.min.js"
-  - "src/tipboard/static/js/chartjs-plugin-tsgauge.js"
-  - "src/tipboard/static/js/jquery-3.4.1.min.js"
-  - "src/tipboard/static/js/popper.min.js"
-  - "src/tipboard/static/css/bootstrap.min.css"
-  - "src/tipboard/test.py"
+  - "src/test.py"
 
 
 [flake8]
