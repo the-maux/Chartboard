@@ -1,42 +1,23 @@
----
-- version: "2"
-- checks:
-  method-complexity:
-    enabled: true
-  nested-control-flow:
+version: "2"
+prepare:
+  fetch:
+    - url: "https://raw.githubusercontent.com/example/example/master/rubocop.yml"
+      path: "alternate-rubocop-path.yml"
+checks:
+  method-lines:
     config:
-      threshold: 6
-#- plugins:
-#  duplication:
-#    config:
-#      languages:
-#        python:
-#          python_version: 3
-#  sonar-python:
-#    checks:
-#      python:S1542:
-#        enabled: false
-#      python:S3776:
-#        enabled: false
-#  pylint:
-#    channel: beta
-#    plugins:
-#      - django
-#    checks:
-#      no-member:
-#        enabled: false
-#      import-error:
-#        enabled: false
-#  pep8:
-#  #    enabled: true
-#  fixme:
-#    #    enabled: true
-#    config:
-#      strings:
-#        - TOFIX
-#        - TODO
-#  csslint:
-##    enabled: true
-#
-#exclude_patterns:
-#  - "src/test.py"
+      threshold: 100
+  argument-count:
+    enabled: false
+plugins:
+  rubocop:
+    enabled: true
+    channel: "rubocop-0-49"
+    checks:
+      Rubocop/Style/TrailingCommaInLiteral:
+        enabled: false
+    config:
+      file: "alternate-rubocop-path.yml"
+exclude_patterns:
+  - "spec/"
+  - "!spec/support/helpers"
