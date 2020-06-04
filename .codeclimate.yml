@@ -2,6 +2,9 @@ version: "2"
 checks:
   method-complexity:
     enabled: false
+  nested-control-flow:
+    config:
+      threshold: 6
 plugins:
   duplication:
     enabled: true
@@ -14,6 +17,8 @@ plugins:
     checks:
       python:S1542:
         enabled: false
+      python:S3776:
+        enabled: false #TODO: Complexity to 20
   pylint:
     channel: beta
     plugins:
