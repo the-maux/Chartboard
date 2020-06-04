@@ -21,7 +21,6 @@ plugins:
         enabled: false
       import-error:
         enabled: false
-  pep8:
   fixme:
     config:
       strings:
