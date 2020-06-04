@@ -21,8 +21,8 @@
         <a href='https://semaphoreci.com/the-maux/chartboard'> <img src='https://semaphoreci.com/api/v1/the-maux/chartboard/branches/develop/badge.svg'></a>
         <a> <img src="https://github.com/the-maux/Chartboard/workflows/Docker%20Unit-test/badge.svg">
         </br>
-<a href="https://codeclimate.com/github/the-maux/Chartboard/maintainability"><img src="https://api.codeclimate.com/v1/badges/720aa7a9d0bbf3a10e25/maintainability"/></a>
-        <a href="https://codeclimate.com/github/the-maux/Chartboard/test_coverage"><img src="https://api.codeclimate.com/v1/badges/720aa7a9d0bbf3a10e25/test_coverage"/></a>
+<a href="https://codeclimate.com/github/the-maux/Chartboard/maintainability"><img src="https://api.codeclimate.com/v1/badges/bed95ca87346ad080708/maintainability"/></a>
+        <a href="https://codeclimate.com/github/the-maux/Chartboard/test_coverage"><img src="https://api.codeclimate.com/v1/badges/bed95ca87346ad080708/test_coverage"/></a>
         </br>
         <a href="https://pyup.io/account/repos/github/the-maux/tipboard/"> <img alt="PyUp" src="https://pyup.io/repos/github/the-maux/Chartboard/shield.svg"></a>
         <a href="https://snyk.io/test/github/the-maux/Chartboard?targetFile=requirements.txt"><img 
