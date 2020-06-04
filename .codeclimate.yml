@@ -30,7 +30,7 @@ plugins:
         - TOFIX
         - TODO
   csslint:
-    enabled: true
+    enabled: false
 
 exclude_patterns:
   - "src/test.py"
