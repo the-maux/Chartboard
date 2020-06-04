@@ -7,11 +7,7 @@ checks:
       threshold: 6
 plugins:
   duplication:
-    enabled: true
-    config:
-      languages:
-        python:
-          python_version: 3
+    enabled: false
   sonar-python:
     enabled: true
     checks:
