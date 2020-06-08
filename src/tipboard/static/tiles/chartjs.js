@@ -155,9 +155,8 @@ function getTypeOfChartJS(tileType) {
         case "cumulative_flow":
             return "line";
         case "vbar_chart":
-            return "bar";
         case "bar_chart":
-            return "horizontalBar";
+            return ("bar_chart" === tileType ? "bar" : "horizontalBar");
         case "gauge_chart":
             return "tsgauge";
         case "radial_gauge_chart":
