@@ -11,7 +11,7 @@ def startRedisAgain(isTest):
         if 'PONG' in str(output):
             print('[LOG] Redis detected and running -> OK', flush=True)
             return True
-        elif 'No such file or directory:' in str(output):
+        if 'No such file or directory:' in str(output):
             print("[ERROR] can't execute redis: No such file or directory")
         print(output)
     except FileNotFoundError:
@@ -64,5 +64,5 @@ if __name__ == '__main__':
         from src.sensors.sensors_main import scheduleYourSensors
         scheduleYourSensors()
     elif argv in ('test', 'runserver', 'migrate', 'shell', 'collectstatic', 'findstatic'):
-        exit(startDjango())
-    exit(show_help())
+        sys.exit(startDjango())
+    sys.exit(show_help())

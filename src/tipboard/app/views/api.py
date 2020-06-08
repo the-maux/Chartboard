@@ -73,3 +73,4 @@ def push_api(request):
                 return HttpResponse(f'{tile_id} data updated successfully.')
             HttpData = HttpResponse(f'Error while saving tile with tile_id: {tile_id}')
         return HttpData
+    return HttpResponseBadRequest('Only post http request allowed')

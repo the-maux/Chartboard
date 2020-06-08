@@ -76,7 +76,7 @@ def save_tile(tile_id, template, data, meta):
     return True
 
 
-class MyCache(object):
+class MyCache:
     """ Singleton redis object to handle (de)serialization of tiles and inform the channels to update websocket """
     instance = None
 

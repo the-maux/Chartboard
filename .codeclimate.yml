@@ -26,9 +26,17 @@ plugins:
         enabled: false
       invalid-name:
         enabled: false
+      missing-module-docstring:
+        enabled: false
       missing-function-docstring:
         enabled: false
       multiple-imports:
+        enabled: false
+      unnecessary-comprehension:
+        enabled: false
+      broad-except:
+        enabled: false
+      import-outside-toplevel:
         enabled: false
   fixme:
     config:

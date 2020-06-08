@@ -1,5 +1,5 @@
 import os
-from src.tipboard.app.properties import API_KEY, DEBUG, REDIS_HOST, REDIS_PORT, PATH_FOR_PIP
+from src.tipboard.app.properties import API_KEY, REDIS_HOST, REDIS_PORT, PATH_FOR_PIP, DEBUG as debug
 
 INSTALLED_APPS = [
     'django.contrib.contenttypes',
@@ -22,7 +22,7 @@ MIDDLEWARE = [
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = API_KEY
-DEBUG = DEBUG
+DEBUG = debug
 ALLOWED_HOSTS = ['*']
 TIME_ZONE = 'Europe/Paris'
 USE_TZ = True
