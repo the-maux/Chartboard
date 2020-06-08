@@ -42,35 +42,53 @@ def tile_rest(request, tile_key):
     return HttpResponse(http_message, status=status_code)
 
 
-def sanity_push_api(request):
-    """ Test token, all data present, correct tile_template and tile_id present in cache """
+def analyse_request(request):
+    """ return http resonse when error or parse arguments """
     if request.GET.get('API_KEY', 'NO_API_KEY_FOUND') != API_KEY and DEBUG is False:
-        return False, HttpResponse('API KEY incorrect', status=401)
+        return HttpResponse('API KEY incorrect', status=401)
     HttpData = request.POST
     if not HttpData.get('tile_id', None) or not HttpData.get('tile_template', None) or \
             not HttpData.get('data', None):
-        return False, HttpResponseBadRequest('Missing data')
+        return HttpResponseBadRequest('Missing data')
     if HttpData.get('tile_template', None) not in ALLOWED_TILES:
         tile_template = HttpData.get('tile_template', None)
-        return False, HttpResponseBadRequest(f'tile_template: {tile_template} is unknow')
+        return HttpResponseBadRequest(f'tile_template: {tile_template} is unknow')
     cache = MyCache()
     tilePrefix = getRedisPrefix(HttpData.get('tile_id', None))
     if not cache.redis.exists(tilePrefix) and not DEBUG:
-        return False, HttpResponseBadRequest(f'tile_id: {tilePrefix} is unknow')
-    return True, HttpData
+        return HttpResponseBadRequest(f'tile_id: {tilePrefix} is unknow')
+    return HttpData
+
+
+def check_sanity_request(request):
+    """ Test token, all data present """
+    if request.GET.get('API_KEY', 'NO_API_KEY_FOUND') != API_KEY and DEBUG is False:
+        return False
+    HttpData = request.POST
+    if not HttpData.get('tile_id', None) or not HttpData.get('tile_template', None) or \
+            not HttpData.get('data', None):
+        return False
+    if HttpData.get('tile_template', None) not in ALLOWED_TILES:
+        return False
+    cache = MyCache()
+    tilePrefix = getRedisPrefix(HttpData.get('tile_id', None))
+    if not cache.redis.exists(tilePrefix) and not DEBUG:
+        return False
+    return True
 
 
 def push_api(request):
     """ Update the content of a tile (widget) """
     if request.method == 'POST':
-        state, HttpData = sanity_push_api(request)
-        if state:
-            tile_id = HttpData.get('tile_id', None)
-            tile_template = HttpData.get('tile_template', None)
-            tile_data = HttpData.get('data', None)
-            tile_meta = HttpData.get('meta', None)
-            if save_tile(tile_id=tile_id, template=tile_template, data=tile_data, meta=tile_meta):
-                return HttpResponse(f'{tile_id} data updated successfully.')
-            HttpData = HttpResponse(f'Error while saving tile with tile_id: {tile_id}')
+        HttpData = analyse_request(request)
+        if not check_sanity_request(request):
+            return analyse_request(request)
+        tile_id = HttpData.get('tile_id', None)
+        tile_template = HttpData.get('tile_template', None)
+        tile_data = HttpData.get('data', None)
+        tile_meta = HttpData.get('meta', None)
+        if save_tile(tile_id=tile_id, template=tile_template, data=tile_data, meta=tile_meta):
+            return HttpResponse(f'{tile_id} data updated successfully.')
+        HttpData = HttpResponse(f'Error while saving tile with tile_id: {tile_id}')
         return HttpData
     return HttpResponseBadRequest('Only post http request allowed')

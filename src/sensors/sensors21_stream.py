@@ -5,16 +5,16 @@ from src.sensors.utils import end, sendUpdateByApi
 def executeScriptToGetData(tile_id='stream_ex'):
     """ Simulate some actions for text tile exemple """
     webcamArray = [
-        # # # America
+        # America
         # "https://videos-3.earthcam.com/fecnetwork/16730.flv/chunklist_w1958387849.m3u8"
-        # # Espagna
+        # Espagna
         # "https://video-auth1.iol.pt/beachcam/palavasrivegauche/chunks.m3u8",
         # "https://video-auth1.iol.pt/beachcam/carcavelos/chunks.m3u8",
         # "https://video-auth1.iol.pt/beachcam/bcmafraribeira/chunks.m3u8",
         # "https://video-auth1.iol.pt/beachcam/praiaguinchosul/chunks.m3u8",
         # "https://video-auth1.iol.pt/beachcam/costacaparicacds/chunks.m3u8",
         # "https://video-auth1.iol.pt/beachcam/lagide/chunks.m3u8",
-        # # France
+        # France
         "https://video-auth1.iol.pt/beachcam/pourville/chunks.m3u8",
         "https://video-auth1.iol.pt/beachcam/lehavre/chunks.m3u8",
         "https://video-auth1.iol.pt/beachcam/siouvilles/chunks.m3u8",

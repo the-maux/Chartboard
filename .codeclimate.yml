@@ -20,23 +20,27 @@ plugins:
     plugins:
       - django
     checks:
-      no-member:
-        enabled: false
-      import-error:
-        enabled: false
-      invalid-name:
-        enabled: false
       missing-module-docstring:
         enabled: false
       missing-function-docstring:
         enabled: false
+      missing-class-docstring:
+        enabled: false
       multiple-imports:
+        enabled: false
+      import-outside-toplevel:
+        enabled: false
+      import-error:
+        enabled: false
+      ungrouped-imports:
         enabled: false
       unnecessary-comprehension:
         enabled: false
       broad-except:
         enabled: false
-      import-outside-toplevel:
+      no-member:
+        enabled: false
+      invalid-name:
         enabled: false
   fixme:
     config:
