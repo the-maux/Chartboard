@@ -24,6 +24,12 @@ plugins:
         enabled: false
       import-error:
         enabled: false
+      invalid-name:
+        enabled: false
+      missing-function-docstring:
+        enabled: false
+      multiple-imports:
+        enabled: false
   fixme:
     config:
       strings:
