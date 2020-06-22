@@ -11,7 +11,7 @@ whitenoise==5.1.0
 
 # Sensors
 lorem==0.1.1
-requests==2.23.0
+requests==2.24.0
 apscheduler==3.6.3
 
 # Unit-Tests remove on prod
