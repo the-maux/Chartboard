@@ -12,7 +12,7 @@
     <a href=""><img alt="docker" src="https://img.shields.io/docker/pulls/themaux/tipboard"></a>
         </br>
         <a href="https://www.codefactor.io/repository/github/the-maux/chartboard"><img src="https://www.codefactor.io/repository/github/the-maux/chartboard/badge" alt="CodeFactor"/></a>
-        <a href="https://codebeat.co/projects/github-com-the-maux-chartboard-develop"><img alt="codebeat badge" src="https://codebeat.co/badges/5509e541-1e34-4077-a056-2ebac5f6bd76"/></a>
+        <a href="https://codebeat.co/projects/github-com-the-maux-chartboard-master"><img alt="" src="https://codebeat.co/badges/c4c5bd91-dff5-48f8-b7ba-828ad3a82d33"/></a>
         <a href="https://www.codacy.com/manual/the-maux/Chartboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=the-maux/Chartboard&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/134c5656546240f5aa21d19583095de0"/></a>        
         <a href="https://deepscan.io/dashboard#view=project&tid=6043&pid=10798&bid=154148"> <img src="https://deepscan.io/api/teams/6043/projects/10798/branches/154148/badge/grade.svg"  alt="DeepScan grade"></a>
         </br>
