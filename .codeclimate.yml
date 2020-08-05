@@ -1,13 +1,19 @@
 version: "2"
+
 checks:
   method-complexity:
     enabled: false
   nested-control-flow:
     config:
       threshold: 6
+
 plugins:
   duplication:
-    enabled: false
+    enabled: true
+    config:
+      languages:
+        python:
+          python_version: 3
   sonar-python:
     enabled: true
     checks:
