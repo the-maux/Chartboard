@@ -68,11 +68,11 @@ def handleHttpError(request):
     tile_template = HttpData.get('tile_template', None)
     data = HttpData.get('data', None)
     tilePrefix = getRedisPrefix(tile_id)
-    if output is 'error' and (not tile_id or not tile_template or not data):
+    if output == 'error' and (not tile_id or not tile_template or not data):
         output = 'Missing data'
-    elif output is 'error' and (tile_template not in ALLOWED_TILES):
+    elif output == 'error' and (tile_template not in ALLOWED_TILES):
         output = f'tile_template: {tile_template} is unknow'
-    elif output is 'error' and (not cache.redis.exists(tilePrefix) and not DEBUG):
+    elif output == 'error' and (not cache.redis.exists(tilePrefix) and not DEBUG):
         output = f'tile_id: {tilePrefix} is unknow'
     return HttpResponseBadRequest(output)
 
