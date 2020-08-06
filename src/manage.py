@@ -39,7 +39,10 @@ def startDjango(settings_path='tipboard.webserver.settings'):
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings_path)
     if redis_sanity_check(isTest='test' in sys.argv[1]):
         from django.core.management import execute_from_command_line
-        return execute_from_command_line(sys.argv)
+        try:
+            return execute_from_command_line(sys.argv)
+        except NotImplementedError:
+            print('Django is not installed')
     return -1
 
 
