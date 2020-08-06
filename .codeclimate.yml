@@ -9,7 +9,7 @@ checks:
 
 plugins:
   duplication:
-    enabled: true
+    enabled: false
     config:
       languages:
         python:
