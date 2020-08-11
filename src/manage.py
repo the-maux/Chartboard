@@ -65,7 +65,6 @@ if __name__ == '__main__':
     sys.path.insert(0, os.getcwd())
     if argv in ('sensors', '-s'):
         from src.sensors.sensors_main import scheduleYourSensors
-
         scheduleYourSensors()
     elif argv in ('test', 'runserver', 'migrate', 'shell', 'collectstatic', 'findstatic'):
         sys.exit(startDjango())
