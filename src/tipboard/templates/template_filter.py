@@ -33,13 +33,13 @@ def handle_errors(tile_data, templateData, isTemplateNotFound=False):
         templateData['reason'] = 'tile template is not allowed'
     elif isTemplateNotFound:
         templateData['reason'] = 'not found'
-    return render_to_string(f'tiles/notfound_tiles.html', templateData)
+    return render_to_string('tiles/notfound_tiles.html', templateData)
 
 
 def get_name_of_template(tile_data):
     name_of_template = f'tiles/{tile_data["tile_template"]}.html'
     if isChartJS_tile(tile_data['tile_template']):
-        name_of_template = f'tiles/chartJS_template.html'
+        name_of_template = 'tiles/chartJS_template.html'
     elif isTxt_tile(tile_data['tile_template']):
         name_of_template = f'tiles/txt_{tile_data["tile_template"]}.html'
     return name_of_template
@@ -62,6 +62,6 @@ def template_tile_data(packedData, data):
             template_data['title'] = data['title'] if 'title' in data else 'TITLE_NOT_FOUND'
             return render_to_string(get_name_of_template(tile_data=data), template_data)
     except Exception as e:
-        print(f'[ERROR] Error in template: {e} for {type(e).__name__}')
+        print(f'[ERROR] Error in template: {e} for {type(e).__name__}', flush=True)
         template_data['reason'] = type(e).__name__
     return handle_errors(data, template_data, False)

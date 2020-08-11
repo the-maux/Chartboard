@@ -2,23 +2,16 @@ import datetime, json, requests, time, random
 from src.tipboard.app.properties import TIPBOARD_URL, COLOR_TAB, LOG
 
 
-def printEndOfTipboardCall(tipboardAnswer, tileId):
-    if tipboardAnswer is None:
-        print(f'POST tile:{tileId} tipboard/push => (FAILED HTTP CONNECT): ', flush=True)
-
-
 def end(title=None, startTime=None, tipboardAnswer=None, tileId=None):
     """ Eazy way to end sensors, print the action time & http answer of tipboard """
     if LOG:
-        printEndOfTipboardCall(tipboardAnswer, tileId)
-        duration = time.time() - startTime
-        m = str(duration / 60)[:str(duration / 60).index('.')]
-        s = str(duration % 60)[:str(duration % 60).index('.')]
-        if m == '0':
-            print(f'{getTimeStr()}-{title}: executed script in {s} seconds', flush=True)
+        if tipboardAnswer.status_code != 200:
+            print(f'[ERROR] POST tile:{tileId} tipboard/push => ({tipboardAnswer.status_code}): ', flush=True)
         else:
-            print(f'{getTimeStr()}-{title}: executed script in {m}:{s}', flush=True)
-        print(f'-----------------------------------------------------------------------------------------', flush=True)
+            duration = time.time() - startTime
+            m = str(duration / 60)[:str(duration / 60).index('.')]
+            s = str(duration % 60)[:str(duration % 60).index('.')]
+            print(f'[INFO] {getTimeStr()}-{title}: executed script in {m}min & {s} second', flush=True)
 
 
 def getTimeStr():

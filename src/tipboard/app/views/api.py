@@ -1,13 +1,12 @@
 from django.http import JsonResponse, HttpResponseBadRequest, HttpResponse
 from src.tipboard.app.applicationconfig import getRedisPrefix
-from src.tipboard.app.properties import BASIC_CONFIG, REDIS_DB, DEBUG, ALLOWED_TILES
+from src.tipboard.app.properties import BASIC_CONFIG, REDIS_DB, DEBUG, ALLOWED_TILES, API_KEY
 from src.tipboard.app.cache import MyCache, save_tile
-from src.tipboard.app.utils import checkAccessToken
 from src.tipboard.app.parser import getConfigNames
 
 
-def project_info(request):  # TODO: add uptime and last update time and redis connected and numnber of tile in redis
-    """ Return info of server tipboard """
+def project_info(request):
+    """ Return infos about tipboard server """
     cache = MyCache()
     return JsonResponse(dict(is_redis_connected=cache.isRedisConnected,
                              last_update=cache.getLastUpdateTime(),
@@ -18,62 +17,75 @@ def project_info(request):  # TODO: add uptime and last update time and redis co
 
 
 def get_tile(request, tile_key):
-    """ Return Json from redis for tile_key """
-    if not checkAccessToken(method='GET', request=request, unsecured=True):
-        return HttpResponse('API KEY incorrect', status=401)
+    httpMessage = ''
+    httpStatus_code = 200
     redis = MyCache().redis
     if redis.exists(getRedisPrefix(tile_key)):
-        return HttpResponse(redis.get(tile_key))
-    return HttpResponseBadRequest(f'{tile_key} key does not exist.')
-
-
-def delete_tile(request, tile_key):
-    """ Delete in redis """
-    if not checkAccessToken(method='DELETE', request=request, unsecured=True):
-        return HttpResponse('API KEY incorrect', status=401)
-    redis = MyCache().redis
-    if redis.exists(getRedisPrefix(tile_key)):
-        redis.delete(tile_key)
-        return HttpResponse('Tile\'s data deleted.')
-    return HttpResponseBadRequest(f'{tile_key} key does not exist.')
+        if request.method == 'DELETE':
+            redis.delete(tile_key)
+            httpMessage = 'Tile\'s data deleted.'
+        if request.method == 'GET':
+            httpMessage = redis.get(tile_key)
+    else:
+        httpMessage = f'{tile_key} key does not exist.'
+        httpStatus_code = 400
+    return httpMessage, httpStatus_code
 
 
 def tile_rest(request, tile_key):
     """ Handles reading and deleting of tile's data """
-    if request.method == 'DELETE':
-        return delete_tile(request, tile_key)
-    if request.method == 'GET':
-        return get_tile(request, tile_key)
+    if request.GET.get('API_KEY', 'NO_API_KEY_FOUND') == API_KEY or DEBUG:
+        http_message, status_code = get_tile(request, tile_key)
+    else:
+        http_message = 'API KEY incorrect'
+        status_code = 401
+    return HttpResponse(http_message, status=status_code)
 
 
-def sanity_push_api(request, unsecured):
-    """ Test token, all data present, correct tile_template and tile_id present in cache """
-    if not checkAccessToken(method='POST', request=request, unsecured=unsecured):
-        return False, HttpResponse('API KEY incorrect', status=401)
+def check_sanity_request(request):
+    """ Test token, and presence of all data required """
     HttpData = request.POST
-    if not HttpData.get('tile_id', None) or not HttpData.get('tile_template', None) or \
-            not HttpData.get('data', None):
-        return False, HttpResponseBadRequest('Missing data')
-    if HttpData.get('tile_template', None) not in ALLOWED_TILES:
-        tile_template = HttpData.get('tile_template', None)
-        return False, HttpResponseBadRequest(f'tile_template: {tile_template} is unknow')
-    cache = MyCache()
     tilePrefix = getRedisPrefix(HttpData.get('tile_id', None))
-    if not cache.redis.exists(tilePrefix) and not DEBUG:
-        return False, HttpResponseBadRequest(f'tile_id: {tilePrefix} is unknow')
-    return True, HttpData
+    cache = MyCache()
+    fg = not HttpData.get('tile_id', None) or not HttpData.get('tile_template', None) or not HttpData.get('data', None)
+    if request.method != 'POST' or \
+            fg or request.GET.get('API_KEY', 'NO_API_KEY_FOUND') != API_KEY and DEBUG is False or \
+            HttpData.get('tile_template', None) not in ALLOWED_TILES or \
+            not cache.redis.exists(tilePrefix) and not DEBUG:
+        return False
+    return True
 
 
-def push_api(request, unsecured=False):  # TODO: handle when there is error in save_tile_redis
+def handleHttpError(request):
+    output = 'error'
+    if request.method != 'POST':
+        output = 'Only accept Post request'
+    if request.GET.get('API_KEY', 'NO_API_KEY_FOUND') != API_KEY and DEBUG is False:
+        return HttpResponse('API KEY incorrect', status=401)
+    cache = MyCache()
+    HttpData = request.POST
+    tile_id = HttpData.get('tile_id', None)
+    tile_template = HttpData.get('tile_template', None)
+    data = HttpData.get('data', None)
+    tilePrefix = getRedisPrefix(tile_id)
+    if output == 'error' and (not tile_id or not tile_template or not data):
+        output = 'Missing data'
+    elif output == 'error' and (tile_template not in ALLOWED_TILES):
+        output = f'tile_template: {tile_template} is unknow'
+    elif output == 'error' and (not cache.redis.exists(tilePrefix) and not DEBUG):
+        output = f'tile_id: {tilePrefix} is unknow'
+    return HttpResponseBadRequest(output)
+
+
+def push_api(request):
     """ Update the content of a tile (widget) """
-    if request.method == 'POST':
-        state, HttpData = sanity_push_api(request, unsecured)
-        if state:
-            tile_id = HttpData.get('tile_id', None)
-            tile_template = HttpData.get('tile_template', None)
-            tile_data = HttpData.get('data', None)
-            tile_meta = HttpData.get('meta', None)
-            if save_tile(tile_id=tile_id, template=tile_template, data=tile_data, meta=tile_meta):
-                return HttpResponse(f'{tile_id} data updated successfully.')
-            HttpData = HttpResponse(f'Error while saving tile with tile_id: {tile_id}')
-        return HttpData
+    if not check_sanity_request(request):
+        return handleHttpError(request)
+    HttpData = request.POST
+    tile_id = HttpData.get('tile_id', None)
+    tile_template = HttpData.get('tile_template', None)
+    tile_data = HttpData.get('data', None)
+    tile_meta = HttpData.get('meta', None)
+    if save_tile(tile_id=tile_id, template=tile_template, data=tile_data, meta=tile_meta):
+        return HttpResponse(f'{tile_id} data updated successfully.')
+    return HttpResponse(f'Error while saving tile with tile_id: {tile_id}')

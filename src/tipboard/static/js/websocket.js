@@ -115,7 +115,7 @@ function initWebSocketManager() {
     let protocol = window.location.protocol === "https:" ? "wss://" : "ws://";
     let websocket = new WebSocket(protocol + window.location.host + "/communication/websocket");
     websocket.onopen = function () {
-        Tipboard.log("[LOG] WEBSOCKET CONNECTION ONOPEN ");
+        //Tipboard.log("[LOG] WEBSOCKET CONNECTION ONOPEN ");
     };
     websocket.onclose = function () { // Handler to detect when API is back alive to reset websocket connection every 5s
         serverDisconnected(false);
@@ -132,11 +132,11 @@ function initWebSocketManager() {
     };
     websocket.onmessage = function (evt) {
         let tileData = JSON.parse(evt.data);
-        console.log("Web socket received data: ", tileData);
+        // console.log("[LOG] Web socket received data: ", tileData);
         updateTile(tileData, websocket.lastDashboard);
     };
     websocket.onerror = function (evt) {
-        console.log("WebSocket error: ", evt.data);
+        // console.log("[ERROR] WebSocket error: ", evt.data);
     };
     return websocket;
 }

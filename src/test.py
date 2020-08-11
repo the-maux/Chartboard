@@ -7,7 +7,6 @@ from src.tipboard.app.properties import ALLOWED_TILES
 from src.tipboard.app.DefaultData.defaultTileControler import buildFakeDataFromTemplate
 from src.tipboard.app.parser import getDashboardName, getConfigNames, parseXmlLayout
 from src.tipboard.app.cache import MyCache
-from src.tipboard.app.utils import checkAccessToken
 from src.tipboard.app.cache import listOfTilesFromLayout
 from src.tipboard.app.applicationconfig import getRedisPrefix
 from src.sensors.sensors1_text import sonde1
@@ -25,7 +24,6 @@ from src.sensors.sensors15_polarchart import sonde15
 from src.sensors.sensors16_dougnutchart import sonde16
 from src.sensors.sensors17_halfdougnutchart import sonde17
 from src.sensors.sensors_main import scheduleYourSensors, test_sensors
-from src.tipboard.app.views.flipboard import demo_controller
 from src.tipboard.app.views.wshandler import WSConsumer
 
 
@@ -55,7 +53,7 @@ def getConfigFileForTest():
     if 'default_config' in listOfDashboard:
         return 'default_config'
     if not listOfDashboard:
-        print('Cant do unit test, there is no config file')
+        print('[DEBUG] Cant do unit test, there is no config file', flush=True)
         exit(-1)
     return listOfDashboard[0]
 
@@ -68,7 +66,7 @@ class TestApp(SimpleTestCase):  # TODO: find a way to test the WebSocket inside 
         self.cache = MyCache()
         self.ALLOWED_TILES = ALLOWED_TILES
         self.layout = getConfigFileForTest()
-        print("[DEBUG] Choosing file to test:" + self.layout)
+        print("[DEBUG] Choosing file to test:" + self.layout, flush=True)
 
     def test_0001_parse_dashboardXml(self):
         """ Test Parse all tiles, cols, rows from a specific .yaml """
@@ -141,7 +139,7 @@ class TestApp(SimpleTestCase):  # TODO: find a way to test the WebSocket inside 
             tile_data = dict(title=f'{tile}_ex', tile_template=tile)
             tileTemplate = template_tile_data(('layout', tile_data['title']), tile_data)
             if 'role="alert"' in tileTemplate:
-                print(f"[EROR] DETECTED WITH TEMPLATE:{tile}")
+                print(f"[ERROR] DETECTED WITH TEMPLATE:{tile}", flush=True)
             self.assertTrue('class="alert alert-danger text-center" role="alert"' not in tileTemplate)  # detect errors
         tileTemplate = template_tile_data(('layout', 'test_unknown_tile'), dict(title='unknown', tile_template='tile'))
         self.assertTrue(tileTemplate is not None)
@@ -160,13 +158,6 @@ class TestApp(SimpleTestCase):  # TODO: find a way to test the WebSocket inside 
         """ Test api /flipboard/getDashboardsPaths """
         reponse = self.fakeClient.get('/flipboard/getDashboardsPaths')
         self.assertTrue(reponse.status_code == 200)
-
-    def test_0104_api_checkToken(self):  # TODO
-        """ Test token mecanism """
-        request = self.fakeClient.get('')
-        checkAccessToken(method='GET', request=request, unsecured=False)
-        # self.assertTrue(checkAccessToken(method='GET', request=request, unsecured=True))
-        self.assertTrue(True)
 
     def test_0105_api_getHtmlDashboard(self):
         """ Test api getHtmlDashboard """
@@ -188,21 +179,16 @@ class TestApp(SimpleTestCase):  # TODO: find a way to test the WebSocket inside 
         reponse = self.fakeClient.get('/api/tiledata/test_text')
         self.assertTrue(reponse.status_code == 200)
 
-    def test_0109_api_parseTitleHtmlFromDashboard(self):  # TODO: fix this by testing the flipboard.html
+    def test_0109_api_parseTitleHtmlFromDashboard(self):
         """ Test if Yaml to dashboard.html know how to parse title """
         reponse = self.fakeClient.get('/dashboard/' + self.layout)
-        title = b'__'  # TODO: need to put __ to test the split methode in template html
+        title = b'__'
         self.assertTrue(title in reponse.content)  # can't work cause it's made by ws
 
     def test_0110_api_parseConfigHtmlFromDashboard(self):  # test with other file when row
         reponse = self.fakeClient.get('/dashboard/' + self.layout)
         configInYaml = b'id="row"'
         self.assertTrue(configInYaml in reponse.content)
-
-    # def test_0111_api_parseConfigHtmlFromDashboard(self):  # TODO: take the tile id by yaml
-    #     reponse = self.fakeClient.get('/dashboard/' + self.layout)
-    #     IdTilePresenInYaml = b'id="' + bytes(self.layout, 'utf-8') + b'-pie_chartjs_ex"'
-    #     self.assertTrue(IdTilePresenInYaml in reponse.content)
 
     def test_1011_updatetile_PieChart(self):
         """ Test PieChart tile update by api """
@@ -265,8 +251,7 @@ class TestApp(SimpleTestCase):  # TODO: find a way to test the WebSocket inside 
         testTileUpdate(tester=self, tileId='test_just_value', sonde=sonde10, isChartJS=False)
 
     def test_1028_test_websocket(self):
-        consumer = WSConsumer(scope=None)
-        print(consumer)  # TODO: improve test
+        WSConsumer(scope=None)  # TODO: find a way to test websocket
 
     def test_1026_test_sensors(self):
         tilePrefix = getRedisPrefix('test_simple_percentage')
@@ -283,19 +268,12 @@ class TestApp(SimpleTestCase):  # TODO: find a way to test the WebSocket inside 
         isDiff = beforeUpdate != afterUpdate
         self.assertTrue(isDiff)
 
-    def test_1027_test_demo_mode(self):
-        response = demo_controller(None, flagSensors='on', tester=self)
-        self.assertTrue(response.status_code == 302)
-        time.sleep(10)
-        response = demo_controller(None, flagSensors='off', tester=self)
-        self.assertTrue(response.status_code == 302)
-
     def test_1030_checkmanage(self):
         """ Test just_value tile update by api """
         show_help()
 
     def test_4242_nohided_code(self):
-        """ Test if there is code hided from the coverage """
+        """ Test if there is code hided from the UnitTests/coverage """
         os.system("grep --exclude='*.pyc' -rnw ./src -e 'pr" + "agma' > dumpPragmaGulty")
         errors = len(open("dumpPragmaGulty", "r").read().splitlines())
         self.assertTrue(errors == 0)

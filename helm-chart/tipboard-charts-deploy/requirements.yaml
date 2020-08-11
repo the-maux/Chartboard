@@ -1,4 +1,0 @@
-dependencies:
-- name: python3-tipboard
-  version: "0.0.1"
-  alias: tipboard

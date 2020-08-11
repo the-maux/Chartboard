@@ -1,0 +1,22 @@
+redis==3.5.3
+asgiref==3.2.10
+
+django-cors-headers==3.4.0
+django==3.1
+django_prometheus==2.0.0
+django-swagger-render==0.1.0
+
+channels==2.4.0
+channels_redis==3.0.1
+PyYAML==5.3.1
+whitenoise==5.2.0
+
+# Sensors
+lorem==0.1.1
+requests==2.24.0
+apscheduler==3.6.3
+
+# Unit-Tests remove on prod
+pytest-django==3.9.0
+pytest==6.0.1
+pytest-asyncio==0.14.0

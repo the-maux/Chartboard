@@ -2,13 +2,11 @@ import json, redis
 from datetime import datetime
 from asgiref.sync import async_to_sync
 from channels.layers import get_channel_layer
-from apscheduler.schedulers.background import BackgroundScheduler
 from src.tipboard.app.properties import REDIS_DB, REDIS_PASSWORD, REDIS_HOST, REDIS_PORT, DEBUG
 from src.tipboard.app.DefaultData.defaultTileControler import buildFakeDataFromTemplate
 from src.tipboard.app.DefaultData.chartJsDatasetBuilder import buildGenericDataset
 from src.tipboard.app.parser import parseXmlLayout
 from src.tipboard.app.applicationconfig import getRedisPrefix
-from src.tipboard.app.utils import getTimeStr
 
 
 def listOfTilesFromLayout(layout_name='default_config'):
@@ -78,7 +76,7 @@ def save_tile(tile_id, template, data, meta):
     return True
 
 
-class MyCache(object):
+class MyCache:
     """ Singleton redis object to handle (de)serialization of tiles and inform the channels to update websocket """
     instance = None
 
@@ -90,11 +88,10 @@ class MyCache(object):
                                                decode_responses=True, db=REDIS_DB)
                 inst.redis.time()
                 inst.isRedisConnected = True
-                inst.scheduler_sensors = BackgroundScheduler()
                 inst.startedTime = datetime.now().strftime("%d %B %Y %T")
                 inst.lastUpdateTime = datetime.now().strftime("%d %B %Y %T")
             except Exception:
-                print(f'{getTimeStr()} (+) Initializing cache: Redis not connected', flush=True)
+                print('[ERROR] Initializing cache: Redis not connected', flush=True)
                 inst.isRedisConnected = False
             return inst
         return cls.instance  # if already exist, return the instance already initialized :)

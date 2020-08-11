@@ -1,54 +1,36 @@
-  <p align="center">
-  <img alt="Tipboard" src="https://i.ibb.co/Fx6FykP/image-5.png"/>
-  <p align="center">
+<p align="center">
+    <img alt="Tipboard" src="https://i.ibb.co/Fx6FykP/image-5.png"/>
+<p align="center">
     <a href="https://gitter.im/tipboard-dev/community">
-     <img alt="Chat" src="https://img.shields.io/gitter/room/DAVFoundation/DAV-Contributors.svg?style=flat-square"></a>
-    <a href="https://github.com/the-maux/tipboard">
-     <img alt="Github" src="https://img.shields.io/github/v/release/the-maux/tipboard"></a>
-    <a href="https://pypi.org/project/tipboard2.0/">
-     <img alt="Pypi" src="https://badge.fury.io/py/tipboard2.0.svg"></a>
-</br>
+        <img alt="Chat" src="https://img.shields.io/gitter/room/DAVFoundation/DAV-Contributors.svg?style=flat-square"></a>
+    <a href="https://github.com/the-maux/tipboard"> <img alt="Github" src="https://img.shields.io/github/v/release/the-maux/tipboard"></a>
+    <a href="https://pypi.org/project/tipboard2.0/"> <img alt="Pypi" src="https://badge.fury.io/py/tipboard2.0.svg"></a>
+    </br>
     <a href="https://allegro.tech/tipboard/">
-     <img src="http://hits.dwyl.io/themaux/tipboard.svg"></a>
-    <a href="">
-     <img alt="pypi" src="https://img.shields.io/pypi/dm/tipboard.svg"></a>
-    <a href="">
-     <img alt="docker" src="https://img.shields.io/docker/pulls/themaux/tipboard"></a>
-    <a href="">
-</br>
-    <a href="https://travis-ci.com/the-maux/tipboard">
-     <img alt="Travis" src="https://travis-ci.com/the-maux/tipboard.svg?branch=develop"></a>
-    <a href="https://gitlab.com/the-maux/tipboard/pipelines">
-     <img src="https://gitlab.com/the-maux/tipboard/badges/master/pipeline.svg" alt="Gitlab"></a>
-    <a href="https://tipboard.readthedocs.io/">
-     <img alt="ReadTheDocs" src="https://readthedocs.org/projects/tipboard/badge/?version=latest"></a>  
-</br>
-   <a href="https://semaphoreci.com/the-maux/tipboard">
-    <img alt="Semaphore" src="https://semaphoreci.com/api/v1/the-maux/tipboard/branches/wip/badge.svg"></a>
-   <a href="https://codeclimate.com/github/the-maux/tipboard/code">
-    <img alt="Code Coverage" src="https://api.codeclimate.com/v1/badges/d8974fc0be8e2b0d4c88/test_coverage"></a>
-</br>
-   <a href="https://www.codefactor.io/repository/github/the-maux/tipboard">
-     <img src="https://www.codefactor.io/repository/github/the-maux/tipboard/badge" alt="CodeFactor" /></a>
-   <a href="https://codebeat.co/projects/github-com-the-maux-tipboard-develop">
-     <img alt="codebeat badge" src="https://codebeat.co/badges/9505d595-5b06-46bb-b7c6-1623090fc2f5" /></a>
-   <a href="https://codeclimate.com/github/the-maux/tipboard/maintainability">
-     <img alt="Code Quality" src="https://api.codeclimate.com/v1/badges/d8974fc0be8e2b0d4c88/maintainability"></a>
-</br>
-   <a href="https://app.codacy.com/manual/the-maux/tipboard/dashboard?bid=14574464">
-     <img alt="Codacy" src="https://api.codacy.com/project/badge/Grade/b28af36f50584bd29612b66bc42ce0c3"></a>
-   <a href="https://deepscan.io/dashboard#view=project&tid=6043&pid=7901&bid=87511">
-     <img src="https://deepscan.io/api/teams/6043/projects/7901/branches/87511/badge/grade.svg" alt="DeepScan grade"></a>
-    <a href="https://bettercodehub.com">
-     <img src='https://bettercodehub.com/edge/badge/the-maux/tipboard?branch=develop'></a>
-</br>
-   <a href="https://snyk.io/test/github/the-maux/tipboard?targetFile=requirements.txt">
-    <img alt="Snyk" src="https://snyk.io/test/github/the-maux/tipboard/badge.svg?targetFile=requirements.txt"></a>
-   <a href="https://pyup.io/account/repos/github/the-maux/tipboard/">
-    <img alt="PyUp" src="https://pyup.io/repos/github/the-maux/tipboard/shield.svg"></a>
-</br>
+        <img src="http://hits.dwyl.io/themaux/tipboard.svg"></a>
+    <a href=""> <img alt="pypi" src="https://img.shields.io/pypi/dm/tipboard.svg"></a>
+    <a href=""><img alt="docker" src="https://img.shields.io/docker/pulls/themaux/tipboard"></a>
+        </br>
+        <a href="https://www.codefactor.io/repository/github/the-maux/chartboard"><img src="https://www.codefactor.io/repository/github/the-maux/chartboard/badge" alt="CodeFactor"/></a>
+        <a href="https://codebeat.co/projects/github-com-the-maux-chartboard-master"><img alt="" src="https://codebeat.co/badges/c4c5bd91-dff5-48f8-b7ba-828ad3a82d33"/></a>
+        <a href="https://www.codacy.com/manual/the-maux/Chartboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=the-maux/Chartboard&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/134c5656546240f5aa21d19583095de0"/></a>        
+        <a href="https://deepscan.io/dashboard#view=project&tid=6043&pid=10798&bid=154148"> <img src="https://deepscan.io/api/teams/6043/projects/10798/branches/154148/badge/grade.svg"  alt="DeepScan grade"></a>
+        </br>
+        <a href="https%3A%2F%2Fg.codefresh.io%2Fpipelines%2FProd%20mode%20unit%20test%2Fbuilds%3Ffilter%3Dtrigger%3Abuild~Build%3Bpipeline%3A5ecd47ed28b46d266427b4b5~Prod%20mode%20unit%20test"> <img alt="Codefresh" src="https://g.codefresh.io/api/badges/pipeline/themaux/chartboard%2FProd%20mode%20unit%20test?key=eyJhbGciOiJIUzI1NiJ9.NWQ5NDkxYzg1YzI5YzVmOWQyODQ0MDc4.rDj-1Rn5DxSkv_oE8p87ijZhoTelE_WjvbbKWMCI3ZA&type=cf-1"></a>
+        <a href="https://travis-ci.com/the-maux/tipboard"> <img alt="Travis" src="https://travis-ci.com/the-maux/tipboard.svg?branch=develop"></a>
+        <a> <img src="https://github.com/the-maux/Chartboard/workflows/Docker%20Unit-test/badge.svg">
+        </br>
+<a href="https://codeclimate.com/github/the-maux/Chartboard/maintainability"><img src="https://api.codeclimate.com/v1/badges/bed95ca87346ad080708/maintainability"/></a>
+        <a href="https://codeclimate.com/github/the-maux/Chartboard/test_coverage"><img src="https://api.codeclimate.com/v1/badges/bed95ca87346ad080708/test_coverage"/></a>
+        </br>
+        <a href="https://pyup.io/account/repos/github/the-maux/tipboard/"> <img alt="PyUp" src="https://pyup.io/repos/github/the-maux/Chartboard/shield.svg"></a>
+        <a href="https://snyk.io/test/github/the-maux/Chartboard?targetFile=requirements.txt"><img 
+                src="https://snyk.io/test/github/the-maux/Chartboard/badge.svg?targetFile=requirements.txt" alt="Known Vulnerabilities"
+                data-canonical-src="https://snyk.io/test/github/the-maux/Chartboard?targetFile=requirements.txt" style="max-width:100%;"></a>
+        </br>
 </p>
 </p>
+
 
 Introduction
 ------------

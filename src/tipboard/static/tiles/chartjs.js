@@ -16,6 +16,20 @@ function pieChartPluginPercentge() {
     };
 }
 
+function createDatasetLine(data, listOfDataset) {
+    let tile = {
+        labels: data.labels,
+        datasets: listOfDataset,
+    };
+    if ("title" in data) {
+        tile.title = data.title;
+    }
+    if ("legend" in data) {
+        tile.legend = data.legend;
+    }
+    return tile
+}
+
 /**
  * Update for tile cumulative_flow & line_chartjs
  * @param data
@@ -39,17 +53,7 @@ function updateDatasetLine(data, tileType) {
         }
         listOfDataset.push(datasetTmp);
     });
-    let tile = {
-        labels: data.labels,
-        datasets: listOfDataset,
-    };
-    if ("title" in data) {
-        tile.title = data.title;
-    }
-    if ("legend" in data) {
-        tile.legend = data.legend;
-    }
-    return tile;
+    return createDatasetLine(data, listOfDataset);
 }
 
 function updateDataset(chart, newDict) {
@@ -151,9 +155,8 @@ function getTypeOfChartJS(tileType) {
         case "cumulative_flow":
             return "line";
         case "vbar_chart":
-            return "bar";
         case "bar_chart":
-            return "horizontalBar";
+            return ("bar_chart" === tileType ? "bar" : "horizontalBar");
         case "gauge_chart":
             return "tsgauge";
         case "radial_gauge_chart":
