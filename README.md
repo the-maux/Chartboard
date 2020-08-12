@@ -70,7 +70,7 @@ Depot Github
 License
 -------
 
-Tipboard is licensed under the [Apache License, v2.0](http://tipboard.readthedocs.org/en/latest/license.html).
+Chartboard is licensed under the [Apache License, v2.0](http://tipboard.readthedocs.org/en/latest/license.html).
 
 Copyright (c) 2013-2017 [Allegro Group](http://allegrogroup.com).
 
