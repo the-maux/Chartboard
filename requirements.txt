@@ -1,6 +1,6 @@
 redis==3.5.3
 asgiref==3.2.10
-django==3.1
+django==3.1.1
 channels==2.4.0
 channels_redis==3.0.1
 PyYAML==5.3.1
