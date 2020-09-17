@@ -72,8 +72,8 @@ License
 
 Tipboard is licensed under the [Apache License, v2.0](http://tipboard.readthedocs.org/en/latest/license.html).
 
-Copyright (c) 2013-2017 [Allegro Group](http://allegrogroup.com).
-Chartboard 2019-2021 M.I.T License
+Copyright (c) 2013-2017 [Allegro Group](http://allegrogroup.com).  
+Copyright (c) 2019-2021 the-maux
 
 
 [1]: https://travis-ci.com/the-maux/tipboard.svg?branch=develop
