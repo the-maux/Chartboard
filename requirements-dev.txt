@@ -7,7 +7,7 @@ django_prometheus==2.1.0
 django-swagger-render==0.1.0
 
 channels==2.4.0
-channels_redis==3.1.0
+channels_redis==3.2.0
 PyYAML==5.3.1
 whitenoise==5.2.0
 
