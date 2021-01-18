@@ -7,7 +7,8 @@ layout:
       - col:
           - tile_template: stream
             tile_id: stream_ex
-
+            meta:
+              - url: https://video-auth1.iol.pt/beachcam/montalivet/chunks.m3u8
 
       - col:
           - tile_template: stream

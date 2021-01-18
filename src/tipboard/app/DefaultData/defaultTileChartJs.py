@@ -13,7 +13,8 @@ def getDefaultLineChart():
             'datasets': [
                 buildDatasetLine(index=0, randomData=True, labelLenght=25),
                 buildDatasetLine(index=1, randomData=True, labelLenght=25)
-            ]
+            ],
+            'wasTileUpdatedSinceBoot': False
         },
         'meta': {
             'options': {
@@ -35,7 +36,8 @@ def getDefaultCumulFlow():
             'datasets': [
                 buildDatasetCumulFlow(index=0, randomData=True, labelLenght=10),
                 buildDatasetCumulFlow(index=1, randomData=True, labelLenght=10)
-            ]
+            ],
+            'wasTileUpdatedSinceBoot': False
         },
         'meta': {
             'options': {
@@ -58,7 +60,8 @@ def getDefaultNormChart():
             'datasets': [
                 buildDatasetNorm(index=0, randomData=True, labelLenght=6),
                 buildDatasetNorm(index=1, randomData=True, labelLenght=6)
-            ]
+            ],
+            'wasTileUpdatedSinceBoot': False
         },
         'meta': {
             'backgroundColor': COLOR_TAB,
@@ -81,7 +84,8 @@ def getDefaultBarChart():
             'datasets': [
                 buildDatasetBar(index=0, randomData=True, labelLenght=3),
                 buildDatasetBar(index=1, randomData=True, labelLenght=3)
-            ]
+            ],
+            'wasTileUpdatedSinceBoot': False
         },
         'meta': {
             'options': {
@@ -99,7 +103,8 @@ def getDefaultPieChart():
     return {
         'data': {
             'title': {'display': True, 'text': 'PieChart Demo'}, 'labels': [f'Label {i + 1}' for i in range(5)],
-            'borderColor': '#626262', 'datasets': [buildDatasetPie(randomData=True, labelLenght=5)]
+            'borderColor': '#626262', 'datasets': [buildDatasetPie(randomData=True, labelLenght=5)],
+            'wasTileUpdatedSinceBoot': False
         },
         'meta': {
             'responsive': True, 'maintainAspectRatio': False, 'backgroundColor': COLOR_TAB,
@@ -114,7 +119,8 @@ def getDefaultDoughnutChart():
         'data': {
             'title': {'display': True, 'text': 'Doughnut Demo'},
             'datasets': [buildDatasetDoughnut(randomData=False, labelLenght=8)],
-            'labels': [f'Label {i + 1}' for i in range(8)]
+            'labels': [f'Label {i + 1}' for i in range(8)],
+            'wasTileUpdatedSinceBoot': False
         },
         'meta': {
             'options': {
@@ -129,7 +135,8 @@ def getDefaultRadialGaugeChart():
     return {
         'data': {
             'title': {'display': True, 'text': 'Radial Gauge Demo'}, 'labels': ['Label 1'],
-            'datasets': [{'data': [42], 'label': 'Label'}]
+            'datasets': [{'data': [42], 'label': 'Label'}],
+            'wasTileUpdatedSinceBoot': False
         },
         'meta': {
             'options': {
@@ -154,7 +161,8 @@ def getDefaultLinearGaugeChart():
                 {'label': 'data 1', 'data': [370], 'backgroundColor': COLOR_TAB[0], 'offset': 10, 'width': 10},
                 {'label': 'data 2', 'data': [170], 'backgroundColor': COLOR_TAB[1], 'offset': 21, 'width': 10},
                 {'label': 'data 3', 'data': [270], 'backgroundColor': COLOR_TAB[2], 'offset': 32, 'width': 10}
-            ]
+            ],
+            'wasTileUpdatedSinceBoot': False
         },
         'meta': {
             'options': {'responsive': True, 'maintainAspectRatio': False, 'scale': {'horizontal': True}}
@@ -177,7 +185,8 @@ def getDefaultTsGaugeChart():
                     'backgroundColor': ['#0fdc63', '#fd9704', '#ff7143'], 'borderWidth': 0,
                     'gaugeData': {'value': 7777, 'valueColor': '#ff7143'}, 'gaugeLimits': [0, 3000, 7000, 10000]
                 }
-            ]
+            ],
+            'wasTileUpdatedSinceBoot': False
         },
         'meta': {'options': {'responsive': True, 'maintainAspectRatio': False, 'events': list(), 'showMarkers': True}}
     }
@@ -191,7 +200,8 @@ def getDefaultRadarChart():
             'datasets': [
                 buildDatasetRadar(index=0, randomData=True, labelLenght=5),
                 buildDatasetRadar(index=1, randomData=True, labelLenght=5)
-            ]
+            ],
+            'wasTileUpdatedSinceBoot': False
         },
         'meta': {
             'options': {
@@ -210,7 +220,8 @@ def getDefaultPolarareaChart():
         'data': {
             'title': {'display': True, 'text': 'Polar area Demo'},
             'labels': [f'Serie {i + 1}' for i in range(4)],
-            'datasets': [buildDatasetPolararea(randomData=True, labelLenght=4)]
+            'datasets': [buildDatasetPolararea(randomData=True, labelLenght=4)],
+            'wasTileUpdatedSinceBoot': False
         },
         'meta': {
             'options': {
