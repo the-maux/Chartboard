@@ -3,5 +3,5 @@ django==3.1.6
 asgiref==3.3.1
 channels==3.0.3
 channels_redis==3.2.0
-PyYAML==5.4
+PyYAML==5.4.1
 whitenoise==5.2.0
