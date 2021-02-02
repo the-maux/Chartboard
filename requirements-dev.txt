@@ -1,22 +1,22 @@
 redis==3.5.3
 asgiref==3.3.1
 
-django-cors-headers==3.6.0
-django==3.1.5
+django-cors-headers==3.7.0
+django==3.1.6
 django_prometheus==2.1.0
 django-swagger-render==0.1.0
 
 channels==3.0.3
 channels_redis==3.2.0
-PyYAML==5.3.1
+PyYAML==5.4.1
 whitenoise==5.2.0
 
 # Sensors
 lorem==0.1.1
 requests==2.25.1
-apscheduler==3.6.3
+apscheduler==3.7.0
 
 # Unit-Tests remove on prod
-pytest==6.2.0
+pytest==6.2.2
 pytest-django==4.1.0
 pytest-asyncio==0.14.0
