@@ -20,7 +20,7 @@ def renderDashboardHtmlUniqueDashboard(request, layout_name='default_config', is
     """
     config = parseXmlLayout(layout_name)
     if config is not None:
-        color_mode = "black"
+        color_mode = "black"  # default color
         title = layout_name
         if 'details' in config:
             title = config['details']['page_title'] if 'page_title' in config['details'] else layout_name

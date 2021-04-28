@@ -14,6 +14,8 @@ from src.tipboard.app.properties import COLOR_TAB
 #         "pointBackgroundColor": "rgba(255, 255, 255, 0.5)"
 #       },
 #     ]
+# There is one additional Value "wasTileUpdatedSinceBoot":
+# - to check if we need to override the value in reddis by the value in the config.yml
 
 
 def getRandomData(minLenght=0, maxLenght=100, labelLenght=1):
@@ -26,7 +28,7 @@ def buildDatasetLine(index=0, randomData=False, labelLenght=24):
                 label=f'Line {index + 1}',
                 backgroundColor=COLOR_TAB[index],
                 fill=False,
-                borderColor=COLOR_TAB[index])
+                borderColor=COLOR_TAB[index], wasTileUpdatedSinceBoot=False)
 
 
 def buildDatasetCumulFlow(index=0, randomData=False, labelLenght=9):
@@ -34,7 +36,7 @@ def buildDatasetCumulFlow(index=0, randomData=False, labelLenght=9):
                 label=f'Cumul {index + 1}',
                 borderColor=COLOR_TAB[index],
                 backgroundColor=COLOR_TAB[index],
-                fill=True)
+                fill=True, wasTileUpdatedSinceBoot=False)
 
 
 def buildDatasetNorm(index=0, randomData=False, labelLenght=5):
@@ -42,43 +44,47 @@ def buildDatasetNorm(index=0, randomData=False, labelLenght=5):
                 label=f'Series {index + 1}',
                 fill=False,
                 backgroundColor=COLOR_TAB[index],
-                borderColor=COLOR_TAB[index])
+                borderColor=COLOR_TAB[index], wasTileUpdatedSinceBoot=False)
 
 
 def buildDatasetBar(index=0, randomData=False, labelLenght=3):
     return dict(data=[49, 50, 35] if randomData is False else getRandomData(5, 30, labelLenght),
-                label=f'Series {index + 1}', backgroundColor=COLOR_TAB[index])
+                label=f'Series {index + 1}', backgroundColor=COLOR_TAB[index], wasTileUpdatedSinceBoot=False)
 
 
 def buildDatasetPolararea(index=0, randomData=False, labelLenght=5):
     return dict(label=f'Section {index}', backgroundColor=COLOR_TAB, borderColor=COLOR_TAB,
-                data=[10, 29, 40] if randomData is False else getRandomData(100, 1000, labelLenght))
+                data=[10, 29, 40] if randomData is False else getRandomData(100, 1000, labelLenght),
+                wasTileUpdatedSinceBoot=False)
 
 
 def buildDatasetPie(index=0, randomData=False, labelLenght=3):
     return dict(label=f'Section {index}', borderColor='#626262', backgroundColor=COLOR_TAB,
-                data=[10, 29, 40] if randomData is False else getRandomData(100, 1000, labelLenght), borderWidth=1)
+                data=[10, 29, 40] if randomData is False else getRandomData(100, 1000, labelLenght), borderWidth=1,
+                wasTileUpdatedSinceBoot=False)
 
 
 def buildDatasetDoughnut(index=0, randomData=False, labelLenght=4):
     return dict(backgroundColor=COLOR_TAB, borderColor="#626262",
                 data=[895, 1478, 1267, 895, 734, 1056, 895, 1056] if randomData is False
                 else getRandomData(100, 150, labelLenght),
-                label=f'Doughnut {index + 1}')
+                label=f'Doughnut {index + 1}',
+                wasTileUpdatedSinceBoot=False)
 
 
 def buildDatasetRadar(index=0, randomData=False, labelLenght=5):
     return dict(label=f'Series {index + 1}', fill=True,
                 data=[18, 10, 36, 36, 40] if randomData is False else getRandomData(4, 50, labelLenght),
                 backgroundColor=COLOR_TAB[index], pointBackgroundColor='rgba(255, 255, 255, 0.5)',
-                pointBorderColor=COLOR_TAB[index], borderColor=COLOR_TAB[index])
+                pointBorderColor=COLOR_TAB[index], borderColor=COLOR_TAB[index], wasTileUpdatedSinceBoot=False)
 
 
 def buildDatasetLinearGauge(index=0, randomData=False, labelLenght=1):
     return dict(label=f'Series {index + 1}', fill=True,
                 data=42 if randomData is False else getRandomData(100, 500, labelLenght),
                 backgroundColor=COLOR_TAB[index], borderColor='#626262', borderWidth=1,
-                pointBorderColor=COLOR_TAB[index], pointBackgroundColor='rgba(255, 255, 255, 0.5)')
+                pointBorderColor=COLOR_TAB[index], pointBackgroundColor='rgba(255, 255, 255, 0.5)',
+                wasTileUpdatedSinceBoot=False)
 
 
 def buildGenericDataset(tile_template):
