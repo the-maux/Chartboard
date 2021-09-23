@@ -13,7 +13,7 @@ whitenoise==5.3.0
 # Sensors
 lorem==0.1.1
 requests==2.26.0
-apscheduler==3.7.0
+apscheduler==3.8.0
 
 # Unit-Tests remove on prod
 pytest-asyncio==0.15.1
