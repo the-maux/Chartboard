@@ -1,4 +1,4 @@
-redis==3.5.3
+redis==4.0.0
 asgiref==3.4.1
 
 django-cors-headers==3.8.0
