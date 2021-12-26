@@ -3,7 +3,7 @@ asgiref==3.4.1
 
 django-cors-headers==3.8.0
 django==3.2.7
-django_prometheus==2.1.0
+django_prometheus==2.2.0
 
 channels==3.0.4
 channels_redis==3.3.0
