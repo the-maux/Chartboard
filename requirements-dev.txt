@@ -16,6 +16,6 @@ requests==2.26.0
 apscheduler==3.7.0
 
 # Unit-Tests remove on prod
-pytest-asyncio==0.15.1
+pytest-asyncio==0.17.1
 pytest-django==4.4.0
 pytest==6.2.5
