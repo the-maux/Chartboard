@@ -1,7 +1,7 @@
 asgiref==3.5.0
 redis==4.1.4
 
-django-cors-headers==3.8.0
+django-cors-headers==3.11.0
 django==3.2.12
 django_prometheus==2.1.0
 
