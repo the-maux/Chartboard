@@ -4,4 +4,4 @@ channels==3.0.4
 asgiref==3.4.1
 channels_redis==3.3.0
 PyYAML==5.4.1
-whitenoise==5.3.0
+whitenoise==6.0.0
