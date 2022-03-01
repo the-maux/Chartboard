@@ -13,7 +13,7 @@ whitenoise==6.0.0
 # Sensors
 lorem==0.1.1
 requests==2.27.1
-apscheduler==3.9.0.post1
+apscheduler==3.9.1
 
 # Unit-Tests remove on prod
 pytest-django==4.5.2
