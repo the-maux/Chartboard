@@ -1,5 +1,5 @@
 redis==4.1.4
-django==3.2.12
+django==4.0.3
 channels==3.0.4
 
 channels_redis==3.3.1
