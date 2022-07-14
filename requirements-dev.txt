@@ -6,7 +6,7 @@ django-cors-headers==3.13.0
 django==4.0.6
 
 channels==3.0.5
-channels_redis==3.4.0
+channels_redis==3.4.1
 PyYAML==6.0
 whitenoise==6.2.0
 
