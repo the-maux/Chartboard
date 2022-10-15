@@ -1,6 +1,6 @@
 redis==4.3.4
 django==4.1
-channels==3.0.5
+channels==4.0.0
 
 channels_redis==3.4.1
 PyYAML==6.0
