@@ -1,4 +1,4 @@
-redis==4.3.4
+redis==4.4.4
 asgiref==3.5.2
 
 django_prometheus==2.2.0
