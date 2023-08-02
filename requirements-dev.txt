@@ -6,7 +6,7 @@ django==4.1.7
 channels_redis==4.1.0
 channels==4.0.0
 PyYAML==6.0
-whitenoise==6.2.0
+whitenoise==6.5.0
 
 # Sensors
 lorem==0.1.1
