@@ -11,7 +11,6 @@ def end(title=None, startTime=None, tipboardAnswer=None, tileId=None):
             duration = time.time() - startTime
             m = str(duration / 60)[:str(duration / 60).index('.')]
             s = str(duration % 60)[:str(duration % 60).index('.')]
-            print(f'[INFO] {getTimeStr()}-{title}: executed script in {m}min & {s} second', flush=True)
 
 
 def getTimeStr():

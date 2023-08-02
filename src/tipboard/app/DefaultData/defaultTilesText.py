@@ -7,7 +7,8 @@ def getDefaultBigValue():
             'lower-left-label': 'lower left-label',
             'upper-left-label': 'upper left-label',
             'upper-right-label': 'upper right-label',
-            'lower-right-label': 'lower right-label'
+            'lower-right-label': 'lower right-label',
+            'wasTileUpdatedSinceBoot': False
         },
         'meta': dict(big_value_color='#4CAF50', fading_background=True),
     }
@@ -22,7 +23,8 @@ def getDefaultSimplePercentg():
             'right_value': 'right_value',
             'right_label': 'right_label',
             'left_label': 'left_label',
-            'left_value': 'left_value'
+            'left_value': 'left_value',
+            'wasTileUpdatedSinceBoot': False
         },
         'meta': dict(big_value_color='#4CAF50', fading_background=False),
     }
@@ -33,7 +35,8 @@ def getDefaultJustValue():
         'data': {
             'title': 'Title',
             'description': 'Description',
-            'just-value': '51'
+            'just-value': '51',
+            'wasTileUpdatedSinceBoot': False
         },
         'meta': dict(big_value_color='#d50000', fading_background=True),
     }
@@ -41,7 +44,7 @@ def getDefaultJustValue():
 
 def getDefaultText():
     return {
-        'data': dict(text='Text auto generated text tile')
+        'data': dict(text='Text auto generated text tile', wasTileUpdatedSinceBoot=False)
     }
 
 
@@ -54,12 +57,13 @@ def getDefaultListing():
                 'Scrum Master: 1',
                 'Developer: 1',
                 'U.X: 1'
-            ]
+            ],
+            'wasTileUpdatedSinceBoot': False
         }
     }
 
 
 def getDefaultCustomTile():
     return {
-        'data': dict(text='Text auto generated For custom tile')
+        'data': dict(text='Text auto generated For custom tile', wasTileUpdatedSinceBoot=False)
     }

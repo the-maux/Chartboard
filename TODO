@@ -1,0 +1,36 @@
+META IN CONFIG:
+dans streams.yaml, tu ne eux pas spécifier dans le config, l'url directement... ce qui est trés chiant
+Ne faite pas toutes les tiles, mais pour reprendre le code en main, ajoute cette meta depuis le fichire de config
+
+- il faut ajouter une variable a toutes les fonctions de générations par defaul dune tile pour ajouter cette new variable: OK
+
+- [ ] il faut a chaques lancement clean cette variable dans TOUTE les tiles
+pour dire que la variable na pas été reset depuis le lancement
+et que donc on peut lire la variable meta dans le config puis la set dans le reddis
+
+mais il y a deux facon de le génerer,
+- par defaut si la tile nexiste pas dans le redis et qu'une valeur meta est présente dans le .yaml
+- si la tile existe dans le redis mais que Chartboard vient detre lancé et qu'une valeur meta dans .yaml existe
+il faut donc la set dans le reddis a la place de la valeur précédente
+
+- [ ] dans parser.py, si la variable est à False alors set la valeur de meta, sinon ne rien faire
+Si tu vas plus loin ca erase ecrite par les sensors car cest reload a chaque changement de screen
+
+
+
+
+
+
+
+
+
+
+
+
+
+REDIS INIT BUG:
+Depuis que tu as installé redis server sur windows en local... tu n'as plus le probleme
+Donc ce que le process windows pycharm a du mal a close le redis-server (in WSL)
+Je pense qu'il va falloir documenter et enlever du code les automatisation de lancement de server ...
+
+
