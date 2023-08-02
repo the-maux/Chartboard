@@ -1,4 +1,4 @@
-redis==4.3.4
+redis==4.3.6
 django==4.1.7
 channels==4.0.0
 channels_redis==3.4.1
