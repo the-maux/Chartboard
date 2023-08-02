@@ -34,7 +34,7 @@ def add_template_and_id(little_dict, tile_id, template_name):
     return little_dict
 
 
-def buildSwicthPythonFfso_o():
+def ptrToFunctionDefaultData():
     return dict(pie_chart=getDefaultPieChart,
                 line_chart=getDefaultLineChart,
                 cumulative_flow=getDefaultCumulFlow,
@@ -60,7 +60,7 @@ def buildSwicthPythonFfso_o():
 
 
 def buildFakeDataFromTemplate(tile_id, template_name, cache):
-    ptrToFuncUpdateTile = buildSwicthPythonFfso_o()
+    ptrToFuncUpdateTile = ptrToFunctionDefaultData()  # switch in python are ... 0_0
     if template_name in ptrToFuncUpdateTile:
         functionTileUpdate = ptrToFuncUpdateTile[template_name]
         tileData = add_template_and_id(functionTileUpdate(), tile_id, template_name)

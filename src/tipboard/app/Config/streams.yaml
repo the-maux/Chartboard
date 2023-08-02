@@ -5,14 +5,14 @@ layout:
   - row:
 
       - col:
-          - tile_template: listing
-            tile_id: listing_ex
-            title: listing
+          - tile_template: stream
+            tile_id: stream_ex
+            meta:
+              - url: https://video-auth1.iol.pt/beachcam/montalivet/chunks.m3u8
 
       - col:
-          - tile_template: iframe
-            tile_id: iframe_ex
-            title: Exemple Iframe
+          - tile_template: stream
+            tile_id: stream_ex
 
   - row:
       - col:
