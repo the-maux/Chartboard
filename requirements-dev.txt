@@ -13,7 +13,7 @@ whitenoise==6.5.0
 lorem==0.1.1
 
 requests==2.31.0
-apscheduler==3.10.1
+apscheduler==3.10.2
 
 # Unit-Tests remove on prod
 pytest-django==4.5.2
