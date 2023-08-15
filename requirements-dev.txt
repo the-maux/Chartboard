@@ -1,4 +1,4 @@
-redis==4.6.0
+redis==5.0.0
 asgiref==3.7.2
 django_prometheus==2.3.1
 django-cors-headers==4.2.0
