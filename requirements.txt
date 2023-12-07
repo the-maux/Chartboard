@@ -1,10 +1,10 @@
-django==4.2.4
+django==4.2.7
 PyYAML==6.0.1
-redis==4.6.0
+redis==5.0.1
 channels_redis==4.1.0
 channels==4.0.0
-whitenoise==6.5.0
+whitenoise==6.6.0
 asgiref==3.7.2
 
-twisted>=22.4.0rc1 # not directly required, pinned by Snyk to avoid a vulnerability
+twisted>=23.10.0rc1 # not directly required, pinned by Snyk to avoid a vulnerability
 setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
