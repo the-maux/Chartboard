@@ -58,7 +58,7 @@ Depot Github
 
 
 <p align="center"> 
-  <img alt="Chartboard ChartJS" src="https://github.com/the-maux/Chartboard/blob/develop/src/Chartboard/tipboard.png"/> 
+  <img alt="Chartboard ChartJS" src="https://github.com/the-maux/Chartboard/blob/develop/src/Chartboard/Chartboard.png"/> 
 </p>
 
 
