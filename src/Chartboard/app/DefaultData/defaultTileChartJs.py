@@ -1,8 +1,8 @@
-from src.tipboard.app.DefaultData.chartJsDatasetBuilder import buildDatasetBar, buildDatasetCumulFlow, \
+from src.Chartboard.app.DefaultData.chartJsDatasetBuilder import buildDatasetBar, buildDatasetCumulFlow, \
     buildDatasetDoughnut
-from src.tipboard.app.DefaultData.chartJsDatasetBuilder import buildDatasetLine, buildDatasetNorm, buildDatasetPolararea
-from src.tipboard.app.DefaultData.chartJsDatasetBuilder import buildDatasetRadar, buildDatasetPie
-from src.tipboard.app.properties import COLOR_TAB
+from src.Chartboard.app.DefaultData.chartJsDatasetBuilder import buildDatasetLine, buildDatasetNorm, buildDatasetPolararea
+from src.Chartboard.app.DefaultData.chartJsDatasetBuilder import buildDatasetRadar, buildDatasetPie
+from src.Chartboard.app.properties import COLOR_TAB
 
 
 def getDefaultLineChart():

@@ -1,6 +1,6 @@
 import time
 from src.sensors.utils import end, sendUpdateByApi, updateChartJS
-from src.tipboard.app.properties import COLOR_TAB
+from src.Chartboard.app.properties import COLOR_TAB
 
 
 def sonde14(tester=None, tile_id='radar_ex'):

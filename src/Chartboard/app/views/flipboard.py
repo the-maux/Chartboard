@@ -1,11 +1,11 @@
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
-from src.tipboard.app.parser import parseXmlLayout, getConfigNames, getFlipboardTitles
-from src.tipboard.app.properties import TIPBOARD_CSS_STYLES, FLIPBOARD_INTERVAL, TIPBOARD_JAVASCRIPT_FILES
+from src.Chartboard.app.parser import parseXmlLayout, getConfigNames, getFlipboardTitles
+from src.Chartboard.app.properties import TIPBOARD_CSS_STYLES, FLIPBOARD_INTERVAL, TIPBOARD_JAVASCRIPT_FILES
 
 
 def renderFlipboardHtml(request):
-    """ Render the home page(Html flipboard), and start the javascript tipboard mecanism """
+    """ Render the home page(Html flipboard), and start the javascript Chartboard mecanism """
     return render(request, 'flipboard.html',
                   dict(page_title='Tipboard',
                        flipboard_interval=FLIPBOARD_INTERVAL,
@@ -46,7 +46,7 @@ def renderDashboardHtmlForFlipboard(request, layout_name='default_config'):
 
 def getDashboardsPaths(request):
     """
-        Return the path of layout prensent in the ./tipboard/app/Config
+        Return the path of layout prensent in the ./Chartboard/app/Config
         Used in layout.js function(getDashboardsByApi) to flip between all dashboard(*.yml) in /Config
     """
     paths = ['/' + config_name for config_name in getConfigNames()]

@@ -1,5 +1,5 @@
 import random
-from src.tipboard.app.properties import COLOR_TAB
+from src.Chartboard.app.properties import COLOR_TAB
 
 # Datasets is always an arrays with the always the same possible value for different chart
 # Every dataset is a dict, go to chartJS documentation to see the possibility

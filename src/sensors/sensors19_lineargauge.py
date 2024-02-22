@@ -1,6 +1,6 @@
 import time, random
 from src.sensors.utils import end, sendUpdateByApi, updateChartJS
-from src.tipboard.app.properties import COLOR_TAB
+from src.Chartboard.app.properties import COLOR_TAB
 
 
 def sonde19(tester=None, tile_id='lgauge_ex'):

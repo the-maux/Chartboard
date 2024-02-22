@@ -1,12 +1,12 @@
 import datetime, json, requests, time, random
-from src.tipboard.app.properties import TIPBOARD_URL, COLOR_TAB, LOG
+from src.Chartboard.app.properties import TIPBOARD_URL, COLOR_TAB, LOG
 
 
 def end(title=None, startTime=None, tipboardAnswer=None, tileId=None):
-    """ Eazy way to end sensors, print the action time & http answer of tipboard """
+    """ Eazy way to end sensors, print the action time & http answer of Chartboard """
     if LOG:
         if tipboardAnswer.status_code != 200:
-            print(f'[ERROR] POST tile:{tileId} tipboard/push => ({tipboardAnswer.status_code}): ', flush=True)
+            print(f'[ERROR] POST tile:{tileId} Chartboard/push => ({tipboardAnswer.status_code}): ', flush=True)
         else:
             duration = time.time() - startTime
             m = str(duration / 60)[:str(duration / 60).index('.')]

@@ -1,5 +1,5 @@
 import glob, os, yaml
-from src.tipboard.app.properties import CONF_DIR, BASIC_CONFIG
+from src.Chartboard.app.properties import CONF_DIR, BASIC_CONFIG
 
 
 # def update_tile_data_from_xml(layoutName, listTiles):

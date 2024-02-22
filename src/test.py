@@ -2,13 +2,13 @@ import json, time, os
 from django.test import RequestFactory, SimpleTestCase, Client
 from apscheduler.schedulers.background import BackgroundScheduler
 from src.manage import show_help
-from src.tipboard.templates.template_filter import template_tile_data, template_tile_dashboard
-from src.tipboard.app.properties import ALLOWED_TILES
-from src.tipboard.app.DefaultData.defaultTileControler import buildFakeDataFromTemplate
-from src.tipboard.app.parser import getDashboardName, getConfigNames, parseXmlLayout
-from src.tipboard.app.cache import MyCache
-from src.tipboard.app.cache import listOfTilesFromLayout
-from src.tipboard.app.applicationconfig import getRedisPrefix
+from src.Chartboard.templates.template_filter import template_tile_data, template_tile_dashboard
+from src.Chartboard.app.properties import ALLOWED_TILES
+from src.Chartboard.app.DefaultData.defaultTileControler import buildFakeDataFromTemplate
+from src.Chartboard.app.parser import getDashboardName, getConfigNames, parseXmlLayout
+from src.Chartboard.app.cache import MyCache
+from src.Chartboard.app.cache import listOfTilesFromLayout
+from src.Chartboard.app.applicationconfig import getRedisPrefix
 from src.sensors.sensors1_text import sonde1
 from src.sensors.sensors2_piechart import sonde2
 from src.sensors.sensors3_linechart import sonde3
@@ -24,7 +24,7 @@ from src.sensors.sensors15_polarchart import sonde15
 from src.sensors.sensors16_dougnutchart import sonde16
 from src.sensors.sensors17_halfdougnutchart import sonde17
 from src.sensors.sensors_main import scheduleYourSensors, test_sensors
-from src.tipboard.app.views.wshandler import WSConsumer
+from src.Chartboard.app.views.wshandler import WSConsumer
 
 
 def testTileUpdate(tester=None, tileId='test_pie_chart', sonde=None, isChartJS=True):

@@ -1,29 +1,27 @@
 <p align="center">
-    <img alt="Tipboard" src="https://i.ibb.co/Fx6FykP/image-5.png"/>
+    <img alt="Chartboard" src="https://i.ibb.co/Fx6FykP/image-5.png"/>
 <p align="center">
-    <a href="https://gitter.im/tipboard-dev/community">
-        <img alt="Chat" src="https://img.shields.io/gitter/room/DAVFoundation/DAV-Contributors.svg?style=flat-square"></a>
-    <a href="https://github.com/the-maux/tipboard"> <img alt="Github" src="https://img.shields.io/github/v/release/the-maux/tipboard"></a>
-    <a href="https://pypi.org/project/tipboard2.0/"> <img alt="Pypi" src="https://badge.fury.io/py/tipboard2.0.svg"></a>
+    <a href="https://gitter.im/tipboard-dev/community">  <img alt="Chat" src="https://img.shields.io/gitter/room/DAVFoundation/DAV-Contributors.svg?style=flat-square"></a>
+    <!--a href="https://github.com/the-maux/Chartboard"> <img alt="Github" src="https://img.shields.io/github/v/release/the-maux/Chartboard"></a-->
+    <!--a href="https://pypi.org/project/Chartboard/"> <img alt="Pypi" src="https://badge.fury.io/py/Chartboard.svg"></a-->
     </br>
-    <a href="https://allegro.tech/tipboard/">
-        <img src="http://hits.dwyl.io/themaux/tipboard.svg"></a>
-    <a href=""> <img alt="pypi" src="https://img.shields.io/pypi/dm/tipboard.svg"></a>
-    <a href=""><img alt="docker" src="https://img.shields.io/docker/pulls/themaux/tipboard"></a>
+    <a href="https://allegro.tech/tipboard/"> <img src="http://hits.dwyl.io/themaux/Chartboard.svg"></a>
+    <!--a href=""> <img alt="pypi" src="https://img.shields.io/pypi/dm/Chartboard.svg"></a-->
+    <a href=""><img alt="docker" src="https://img.shields.io/docker/pulls/themaux/Chartboard"></a>
         </br>
-        <a href="https://www.codefactor.io/repository/github/the-maux/chartboard"><img src="https://www.codefactor.io/repository/github/the-maux/chartboard/badge" alt="CodeFactor"/></a>
+        <a href="https://www.codefactor.io/repository/github/the-maux/Chartboard"><img src="https://www.codefactor.io/repository/github/the-maux/chartboard/badge" alt="CodeFactor"/></a>
         <a href="https://codebeat.co/projects/github-com-the-maux-chartboard-master"><img alt="" src="https://codebeat.co/badges/c4c5bd91-dff5-48f8-b7ba-828ad3a82d33"/></a>
         <a href="https://www.codacy.com/manual/the-maux/Chartboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=the-maux/Chartboard&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/134c5656546240f5aa21d19583095de0"/></a>        
         <a href="https://deepscan.io/dashboard#view=project&tid=6043&pid=10798&bid=154148"> <img src="https://deepscan.io/api/teams/6043/projects/10798/branches/154148/badge/grade.svg"  alt="DeepScan grade"></a>
         </br>
         <a href="https%3A%2F%2Fg.codefresh.io%2Fpipelines%2FProd%20mode%20unit%20test%2Fbuilds%3Ffilter%3Dtrigger%3Abuild~Build%3Bpipeline%3A5ecd47ed28b46d266427b4b5~Prod%20mode%20unit%20test"> <img alt="Codefresh" src="https://g.codefresh.io/api/badges/pipeline/themaux/chartboard%2FProd%20mode%20unit%20test?key=eyJhbGciOiJIUzI1NiJ9.NWQ5NDkxYzg1YzI5YzVmOWQyODQ0MDc4.rDj-1Rn5DxSkv_oE8p87ijZhoTelE_WjvbbKWMCI3ZA&type=cf-1"></a>
-        <a href="https://travis-ci.com/the-maux/tipboard"> <img alt="Travis" src="https://travis-ci.com/the-maux/tipboard.svg?branch=develop"></a>
-        <a> <img src="https://github.com/the-maux/Chartboard/workflows/Docker%20Unit-test/badge.svg">
+        <!--a href="https://travis-ci.com/the-maux/Chartboard"> <img alt="Travis" src="https://travis-ci.com/the-maux/Chartboard.svg?branch=develop"></a-->
+        <!--a> <img src="https://github.com/the-maux/Chartboard/workflows/Docker%20Unit-test/badge.svg"-->
         </br>
 <a href="https://codeclimate.com/github/the-maux/Chartboard/maintainability"><img src="https://api.codeclimate.com/v1/badges/bed95ca87346ad080708/maintainability"/></a>
         <a href="https://codeclimate.com/github/the-maux/Chartboard/test_coverage"><img src="https://api.codeclimate.com/v1/badges/bed95ca87346ad080708/test_coverage"/></a>
         </br>
-        <a href="https://pyup.io/account/repos/github/the-maux/tipboard/"> <img alt="PyUp" src="https://pyup.io/repos/github/the-maux/Chartboard/shield.svg"></a>
+        <a href="https://pyup.io/account/repos/github/the-maux/Chartboard/"> <img alt="PyUp" src="https://pyup.io/repos/github/the-maux/Chartboard/shield.svg"></a>
         <a href="https://snyk.io/test/github/the-maux/Chartboard?targetFile=requirements.txt"><img 
                 src="https://snyk.io/test/github/the-maux/Chartboard/badge.svg?targetFile=requirements.txt" alt="Known Vulnerabilities"
                 data-canonical-src="https://snyk.io/test/github/the-maux/Chartboard?targetFile=requirements.txt" style="max-width:100%;"></a>
@@ -35,10 +33,10 @@
 Introduction
 ------------
 
-#### Tipboard was create to simplify the creation of your dashboards  
+#### Chartboard was create to simplify the creation of your dashboards  
 Automaticaly **by scripts** (called sensors) **or manually** (*to let everyone use it*)   
 Core code is written in JavaScript and Python, and used many technology (*django, flexbox, bootstrap*).  
-Its widgets (called 'tiles' in Tipboard's terminology) have two categories 'text' and 'chart'  
+Its widgets (called 'tiles' in Chartboard's terminology) have two categories 'text' and 'chart'  
 It's **responsive** but was made for big screen (optimized for larger screens in your office)  
 Tipboard-1.0 code sources has been fully refactored to be:
  - cloud-ready
@@ -46,7 +44,7 @@ Tipboard-1.0 code sources has been fully refactored to be:
  - with native pypi support for pip install and python multi-os continuity
  - build with C.I to assure code quality/security
  
-Wiki is [here](https://github.com/the-maux/tipboard/wiki) (in wip)
+Wiki is [here](https://github.com/the-maux/Chartboard/wiki) (in wip)
 ChartJS demo can be found [here](http://jerairrest.github.io/react-chartjs-2/)
 
 Quick Demo
@@ -54,7 +52,7 @@ Quick Demo
 
 
 <p align="center"> 
-  <img alt="Demo 1" src="https://raw.githubusercontent.com/the-maux/tipboard/develop/src/tipboard/demo.gif"/> 
+  <img alt="Demo" src="https://raw.githubusercontent.com/the-maux/Chartboard/develop/src/Chartboard/demo.gif"/> 
 </p>
 
 
@@ -63,14 +61,14 @@ Depot Github
 
 
 <p align="center"> 
-  <img alt="Tipboard ChartJS" src="https://github.com/the-maux/tipboard/blob/develop/src/tipboard/tipboard.png"/> 
+  <img alt="Chartboard ChartJS" src="https://github.com/the-maux/Chartboard/blob/develop/src/Chartboard/tipboard.png"/> 
 </p>
 
 
 License
 -------
 
-Tipboard is licensed under the [Apache License, v2.0](http://tipboard.readthedocs.org/en/latest/license.html).
+Chartboard is licensed under the [Apache License, v2.0](http://Chartboard.readthedocs.org/en/latest/license.html). (like Tipboard)
 
 Copyright (c) 2013-2017 [Allegro Group](http://allegrogroup.com).  
 Copyright (c) 2019-2021 the-maux
