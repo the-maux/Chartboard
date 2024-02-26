@@ -1,5 +1,5 @@
 import os
-from src.tipboard.app.properties import API_KEY, REDIS_HOST, REDIS_PORT, PATH_FOR_PIP, DEBUG as debug
+from src.Chartboard.app.properties import API_KEY, REDIS_HOST, REDIS_PORT, PATH_FOR_PIP, DEBUG as debug
 
 INSTALLED_APPS = [
     'django.contrib.contenttypes',
@@ -7,7 +7,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'channels',
-    PATH_FOR_PIP + 'tipboard.app.Config',
+    PATH_FOR_PIP + 'Chartboard.app.Config',
 ]
 
 MIDDLEWARE = [
@@ -26,9 +26,9 @@ DEBUG = debug
 ALLOWED_HOSTS = ['*']
 TIME_ZONE = 'Europe/Paris'
 USE_TZ = True
-ROOT_URLCONF = PATH_FOR_PIP + 'tipboard.webserver.urls'
-WSGI_APPLICATION = PATH_FOR_PIP + 'tipboard.webserver.wsgi.application'
-ASGI_APPLICATION = PATH_FOR_PIP + 'tipboard.webserver.routing.application'
+ROOT_URLCONF = PATH_FOR_PIP + 'Chartboard.webserver.urls'
+WSGI_APPLICATION = PATH_FOR_PIP + 'Chartboard.webserver.wsgi.application'
+ASGI_APPLICATION = PATH_FOR_PIP + 'Chartboard.webserver.routing.application'
 
 TEMPLATES = [
     {
@@ -43,7 +43,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
             ],
             'libraries': {
-                'template_filter': PATH_FOR_PIP + 'tipboard.templates.template_filter',
+                'template_filter': PATH_FOR_PIP + 'Chartboard.templates.template_filter',
             }
         },
     },

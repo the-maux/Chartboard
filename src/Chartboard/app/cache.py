@@ -2,11 +2,11 @@ import json, redis
 from datetime import datetime
 from asgiref.sync import async_to_sync
 from channels.layers import get_channel_layer
-from src.tipboard.app.properties import REDIS_DB, REDIS_PASSWORD, REDIS_HOST, REDIS_PORT, DEBUG
-from src.tipboard.app.DefaultData.defaultTileControler import buildFakeDataFromTemplate
-from src.tipboard.app.DefaultData.chartJsDatasetBuilder import buildGenericDataset
-from src.tipboard.app.parser import parseXmlLayout
-from src.tipboard.app.applicationconfig import getRedisPrefix
+from src.Chartboard.app.properties import REDIS_DB, REDIS_PASSWORD, REDIS_HOST, REDIS_PORT, DEBUG
+from src.Chartboard.app.DefaultData.defaultTileControler import buildFakeDataFromTemplate
+from src.Chartboard.app.DefaultData.chartJsDatasetBuilder import buildGenericDataset
+from src.Chartboard.app.parser import parseXmlLayout
+from src.Chartboard.app.applicationconfig import getRedisPrefix
 
 
 def listOfTilesFromLayout(layout_name='default_config'):

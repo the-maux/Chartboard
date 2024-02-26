@@ -1,6 +1,6 @@
 swagger: "2.0"
 info:
-  description: "Full documentation & Wiki on the (github repo)[https://github.com/the-maux/tipboard]"
+  description: "Full documentation & Wiki on the (github repo)[https://github.com/the-maux/Chartboard]"
   version: "1.0.0"
   title: "Tipboard API"
   termsOfService: "http://swagger.io/terms/"

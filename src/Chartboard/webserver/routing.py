@@ -1,6 +1,6 @@
 from channels.auth import AuthMiddlewareStack
 from channels.routing import ProtocolTypeRouter, URLRouter
-import src.tipboard.app.routing
+import src.Chartboard.app.routing
 
 application = ProtocolTypeRouter({
     'websocket': AuthMiddlewareStack(

@@ -1,7 +1,7 @@
 import requests, time, random, lorem, json
-from src.tipboard.app.properties import TIPBOARD_URL
+from src.Chartboard.app.properties import TIPBOARD_URL
 from src.sensors.utils import end
-from src.tipboard.app.DefaultData.defaultTileControler import getDefaultText
+from src.Chartboard.app.DefaultData.defaultTileControler import getDefaultText
 
 
 def executeScriptToGetData(tile_id=None, tile_template=None):

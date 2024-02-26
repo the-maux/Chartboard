@@ -1,8 +1,8 @@
 from channels.generic.websocket import WebsocketConsumer
 from asgiref.sync import async_to_sync
-from src.tipboard.app.applicationconfig import getRedisPrefix
-from src.tipboard.app.cache import MyCache, listOfTilesFromLayout
-from src.tipboard.app.DefaultData.defaultTileControler import buildFakeDataFromTemplate
+from src.Chartboard.app.applicationconfig import getRedisPrefix
+from src.Chartboard.app.cache import MyCache, listOfTilesFromLayout
+from src.Chartboard.app.DefaultData.defaultTileControler import buildFakeDataFromTemplate
 
 
 class WSConsumer(WebsocketConsumer):

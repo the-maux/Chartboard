@@ -1,6 +1,6 @@
 import time, random
 from src.sensors.utils import end, sendUpdateByApi
-from src.tipboard.app.properties import BACKGROUND_TAB
+from src.Chartboard.app.properties import BACKGROUND_TAB
 
 
 def executeScriptToGetData():

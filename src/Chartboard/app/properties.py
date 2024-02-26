@@ -18,7 +18,7 @@ BASIC_CONFIG = os.path.join(CONF_DIR, PROPERTIES['default_config'] if 'default_c
 TIPBOARD_CSS_STYLES = ['css/layout.css']
 TIPBOARD_JAVASCRIPT_FILES = ['js/websocket.js',         # Websocket mecanic
                              'js/style.js',             # color / responsiv / fliping mecanic
-                             'js/tipboard.js',          # all the client tipboard logic is here
+                             'js/Chartboard.js',          # all the client Chartboard logic is here
                              'tiles/chartjs.js',        # simplify the chartJs librari usage
                              'tiles/text_value.js']     # handle all the other tiles mecanic (stream, txt, etc)
 FLIPBOARD_INTERVAL = PROPERTIES['FLIPBOARD_INTERVAL'] if 'FLIPBOARD_INTERVAL' in PROPERTIES else 10
