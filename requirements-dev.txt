@@ -1,5 +1,5 @@
 redis==5.0.1
-asgiref==3.7.2
+asgiref==3.8.0
 django_prometheus==2.3.1
 django==5.0.2
 django-cors-headers==4.3.1
