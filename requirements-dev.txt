@@ -1,5 +1,5 @@
-redis==5.0.1
-asgiref==3.7.2
+asgiref==3.8.1
+redis==5.0.3
 django_prometheus==2.3.1
 django==5.0.4
 django-cors-headers==4.3.1
@@ -15,7 +15,7 @@ requests==2.31.0
 apscheduler==3.10.4
 
 # Unit-Tests remove on prod
-pytest==8.0.2
-pytest-asyncio==0.23.5
-pytest-django==4.8.0
+pytest-asyncio==0.23.6
+pytest==8.1.1
 
+pytest-django==4.8.0

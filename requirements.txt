@@ -1,10 +1,10 @@
 django==5.0.4
 PyYAML==6.0.1
-redis==5.0.1
+redis==5.0.3
 channels_redis==4.2.0
 channels==4.0.0
 whitenoise==6.6.0
-asgiref==3.7.2
+asgiref==3.8.1
 
 twisted>=23.10.0rc1 # not directly required, pinned by Snyk to avoid a vulnerability
 setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
