@@ -1,7 +1,7 @@
 asgiref==3.8.1
 redis==5.0.3
 django_prometheus==2.3.1
-django==5.0.4
+django==5.0.6
 django-cors-headers==4.3.1
 PyYAML==6.0.1
 channels_redis==4.2.0
