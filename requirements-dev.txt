@@ -11,11 +11,9 @@ whitenoise==6.6.0
 # Sensors
 lorem==0.1.1
 
-requests==2.32.0
+requests==2.32.2
 apscheduler==3.10.4
 
 pytest==8.2.1
-=======
 pytest-asyncio==0.23.7
-
 pytest-django==4.8.0
