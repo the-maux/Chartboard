@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="Chartboard" src="https://i.ibb.co/Fx6FykP/image-5.png"/>
+    <!--img alt="Chartboard" src="https://i.ibb.co/Fx6FykP/image-5.png"/-->
 <p align="center">
     <a href="https://gitter.im/tipboard-dev/community">  <img alt="Chat" src="https://img.shields.io/gitter/room/DAVFoundation/DAV-Contributors.svg?style=flat-square"></a>
     <!--a href="https://github.com/the-maux/Chartboard"> <img alt="Github" src="https://img.shields.io/github/v/release/the-maux/Chartboard"></a-->
@@ -35,11 +35,6 @@ Automaticaly **by scripts** (called sensors) **or manually** (*to let everyone u
 Core code is written in JavaScript and Python, and used many technology (*django, flexbox, bootstrap*).  
 Its widgets (called 'tiles' in Chartboard's terminology) have two categories 'text' and 'chart'  
 It's **responsive** but was made for big screen (optimized for larger screens in your office)  
-Tipboard-1.0 code sources has been fully refactored to be:
- - cloud-ready
- - with helm to support multi-cloup
- - with native pypi support for pip install and python multi-os continuity
- - build with C.I to assure code quality/security
  
 Wiki is [here](https://github.com/the-maux/Chartboard/wiki) (in wip)
 ChartJS demo can be found [here](http://jerairrest.github.io/react-chartjs-2/)
