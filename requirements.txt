@@ -3,7 +3,7 @@ PyYAML==6.0.1
 redis==5.0.6
 channels_redis==4.2.0
 channels==4.1.0
-whitenoise==6.6.0
+whitenoise==6.7.0
 asgiref==3.8.1
 
 twisted>=23.10.0rc1 # not directly required, pinned by Snyk to avoid a vulnerability
