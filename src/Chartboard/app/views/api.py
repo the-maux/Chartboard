@@ -1,12 +1,12 @@
 from django.http import JsonResponse, HttpResponseBadRequest, HttpResponse
-from src.tipboard.app.applicationconfig import getRedisPrefix
-from src.tipboard.app.properties import BASIC_CONFIG, REDIS_DB, DEBUG, ALLOWED_TILES, API_KEY
-from src.tipboard.app.cache import MyCache, save_tile
-from src.tipboard.app.parser import getConfigNames
+from src.Chartboard.app.applicationconfig import getRedisPrefix
+from src.Chartboard.app.properties import BASIC_CONFIG, REDIS_DB, DEBUG, ALLOWED_TILES, API_KEY
+from src.Chartboard.app.cache import MyCache, save_tile
+from src.Chartboard.app.parser import getConfigNames
 
 
 def project_info(request):
-    """ Return infos about tipboard server """
+    """ Return infos about Chartboard server """
     cache = MyCache()
     return JsonResponse(dict(is_redis_connected=cache.isRedisConnected,
                              last_update=cache.getLastUpdateTime(),

@@ -1,14 +1,14 @@
 import json
-from src.tipboard.app.applicationconfig import getRedisPrefix
-from src.tipboard.app.DefaultData.defaultTileChartJs import getDefaultPieChart, getDefaultBarChart
-from src.tipboard.app.DefaultData.defaultTileChartJs import getDefaultPolarareaChart, getDefaultRadarChart
-from src.tipboard.app.DefaultData.defaultTileChartJs import getDefaultDoughnutChart, getDefaultLineChart
-from src.tipboard.app.DefaultData.defaultTileChartJs import getDefaultNormChart, getDefaultCumulFlow
-from src.tipboard.app.DefaultData.defaultTileChartJs import getDefaultTsGaugeChart, getDefaultRadialGaugeChart
-from src.tipboard.app.DefaultData.defaultTileChartJs import getDefaultLinearGaugeChart, getDefaultVLinearGaugeChart
-from src.tipboard.app.DefaultData.defaultTilesText import getDefaultText, getDefaultListing, getDefaultJustValue
-from src.tipboard.app.DefaultData.defaultTilesText import getDefaultSimplePercentg, getDefaultBigValue
-from src.tipboard.app.DefaultData.defaultTilesText import getDefaultCustomTile
+from src.Chartboard.app.applicationconfig import getRedisPrefix
+from src.Chartboard.app.DefaultData.defaultTileChartJs import getDefaultPieChart, getDefaultBarChart
+from src.Chartboard.app.DefaultData.defaultTileChartJs import getDefaultPolarareaChart, getDefaultRadarChart
+from src.Chartboard.app.DefaultData.defaultTileChartJs import getDefaultDoughnutChart, getDefaultLineChart
+from src.Chartboard.app.DefaultData.defaultTileChartJs import getDefaultNormChart, getDefaultCumulFlow
+from src.Chartboard.app.DefaultData.defaultTileChartJs import getDefaultTsGaugeChart, getDefaultRadialGaugeChart
+from src.Chartboard.app.DefaultData.defaultTileChartJs import getDefaultLinearGaugeChart, getDefaultVLinearGaugeChart
+from src.Chartboard.app.DefaultData.defaultTilesText import getDefaultText, getDefaultListing, getDefaultJustValue
+from src.Chartboard.app.DefaultData.defaultTilesText import getDefaultSimplePercentg, getDefaultBigValue
+from src.Chartboard.app.DefaultData.defaultTilesText import getDefaultCustomTile
 
 
 def getDefaultStreamTile():

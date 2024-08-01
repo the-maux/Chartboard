@@ -7,7 +7,7 @@ if sys.version_info < (3, 7):
     print('[INFO] Python 3.7+ required.', flush=True)
 
 sys.path.insert(0, os.getcwd())  # Import project to PYTHONPATH
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'src.tipboard.webserver.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'src.Chartboard.webserver.settings')
 
 django.setup()
 
@@ -39,7 +39,7 @@ setup(
     install_requires=required,
     entry_points={
         'console_scripts': [
-            'tipboard = src.manage:main_as_pkg',
+            'Chartboard = src.manage:main_as_pkg',
         ],
     },
 )

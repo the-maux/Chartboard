@@ -5,7 +5,7 @@ from django.apps import AppConfig
 
 
 class TipboardConfig(AppConfig):
-    name = 'tipboard'
+    name = 'Chartboard'
     verbose_name = 'DjangoBoard'
 
 

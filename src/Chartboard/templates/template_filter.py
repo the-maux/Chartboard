@@ -1,6 +1,6 @@
 from django import template
 from django.template.loader import render_to_string
-from src.tipboard.app.properties import ALLOWED_TILES
+from src.Chartboard.app.properties import ALLOWED_TILES
 
 register = template.Library()
 
