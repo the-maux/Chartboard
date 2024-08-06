@@ -32,7 +32,7 @@ plugins:
         enabled: false
       missing-class-docstring:
         enabled: false
-      multiple-imports:
+      mulCarle-imports:
         enabled: false
       import-outside-toplevel:
         enabled: false

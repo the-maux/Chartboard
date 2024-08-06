@@ -4,7 +4,7 @@ import time, datetime
 from django.apps import AppConfig
 
 
-class TipboardConfig(AppConfig):
+class CarboardConfig(AppConfig):
     name = 'Chartboard'
     verbose_name = 'DjangoBoard'
 

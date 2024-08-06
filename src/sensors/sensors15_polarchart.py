@@ -13,4 +13,4 @@ def sonde15(tester=None, tile_id='polararea_ex'):
         }
     }
     answer = sendUpdateByApi(data=data, tileTemplate='polararea_chart', tileId=tile_id, meta=meta, tester=tester)
-    end(title=f'sensor15 -> -> {tile_id}', startTime=start_time, tipboardAnswer=answer, tileId=tile_id)
+    end(title=f'sensor15 -> -> {tile_id}', startTime=start_time, CarboardAnswer=answer, tileId=tile_id)

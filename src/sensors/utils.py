@@ -1,12 +1,12 @@
 import datetime, json, requests, time, random
-from src.Chartboard.app.properties import TIPBOARD_URL, COLOR_TAB, LOG
+from src.Chartboard.app.properties import CarBOARD_URL, COLOR_TAB, LOG
 
 
-def end(title=None, startTime=None, tipboardAnswer=None, tileId=None):
+def end(title=None, startTime=None, CarboardAnswer=None, tileId=None):
     """ Eazy way to end sensors, print the action time & http answer of Chartboard """
     if LOG:
-        if tipboardAnswer.status_code != 200:
-            print(f'[ERROR] POST tile:{tileId} Chartboard/push => ({tipboardAnswer.status_code}): ', flush=True)
+        if CarboardAnswer.status_code != 200:
+            print(f'[ERROR] POST tile:{tileId} Chartboard/push => ({CarboardAnswer.status_code}): ', flush=True)
         else:
             duration = time.time() - startTime
             m = str(duration / 60)[:str(duration / 60).index('.')]
@@ -24,8 +24,8 @@ def sendUpdateByApi(tileId=None, data=None, tileTemplate=None, tester=False, met
     if meta is not None:
         configTile['meta'] = json.dumps(meta)
     if tester is None:
-        return requests.post(TIPBOARD_URL + '/push', data=configTile)
-    return tester.fakeClient.post(TIPBOARD_URL + '/push', data=configTile)
+        return requests.post(CarBOARD_URL + '/push', data=configTile)
+    return tester.fakeClient.post(CarBOARD_URL + '/push', data=configTile)
 
 
 def buildDataset(index, nbrLabel, data, colorTabIndataset):

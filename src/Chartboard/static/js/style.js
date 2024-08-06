@@ -156,7 +156,7 @@ function hideTitleWhenNeeded() {
  * @param body_style
  */
 function loadBlackMode(body_style) {
-    body_style.backgroundImage = "url('/static/img/logo-tipboard_white.svg')";
+    body_style.backgroundImage = "url('/static/img/logo-Carboard_white.svg')";
     body_style.backgroundColor = "#212121";
     changeElements("tile", "#313131", "class-backgroundColor");
     changeElements("card", "#313131", "class-backgroundColor");
@@ -190,7 +190,7 @@ function loadStyleColor() {
     if (mode === "black") {
         loadBlackMode(body_style);
     } else {
-        body_style.backgroundImage = "url('/static/img/logo-tipboard.svg')";
+        body_style.backgroundImage = "url('/static/img/logo-Carboard.svg')";
         body_style.backgroundColor = "#eceff1";
         changeElements("tile", "#f5f5f5", "class-backgroundColor");
         changeElements("card", "#f5f5f5", "class-backgroundColor");

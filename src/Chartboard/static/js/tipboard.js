@@ -7,16 +7,16 @@ function showNextDashboard(nextDashboardPath, nextDashboardName) {
         method: "get",
         url: "/dashboard" + nextDashboardPath,
         success(data) {
-            Tipboard.chartJsTile = {};
-            $("#tipboardIframe").html(data);
+            Carboard.chartJsTile = {};
+            $("#CarboardIframe").html(data);
             loadStyleColor();
             initCardWithFlip();
             initCardWeight();
             hideTitleWhenNeeded();
-            Tipboard.websocket.sendmessage(nextDashboardPath);
+            Carboard.websocket.sendmessage(nextDashboardPath);
         },
         error(request, textStatus, error) {
-            Tipboard.log(request, textStatus, error);
+            Carboard.log(request, textStatus, error);
             document.title = "Error loading: " + nextDashboardName;
         }
     });
@@ -31,7 +31,7 @@ function getDashboardsByApi() {
         method: "post",
         url: "/flipboard/getDashboardsPaths",
         success(data) {
-            let flipInterval = $("#tipboardIframe").attr("data-fliptime-interval");
+            let flipInterval = $("#CarboardIframe").attr("data-fliptime-interval");
                 Flipboard.init(data.paths, data.names);
                 showNextDashboard(Flipboard.getNextDashboardPath(), Flipboard.getNextDashboardName());
                 if (data.paths.length > 1 && parseInt(flipInterval, 10) > 0) {
@@ -41,9 +41,9 @@ function getDashboardsByApi() {
                 }
         },
         error(request, textStatus, error) {
-            Tipboard.log(request, textStatus, error);
+            Carboard.log(request, textStatus, error);
             $(".error-message").html(["Error occured.", "For more details check javascript logs."].join("<br>"));
-            $("#tipboardIframe").hide();
+            $("#CarboardIframe").hide();
             $(".error-wrapper").show();
         }
     });
@@ -82,35 +82,35 @@ function initFlipboard() {
  * Init Global ChartJS value + build updateFunctions array
  */
 function registerUpdateFuction() {
-    Tipboard.updateFunctions = {};
-    Tipboard.updateFunctions["line_chart"] = updateChartjsAndMiscTile;
-    Tipboard.updateFunctions["radar_chart"] = updateChartjsAndMiscTile;
-    Tipboard.updateFunctions["norm_chart"] = updateChartjsAndMiscTile;
-    Tipboard.updateFunctions["pie_chart"] = updateChartjsAndMiscTile;
-    Tipboard.updateFunctions["polararea_chart"] = updateChartjsAndMiscTile;
-    Tipboard.updateFunctions["gauge_chart"] = updateChartjsAndMiscTile;
-    Tipboard.updateFunctions["radial_gauge_chart"] = updateChartjsAndMiscTile;
-    Tipboard.updateFunctions["linear_gauge_chart"] = updateChartjsAndMiscTile;
-    Tipboard.updateFunctions["vlinear_gauge_chart"] = updateChartjsAndMiscTile;
-    Tipboard.updateFunctions["bar_chart"] = updateChartjsAndMiscTile;
-    Tipboard.updateFunctions["just_value"] = updateTileTextValue;
-    Tipboard.updateFunctions["simple_percentage"] = updateTileTextValue;
-    Tipboard.updateFunctions["big_value"] = updateTileTextValue;
-    Tipboard.updateFunctions["listing"] = updateTileTextValue;
-    Tipboard.updateFunctions["text"] = updateTileTextValue;
-    Tipboard.updateFunctions["iframe"] = updateTileTextValue;
-    Tipboard.updateFunctions["stream"] = updateTileTextValue;
-    Tipboard.updateFunctions["custom"] = updateTileTextValue;
+    Carboard.updateFunctions = {};
+    Carboard.updateFunctions["line_chart"] = updateChartjsAndMiscTile;
+    Carboard.updateFunctions["radar_chart"] = updateChartjsAndMiscTile;
+    Carboard.updateFunctions["norm_chart"] = updateChartjsAndMiscTile;
+    Carboard.updateFunctions["pie_chart"] = updateChartjsAndMiscTile;
+    Carboard.updateFunctions["polararea_chart"] = updateChartjsAndMiscTile;
+    Carboard.updateFunctions["gauge_chart"] = updateChartjsAndMiscTile;
+    Carboard.updateFunctions["radial_gauge_chart"] = updateChartjsAndMiscTile;
+    Carboard.updateFunctions["linear_gauge_chart"] = updateChartjsAndMiscTile;
+    Carboard.updateFunctions["vlinear_gauge_chart"] = updateChartjsAndMiscTile;
+    Carboard.updateFunctions["bar_chart"] = updateChartjsAndMiscTile;
+    Carboard.updateFunctions["just_value"] = updateTileTextValue;
+    Carboard.updateFunctions["simple_percentage"] = updateTileTextValue;
+    Carboard.updateFunctions["big_value"] = updateTileTextValue;
+    Carboard.updateFunctions["listing"] = updateTileTextValue;
+    Carboard.updateFunctions["text"] = updateTileTextValue;
+    Carboard.updateFunctions["iframe"] = updateTileTextValue;
+    Carboard.updateFunctions["stream"] = updateTileTextValue;
+    Carboard.updateFunctions["custom"] = updateTileTextValue;
 }
 
 /**
- * Init Tipboard object & Tipboard.Dashboard object
+ * Init Carboard object & Carboard.Dashboard object
  */
-function initTipboardObject() {
-    window.Tipboard = {
+function initCarboardObject() {
+    window.Carboard = {
         chartJsTile: {},
         websocket: initWebSocketManager(),
-        DEBUG_MODE: true,  // TODO: with value from tipboard
+        DEBUG_MODE: true,  // TODO: with value from Carboard
         log(msg) {
             if (this.DEBUG_MODE) {
                 console.log(msg);
@@ -118,12 +118,12 @@ function initTipboardObject() {
         }
     };
     registerUpdateFuction();
-    Tipboard.log("[LOG] Build Tipboard object start");
+    Carboard.log("[LOG] Build Carboard object start");
 }
 
 (function ($) {
     $(document).ready(function () {
-        initTipboardObject();
+        initCarboardObject();
         if (window.location.pathname === "/") {
             initFlipboard();
             getDashboardsByApi();

@@ -20,7 +20,7 @@ def isChartJS_tile(tile_template):
 @register.filter(name='template_tile_dashboard')
 def template_tile_dashboard(tile_id, layout_name):
     """
-        Many thanks to for the solution for multiple argument in template html django
+        Many thanks to for the solution for mulCarle argument in template html django
         For detail, see Stackoverflow answer: https://stackoverflow.com/a/24402622/4797299
     """
     return tile_id, layout_name

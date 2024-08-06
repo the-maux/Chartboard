@@ -17,10 +17,10 @@
         <script type="text/javascript" src="https://raw.githack.com/the-maux/Chartboard-CDN/master/chartjs-plugin-radialgauge.js"></script>
         <script type="text/javascript" src="https://raw.githack.com/the-maux/Chartboard-CDN/master/chart-plugin-test-linearradial.js"></script>
 
-        {% for file in tipboard_css %}
+        {% for file in Carboard_css %}
             <link href="{% static file %}" rel="stylesheet" media="screen">
         {% endfor %}
-        {% for file in tipboard_js %}
+        {% for file in Carboard_js %}
             <script type="text/javascript" src="{% static file %}"></script>
         {% endfor %}
         {% block head %} {% endblock %}

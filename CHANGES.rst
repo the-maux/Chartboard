@@ -17,7 +17,7 @@ Change Log
 
 * add Gitlab-Ci to push new package on Github and to push image on docker hub
 
-* Create new package Tipboard2.0 on pypi https://pypi.org/project/tipboard2.0/
+* Create new package Carboard2.0 on pypi https://pypi.org/project/Carboard2.0/
 
 * cleaning version
 
@@ -80,7 +80,7 @@ Change Log
     * reworking of the file redis_utils.py to a cache.py
     * Config for ASGI_APPLICATION
 
-* Moving the .tipboard directory to ./tipboard/Config/ to make it compatible with bitnami/python
+* Moving the .Carboard directory to ./Carboard/Config/ to make it compatible with bitnami/python
 
 * Adding dockerfile support
     * Using bitnami image in order to be cloud ready
@@ -118,7 +118,7 @@ Released on November 16, 2016.
 
 Released on August 28, 2014.
 
-* Tipboard got open-sourced!
+* Carboard got open-sourced!
 
 
 1.3.1
@@ -205,7 +205,7 @@ This release brings new features and some minor bugfixes.
 
 Released on November 20, 2013.
 
-This release contains multiple improvements and bugfixes:
+This release contains mulCarle improvements and bugfixes:
 
 * Tiles are no longer packages (i.e. folders).
 
@@ -230,6 +230,6 @@ This release contains multiple improvements and bugfixes:
 
 Released on November 06, 2013.
 
-This is the first release of Tipboard.
+This is the first release of Carboard.
 
 * initial release

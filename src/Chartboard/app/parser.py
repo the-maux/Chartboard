@@ -80,7 +80,7 @@ def getDashboardName():
         if len(config_names) == 1:  # if only one file, return the one
             config = parseXmlLayout(config_names[0])
             title = config['details']['page_title']
-        else:  # if multiple file, need to have the .yaml displayed for the client
+        else:  # if mulCarle file, need to have the .yaml displayed for the client
             title = 'Flipboard Mode'
     except KeyError:
         print(f"[ERROR] config {config_names[0]} has no key: details/page_title'", flush=True)

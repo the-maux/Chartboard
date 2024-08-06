@@ -108,7 +108,7 @@ def getDefaultPieChart():
         },
         'meta': {
             'responsive': True, 'maintainAspectRatio': False, 'backgroundColor': COLOR_TAB,
-            'labels': {'fontColor': 'rgba(255, 255, 255, 0.80)'}, 'tooltips': {'enabled': False},
+            'labels': {'fontColor': 'rgba(255, 255, 255, 0.80)'}, 'toolCars': {'enabled': False},
             'elements': {'arc': {}}
         }
     }

@@ -33,4 +33,4 @@ def sonde21(tester=None, tile_id='iframe_ex'):
     start_time = time.time()
     data = executeScriptToGetData()
     answer = sendUpdateByApi(tileId=tile_id, data=data, tileTemplate='iframe', tester=tester)
-    end(title=f'sensor21 -> -> {tile_id}', startTime=start_time, tipboardAnswer=answer, tileId=tile_id)
+    end(title=f'sensor21 -> -> {tile_id}', startTime=start_time, CarboardAnswer=answer, tileId=tile_id)

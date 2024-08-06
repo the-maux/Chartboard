@@ -45,4 +45,4 @@ def sonde21(tester=None, tile_id='stream_ex'):
     data = executeScriptToGetData()
 
     answer = sendUpdateByApi(tileId=tile_id, data=data, tileTemplate='stream', tester=tester)
-    end(title=f'sensor21 -> -> {tile_id}', startTime=start_time, tipboardAnswer=answer, tileId=tile_id)
+    end(title=f'sensor21 -> -> {tile_id}', startTime=start_time, CarboardAnswer=answer, tileId=tile_id)

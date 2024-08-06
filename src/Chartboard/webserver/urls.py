@@ -17,12 +17,12 @@ urlpatterns = [
     url(r'^api/push$', push_api),  # update data for a single tile
     url(r'^api/info$', project_info),  # get data from the Chartboard server
 
-    url(r'^$', renderFlipboardHtml),  # start the flipboard logic for multiple dashboard in a single flipboard.html
+    url(r'^$', renderFlipboardHtml),  # start the flipboard logic for mulCarle dashboard in a single flipboard.html
     url(r'^([a-zA-Z0-9_-]*)$', renderDashboardHtmlUniqueDashboard),  # render a single dashboard.html
     url(r'^dashboard/([a-zA-Z0-9_-]*)$', renderDashboardHtmlForFlipboard),  # render the tiles html for ws in client js
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
-# Thanks for the tips for execute only once a start :) https://stackoverflow.com/a/6792076/4797299
+# Thanks for the Cars for execute only once a start :) https://stackoverflow.com/a/6792076/4797299
 if not redis_sanity_check(isTest='test' in sys.argv[1]):
     sys.exit(-1)

@@ -18,7 +18,7 @@ function getUpdateFunction(tileType) {
             tileType = "line_chart";
             break;
     }
-    return Tipboard.updateFunctions[tileType.toString()];
+    return Carboard.updateFunctions[tileType.toString()];
 }
 
 /**
@@ -115,11 +115,11 @@ function initWebSocketManager() {
     let protocol = window.location.protocol === "https:" ? "wss://" : "ws://";
     let websocket = new WebSocket(protocol + window.location.host + "/communication/websocket");
     websocket.onopen = function () {
-        //Tipboard.log("[LOG] WEBSOCKET CONNECTION ONOPEN ");
+        //Carboard.log("[LOG] WEBSOCKET CONNECTION ONOPEN ");
     };
     websocket.onclose = function () { // Handler to detect when API is back alive to reset websocket connection every 5s
         serverDisconnected(false);
-        if (Tipboard !== "undefined") { // Check if Tipboard object is ready
+        if (Carboard !== "undefined") { // Check if Carboard object is ready
             setTimeout(testApiIsBack, 5000);
         }
     };
