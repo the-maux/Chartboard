@@ -11,6 +11,9 @@ pyup-pin-requests-2.32.3
 requests==2.32.3
 
 apscheduler==3.10.4
+pyup-pin-requests-2.32.3
+requests==2.32.3
+lorem
 requests
 lorem==0.1.1
 
