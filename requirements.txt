@@ -5,8 +5,12 @@ channels_redis==4.2.0
 channels==4.1.0
 whitenoise==6.7.0
 asgiref==3.8.1
-apscheduler
+pyup-pin-requests-2.32.3
+
 requests==2.32.3
+
+apscheduler==3.10.4
+requests
 lorem
 
 twisted>=23.10.0rc1 # not directly required, pinned by Snyk to avoid a vulnerability
