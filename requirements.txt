@@ -1,4 +1,5 @@
-django==5.0.8
+pyup-update-django-5.0.7-to-5.1
+django==5.1
 PyYAML==6.0.1
 redis==5.0.8
 channels_redis==4.2.0
