@@ -1,11 +1,11 @@
-tipboard.egg-info/
+Carboard.egg-info/
 /.idea/*
 /.coverage
 .eggs/
 .idea/
 *TODO.md
 */__pycache__/
-/tipboard2.0.egg-info/
+/Carboard2.0.egg-info/
 src/sensors/__pycache__/
 src/Chartboard/__pycache__/
 src/Chartboard/app/__pycache__/
@@ -16,7 +16,7 @@ src/Chartboard/webserver/__pycache__/
 src/Chartboard/app/Config/dev_properties.json
 /src/Chartboard/app/Config/tmp/
 /src/Chartboard/templates/tmplinear.html
-tipboard2.0.egg-info/
+Carboard2.0.egg-info/
 *.pyc
 *.swp
 /coverage_html_report/

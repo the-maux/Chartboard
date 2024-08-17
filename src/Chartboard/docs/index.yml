@@ -2,7 +2,7 @@ swagger: "2.0"
 info:
   description: "Full documentation & Wiki on the (github repo)[https://github.com/the-maux/Chartboard]"
   version: "1.0.0"
-  title: "Tipboard API"
+  title: "Carboard API"
   termsOfService: "http://swagger.io/terms/"
   contact:
     email: "apiteam@swagger.io"
@@ -83,7 +83,7 @@ paths:
       tags:
         - "pet"
       summary: "Finds Pets by status"
-      description: "Multiple status values can be provided with comma separated strings"
+      description: "MulCarle status values can be provided with comma separated strings"
       operationId: "findPetsByStatus"
       produces:
         - "application/xml"

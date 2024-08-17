@@ -17,4 +17,4 @@ def sonde19(tester=None, tile_id='lgauge_ex'):
                                      data=[random.randrange(100, 500)],
                                      offset=offset, width=10))
     answer = sendUpdateByApi(data=data, tileTemplate='linear_gauge_chart', tileId=tile_id, tester=tester)
-    end(title=f'sensor19 -> -> {tile_id}', startTime=start_time, tipboardAnswer=answer, tileId=tile_id)
+    end(title=f'sensor19 -> -> {tile_id}', startTime=start_time, CarboardAnswer=answer, tileId=tile_id)

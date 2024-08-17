@@ -1,16 +1,16 @@
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 from src.Chartboard.app.parser import parseXmlLayout, getConfigNames, getFlipboardTitles
-from src.Chartboard.app.properties import TIPBOARD_CSS_STYLES, FLIPBOARD_INTERVAL, TIPBOARD_JAVASCRIPT_FILES
+from src.Chartboard.app.properties import CarBOARD_CSS_STYLES, FLIPBOARD_INTERVAL, CarBOARD_JAVASCRIPT_FILES
 
 
 def renderFlipboardHtml(request):
     """ Render the home page(Html flipboard), and start the javascript Chartboard mecanism """
     return render(request, 'flipboard.html',
-                  dict(page_title='Tipboard',
+                  dict(page_title='Carboard',
                        flipboard_interval=FLIPBOARD_INTERVAL,
-                       tipboard_css=TIPBOARD_CSS_STYLES,
-                       tipboard_js=TIPBOARD_JAVASCRIPT_FILES))
+                       Carboard_css=CarBOARD_CSS_STYLES,
+                       Carboard_js=CarBOARD_JAVASCRIPT_FILES))
 
 
 def renderDashboardHtmlUniqueDashboard(request, layout_name='default_config', isFlipboard=False):
@@ -28,8 +28,8 @@ def renderDashboardHtmlUniqueDashboard(request, layout_name='default_config', is
         if 'layout' in config:
             data = dict(layout=config['layout'],
                         layout_name=layout_name, page_title=title,
-                        tipboard_css=list() if isFlipboard else TIPBOARD_CSS_STYLES,
-                        tipboard_js=list() if isFlipboard else TIPBOARD_JAVASCRIPT_FILES,
+                        Carboard_css=list() if isFlipboard else CarBOARD_CSS_STYLES,
+                        Carboard_js=list() if isFlipboard else CarBOARD_JAVASCRIPT_FILES,
                         color_mode=color_mode)
             return render(request, 'dashboard.html' if isFlipboard else 'flipboard.html', data)
     msg = f'''

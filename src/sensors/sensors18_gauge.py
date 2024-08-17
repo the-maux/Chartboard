@@ -19,5 +19,5 @@ def sonde18(tester=None, tile_id='gauge_ex'):
         ]
     }
     meta = {'labelFormat': '°'}
-    tipboardAnswer = sendUpdateByApi(data=data, tileTemplate='gauge_chart', tileId=tile_id, tester=tester, meta=meta)
-    end(title=f'sensors gauge_chart -> {tile_id}', startTime=start_time, tipboardAnswer=tipboardAnswer, tileId=tile_id)
+    CarboardAnswer = sendUpdateByApi(data=data, tileTemplate='gauge_chart', tileId=tile_id, tester=tester, meta=meta)
+    end(title=f'sensors gauge_chart -> {tile_id}', startTime=start_time, CarboardAnswer=CarboardAnswer, tileId=tile_id)

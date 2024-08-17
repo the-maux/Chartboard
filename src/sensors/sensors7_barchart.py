@@ -36,5 +36,5 @@ def sonde7(tester=None, tile_id='barjs_ex', isHorizontal=False):
     start_time = time.time()
     data = updateChartJS(nbrDataset=random.randrange(5, 9), nbrLabel=random.randrange(4, 6), colorTabIndataset=False)
     meta = updateMeta()
-    tipboardAnswer = sendUpdateByApi(data=data, tileTemplate=TILE_TEMPLATE, tileId=tile_id, tester=tester, meta=meta)
-    end(title=f'sensors7 -> {tile_id}', startTime=start_time, tipboardAnswer=tipboardAnswer, tileId=tile_id)
+    CarboardAnswer = sendUpdateByApi(data=data, tileTemplate=TILE_TEMPLATE, tileId=tile_id, tester=tester, meta=meta)
+    end(title=f'sensors7 -> {tile_id}', startTime=start_time, CarboardAnswer=CarboardAnswer, tileId=tile_id)

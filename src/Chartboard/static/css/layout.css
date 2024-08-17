@@ -1,5 +1,5 @@
 /**
-    Project:    Tipboard
+    Project:    Carboard
     Author:     ...
     Date:       2013/11/28
     @the-maux: yes :) this date is the major proof that this project started in 2013, @allegro team is awesome
@@ -56,7 +56,7 @@ h6 {
     background-size: 65%;
 }
 
-#tipboardIframe {
+#CarboardIframe {
     height: 100%;
 }
 

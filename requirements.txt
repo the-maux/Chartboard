@@ -1,10 +1,24 @@
-django==5.0.7
-PyYAML==6.0.1
+pyup-update-django-5.0.7-to-5.1
+django==5.1
+PyYAML==6.0.2
 redis==5.0.8
 channels_redis==4.2.0
 channels==4.1.0
 whitenoise==6.7.0
 asgiref==3.8.1
+pyup-pin-requests-2.32.3
+
+requests==2.32.3
+
+apscheduler==3.10.4
+pyup-pin-requests-2.32.3
+requests==2.32.3
+pyup-pin-requests-2.32.3
+lorem==0.1.1
+requests==2.32.3
+lorem==0.1.1
+requests==2.32.3
+lorem==0.1.1
 
 twisted>=23.10.0rc1 # not directly required, pinned by Snyk to avoid a vulnerability
 setuptools>=70.0.0 # not directly required, pinned by Snyk to avoid a vulnerability

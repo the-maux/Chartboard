@@ -28,5 +28,5 @@ def sonde22(tester=None, tile_id='custom_ex'):
     data = {
         'text': returnHttPageExemple()
     }
-    tipboardAnswer = sendUpdateByApi(data=data, tileTemplate='custom', tileId=tile_id, tester=tester)
-    end(title=f'sensors custom tile -> {tile_id}', startTime=start_time, tipboardAnswer=tipboardAnswer, tileId=tile_id)
+    CarboardAnswer = sendUpdateByApi(data=data, tileTemplate='custom', tileId=tile_id, tester=tester)
+    end(title=f'sensors custom tile -> {tile_id}', startTime=start_time, CarboardAnswer=CarboardAnswer, tileId=tile_id)

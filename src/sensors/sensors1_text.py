@@ -1,5 +1,5 @@
 import requests, time, random, lorem, json
-from src.Chartboard.app.properties import TIPBOARD_URL
+from src.Chartboard.app.properties import CarBOARD_URL
 from src.sensors.utils import end
 from src.Chartboard.app.DefaultData.defaultTileControler import getDefaultText
 
@@ -13,11 +13,11 @@ def executeScriptToGetData(tile_id=None, tile_template=None):
     return tile
 
 
-def sendDataToTipboard(data=None, tile_template=None, tile_id='', tester=None):
+def sendDataToCarboard(data=None, tile_template=None, tile_id='', tester=None):
     configTile = dict(tile_id=tile_id, tile_template=tile_template, data=json.dumps(data['data']['text']))
     if tester is None:
-        return requests.post(TIPBOARD_URL + '/push', data=configTile)
-    return tester.fakeClient.post(TIPBOARD_URL + '/push', data=configTile)
+        return requests.post(CarBOARD_URL + '/push', data=configTile)
+    return tester.fakeClient.post(CarBOARD_URL + '/push', data=configTile)
 
 
 def sonde1(tester=None, tile_id='txt_ex', tile_template='text'):
@@ -25,5 +25,5 @@ def sonde1(tester=None, tile_id='txt_ex', tile_template='text'):
     data = executeScriptToGetData()
     data['text'] = f'Last malware detedted: <br>' \
         f'<h2> {"".join([random.choice("0123456789abcdef") for x in range(32)])}</h2>'
-    tipboardAnswer = sendDataToTipboard(data, tile_template=tile_template, tile_id=tile_id, tester=tester)
-    end(title=f'sensors1 -> {tile_id}', startTime=start_time, tipboardAnswer=tipboardAnswer, tileId=tile_id)
+    CarboardAnswer = sendDataToCarboard(data, tile_template=tile_template, tile_id=tile_id, tester=tester)
+    end(title=f'sensors1 -> {tile_id}', startTime=start_time, CarboardAnswer=CarboardAnswer, tileId=tile_id)

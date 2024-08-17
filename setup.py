@@ -25,12 +25,12 @@ with open(HERE / 'requirements.txt') as requirements:
 
 
 setup(
-    name='tipboard2.0',
+    name='Carboard2.0',
     version=__version__,
-    description='Tipboard - a flexible solution for creating your dashboards.',
+    description='Carboard - a flexible solution for creating your dashboards.',
     long_description=README,
     long_description_content_type='text/markdown',
-    url='http://tipboard.allegrogroup.com',
+    url='http://Carboard.allegrogroup.com',
     author='Allegro Group and Contributors',
     author_email='pylabs@allegro.pl',
     license='Apache Software License v2.0',
