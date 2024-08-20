@@ -63,7 +63,7 @@ License
 Chartboard is licensed under the [Apache License, v2.0](http://Chartboard.readthedocs.org/en/latest/license.html). (like Carboard)
 
 Copyright (c) 2013-2017 [Allegro Group](http://allegro.pl).  
-Copyright (c) 2019-2021 the-maux
+Copyright (c) 2019-2024 the-maux
 
 
 [1]: https://travis-ci.com/the-maux/Carboard.svg?branch=develop
