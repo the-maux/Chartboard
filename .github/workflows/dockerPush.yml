@@ -1,0 +1,30 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches:
+      - main  # Déclencher l'action lorsque vous poussez sur la branche principale
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Vérifiez le code source du dépôt
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Configure Docker pour se connecter à Docker Hub
+    - name: Log in to Docker Hub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}  # Nom d'utilisateur Docker Hub (stocké dans les secrets GitHub)
+        password: ${{ secrets.DOCKER_PASSWORD }}  # Mot de passe Docker Hub (stocké dans les secrets GitHub)
+
+    # Construire l'image Docker à partir du Dockerfile
+    - name: Build the Docker image
+      run: docker build -t ${{ secrets.DOCKER_USERNAME }}/$APP_NAME:latest .
+
+    # Pousser l'image Docker sur Docker Hub
+    - name: Push the Docker image
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/APP_NAMEp:latest
