@@ -3,7 +3,7 @@ name: Docker Image CI
 on:
   push:
     branches:
-      - main  # Déclencher l'action lorsque vous poussez sur la branche principale
+      - develop
 
 jobs:
   build:
