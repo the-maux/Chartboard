@@ -21,7 +21,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}  # Mot de passe Docker Hub (stocké dans les secrets GitHub)
 
     - name: Build the Docker image
-      run: docker build -t ${{ secrets.DOCKER_USERNAME }} { /$APP_NAME:latest .
+      run: docker build -t themaux develop
 
     - name: Push the Docker image
-      run: docker push ${{ secrets.DOCKER_USERNAME }}/APP_NAME }}:latest
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/{{APP_NAME }}:develop
