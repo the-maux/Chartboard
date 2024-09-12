@@ -18,16 +18,6 @@ Si tu vas plus loin ca erase ecrite par les sensors car cest reload a chaque cha
 
 
 
-
-
-
-
-
-
-
-
-
-
 REDIS INIT BUG:
 Depuis que tu as installé redis server sur windows en local... tu n'as plus le probleme
 Donc ce que le process windows pycharm a du mal a close le redis-server (in WSL)
