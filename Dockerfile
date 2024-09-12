@@ -15,7 +15,7 @@ COPY requirements.txt .
 RUN chown -R 1001 /home/app
 
 ENV PATH="/home/app/.local/bin:${PATH}"
-USER 1001
+#USER 1001
 RUN pip install --upgrade pip
 RUN pip install --user -r requirements.txt
 
