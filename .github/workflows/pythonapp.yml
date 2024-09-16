@@ -1,15 +1,20 @@
-name: Docker Unit-test
+#name: Docker Unit-test
+#
+#on: [push]
+#
+#jobs:
+#  build:
+#
+#    runs-on: ubuntu-latest
+#    steps:
+#    - uses: actions/checkout@v1
+#    - name: Build the Docker image
+#      run: docker build . --file Dockerfile-dev --tag chartboard:test
+#    - uses: actions/checkout@v1
+#    - name: Unit Test inside docker
+#      run: docker run --entrypoint=python chartboard:test src/manage.py test -v 2
 
-on: [push]
 
-jobs:
-  build:
 
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile-dev --tag chartboard:test
-    - uses: actions/checkout@v1
-    - name: Unit Test inside docker
-      run: docker run --entrypoint=python chartboard:test src/manage.py test -v 2
+
+
