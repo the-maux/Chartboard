@@ -2,7 +2,7 @@
     <!--img alt="Chartboard" src="https://i.ibb.co/Fx6FykP/image-5.png"/-->
 <p align="center">
         <a href=""><img alt="docker" src="https://img.shields.io/docker/pulls/themaux/Chartboart"></a>
-    <!--a href="https://github.com/the-maux/Chartboard"> <img alt="Github" src="https://img.shields.io/github/v/release/the-maux/Chartboard"></a-->
+    <!--a href="https://github.com/the-maux/Chartboard"> <img alt="Github" src="https://img.shields.io/github/v/release/themaux/Chartboard"></a-->
     <!--a href="https://pypi.org/project/Chartboard/"> <img alt="Pypi" src="https://badge.fury.io/py/Chartboard.svg"></a-->
     <!--a href=""> <img alt="pypi" src="https://img.shields.io/pypi/dm/Chartboard.svg"></a-->
     <a href=""><img alt="docker" src="https://img.shields.io/docker/pulls/themaux/Chartboard"></a>
