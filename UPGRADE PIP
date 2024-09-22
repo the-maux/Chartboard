@@ -14,9 +14,9 @@ requests
 pyup-pin-request
 lorem
 requests
-lorem==0.1.1
-requests==2.32.3
-lorem==0.1.1
+lorem=
+requests
+lorem
 
 twisted>=23.10.0rc1 # not directly required, pinned by Snyk to avoid a vulnerability
 setuptools>=70.0.0 # not directly required, pinned by Snyk to avoid a vulnerability
