@@ -10,7 +10,6 @@ channels_redis==4.2.0
 channels==4.1.0
 whitenoise==6.7.0
 
-# Sensors
 lorem==0.1.1
 
 requests==2.32.3
