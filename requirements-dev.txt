@@ -1,7 +1,7 @@
 asgiref==3.8.1
 redis==5.0.8
-django_prometheus==2.3.1
-pyup-update-django-5.0.7-to-5.1
+django_prometheus
+pyup-update-djangoo
 django==5.1.1
 
 django-cors-headers==4.4.0
@@ -10,7 +10,6 @@ channels_redis==4.2.0
 channels==4.1.0
 whitenoise==6.7.0
 
-# Sensors
 lorem==0.1.1
 
 requests==2.32.3
