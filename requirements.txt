@@ -2,7 +2,7 @@ django
 PyYAML
 redis
 channels_redis
-channels
+channels==4.1.0
 whitenoise==6.7.0
 asgiref==3.8.1
 pyup-pin-requests-2.32.3
