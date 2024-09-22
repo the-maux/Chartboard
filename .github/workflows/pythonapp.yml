@@ -1,6 +1,6 @@
 #name: Docker Unit-test
 #
-#on: [push]
+on: [push]
 #
 #jobs:
 #  build:
