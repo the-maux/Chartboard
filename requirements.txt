@@ -5,7 +5,7 @@ redis=
 channels_redis
 channels
 whitenoise
-asgiref
+asgiref==3.8.1
 pyup-pin-requests-2.32.3
 
 requests
