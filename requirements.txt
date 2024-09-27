@@ -1,5 +1,5 @@
-pyup-update-django
-django=
+
+#### pyup-update-djangodjango=
 PyYAML
 redis=
 channels_redis
@@ -15,7 +15,7 @@ pyup-pin-requests-2.32.3
 requests
 lorem
 requests
-lorem=
+lorem
 requests
 lorem
 
