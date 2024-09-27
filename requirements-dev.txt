@@ -1,5 +1,5 @@
 asgiref==3.8.1
-redis==5.0.8
+redis==5.1.0
 django_prometheus
 pyup-update-djangoo
 django==5.1.1
