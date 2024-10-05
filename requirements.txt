@@ -1,7 +1,7 @@
 
 #### pyup-update-djangodjango=
 PyYAML
-redis==5.1.0
+redis==5.1.1
 channels_redis
 channels
 whitenoise
