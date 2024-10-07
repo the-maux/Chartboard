@@ -4,7 +4,7 @@ PyYAML
 redis==5.1.1
 channels_redis
 
-channels==4.1.0
+channels_redis
 whitenoise==6.7.0
 
 asgiref==3.8.1
