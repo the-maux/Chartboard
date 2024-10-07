@@ -1,10 +1,10 @@
 <p align="center">
-    <!--img alt="Chartboard" src="https://i.ibb.co/Fx6FykP/image-5.png"/-->
-<p align="center">
+    <!--img alt="Chartboard" src="https://i.ibb.co/Fx6FykP/image-5.png"/-->  
+<p align="center">  
 
-<a href="https://codeclimate.com/github/the-maux/Chartboard/maintainability"><img src="https://api.codeclimate.com/v1/badges/bed95ca87346ad080708/maintainability"/></a>
-        <a href="https://codeclimate.com/github/the-maux/Chartboard/test_coverage"><img src="https://api.codeclimate.com/v1/badges/bed95ca87346ad080708/test_coverage"/></a>
-        </br>
+<a href="https://codeclimate.com/github/the-maux/Chartboard/maintainability"><img src="https://api.codeclimate.com/v1/badges/bed95ca87346ad080708/maintainability"/></a>  
+        <a href="https://codeclimate.com/github/the-maux/Chartboard/test_coverage"><img src="https://api.codeclimate.com/v1/badges/bed95ca87346ad080708/test_coverage"/></a>  
+        </br>  
         <a href="https://www.codacy.com/manual/the-maux/Chartboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=the-maux/Chartboard&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/134c5656546240f5aa21d19583095de0"/></a>        
         <a href="https://deepscan.io/dashboard#view=project&tid=6043&pid=10798&bid=154148"> <img src="https://deepscan.io/api/teams/6043/projects/10798/branches/154148/badge/grade.svg"  alt="DeepScan grade"></a>
         </br>
