@@ -10,11 +10,9 @@ whitenoise==6.7.0
 asgiref==3.8.1
 pyup-pin-requests-2.32.3
 
-
 apschedul
 pyup-pin-requests-2.32.3
 requests
-zzzzÂÂÂ
 
 lorem==0.1.1
 
