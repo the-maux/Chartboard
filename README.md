@@ -1,9 +1,9 @@
 <p align="center">
     <!--img alt="Chartboard" src="https://i.ibb.co/Fx6FykP/image-5.png"/-->
 <p align="center">
-    <!--a href="https://github.com/the-maux/Chartboard"> <img alt="Github" src="https://img.shields.io/github/v/release/themaux/Chartboard"></a-->
-    <!--a href="https://pypi.org/project/Chartboard/"> <img alt="Pypi" src="https://badge.fury.io/py/Chartboard.svg"></a-->
-    <!--a href=""> <img alt="pypi" src="https://img.shields.io/pypi/dm/Chartboard.svg"></a-->
+    <!--a href="https://github.com/the-maux/Chartboard"> <img alt="Github" src="https://img.shields.io/github/v/release/themaux/Chartboard">
+    <!--a href="https://pypi.org/project/Chartboard/"> <img alt="Pypi" src="https://badge.fury.io/py/Chartboard.svg">
+    <!--a href=""> <img alt="pypi" src="https://img.shields.io/pypi/dm/Chartboard.svg"><
     <a href=""><img alt="docker" src="https://img.shields.io/docker/pulls/themaux/chartboard"></a>
         </br>
 <a href="https://codeclimate.com/github/the-maux/Chartboard/maintainability"><img src="https://api.codeclimate.com/v1/badges/bed95ca87346ad080708/maintainability"/></a>
