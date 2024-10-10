@@ -16,7 +16,7 @@
 </p>
 
 Introduction
-------------
+
 
 #### Chartboard was create to simplify the creation of your dashboards  
 Automaticaly **by scripts** (called sensors) **or manually** (*to let everyone use it*)   
