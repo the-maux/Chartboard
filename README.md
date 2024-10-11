@@ -20,7 +20,8 @@
         </br>
 </p>
 </p>
-
+                src="https://snyk.io/test/github/the-maux/Chartboard/badge.svg?targetFile=requirements.txt" alt="Known Vulnerabilities"
+                data-canonical-src="https://snyk.io/test/github/the-maux/Chartboard?targetFile=requirements.txt" style="max-width:100%;"></a>
 
 Introduction
 ------------
