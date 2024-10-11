@@ -1,3 +1,58 @@
+Historique de chat
+ChatGPT
+ChatGPT
+Aujourd’hui
+
+    Correction de l'erreur
+
+    Correction de code HTML
+
+30 jours précédents
+
+    GitHub Logs Troubleshooting Tips
+    GitHub Actions Configuration Help
+    Lier GitHub Docker Hub
+
+août
+
+    Pousser Image Docker Hub
+    Raccourci changement écran Mac
+
+mai
+
+    Tourelle Nocturne cible sbires.
+
+2023
+
+    Corriger erreur GPG Jenkins
+    Clé manquante résolue
+    Offline Package Download
+    Problèmes dépendances résolus
+    User: Ok Assistant: How can I help?
+    iPhone 18: No Touch ID
+    Transfert de données iPhone
+    Horaires de marées demain
+    Git Pull & Push
+    Purger les indices Elasticsearch
+    Rimes en "-ume" (40)
+    GitHub Action JSON Creation.
+    Erreur de configuration GCP
+    Erreur communication registre schémas
+    Bot Securing Infrastructure
+    SWD and JTAG Debugger
+    ReplicaSet sur GCP.
+    K8s low memory alert.
+    Equations and Algorithms
+    Créer une VM GCE.
+
+Passer au plan supérieurAccès étendu aux meilleurs modèles
+Vous avez dit :
+Corrige cette erreur
+ChatGPT a dit :
+ChatGPT
+
+Peux-tu me préciser l'erreur que tu souhaites corriger ? Je suis là pour t'aider !
+Vous avez dit :
 <p align="center">
     <!--img alt="Chartboard" src="https://i.ibb.co/Fx6FykP/image-5.png"/-->
 <p align="center">
@@ -84,3 +139,80 @@ Copyright (c) 2019-2024 the-maux
 [28]: https://img.shields.io/badge/pipeline-todo-orange
 [31]: https://dev.azure.com/maximerenaud/Carboard/_apis/build/status/Carboard?branchName=master
 [33]: https://codebuild.eu-west-3.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiOXBBZTVtMk5nMmJFcG9vVFlGUVh3cHNoWUFoWXlCVjNjNkd1RE9ZWGtpVlBpazBLaHFKaFpsdXRuamdTc1d4ckNuTSttZnNoNzkwZHNyRUZrbndaaGdvPSIsIml2UGFyYW1ldGVyU3BlYyI6IjNHTnRyekcvWER0Wk1uRW4iLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master
+ChatGPT a dit :
+ChatGPT
+
+Voici une version corrigée du code, où j'ai fermé correctement les balises et supprimé les balises commentées incomplètes :
+
+html
+
+<p align="center">
+    <a href=""><img alt="docker" src="https://img.shields.io/docker/pulls/themaux/Chartboard"></a>
+    <br>
+
+    <a href="https://codeclimate.com/github/the-maux/Chartboard/maintainability">
+        <img src="https://api.codeclimate.com/v1/badges/bed95ca87346ad080708/maintainability" alt="Maintainability"/>
+    </a>
+    <a href="https://codeclimate.com/github/the-maux/Chartboard/test_coverage">
+        <img src="https://api.codeclimate.com/v1/badges/bed95ca87346ad080708/test_coverage" alt="Test Coverage"/>
+    </a>
+    <br>
+
+    <a href="https://www.codacy.com/manual/the-maux/Chartboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=the-maux/Chartboard&amp;utm_campaign=Badge_Grade">
+        <img src="https://app.codacy.com/project/badge/Grade/134c5656546240f5aa21d19583095de0" alt="Codacy Grade"/>
+    </a>
+    <a href="https://deepscan.io/dashboard#view=project&tid=6043&pid=10798&bid=154148">
+        <img src="https://deepscan.io/api/teams/6043/projects/10798/branches/154148/badge/grade.svg" alt="DeepScan Grade"/>
+    </a>
+    <br>
+
+    <a href="https://pyup.io/account/repos/github/the-maux/Chartboard/">
+        <img alt="PyUp" src="https://pyup.io/repos/github/the-maux/Chartboard/shield.svg"/>
+    </a>
+    <a href="https://snyk.io/test/github/the-maux/Chartboard?targetFile=requirements.txt">
+        <img src="https://snyk.io/test/github/the-maux/Chartboard/badge.svg?targetFile=requirements.txt" alt="Known Vulnerabilities"/>
+    </a>
+    <br>
+</p>
+
+#### Chartboard was created to simplify the creation of your dashboards
+Automatically **by scripts** (called sensors) **or manually** (*to let everyone use it*).  
+Core code is written in JavaScript and Python, and uses many technologies (*Django, Flexbox, Bootstrap*).  
+Its widgets (called 'tiles' in Chartboard's terminology) are divided into two categories: 'text' and 'chart'.  
+It's **responsive**, but was designed for big screens (optimized for larger screens in your office).
+
+The Wiki is [here](https://github.com/the-maux/Chartboard/wiki) (work in progress).  
+ChartJS demo can be found [here](http://jerairrest.github.io/react-chartjs-2/).
+
+Quick Demo
+-----------
+
+<p align="center"> 
+  <img alt="Demo" src="https://raw.githubusercontent.com/the-maux/Chartboard/develop/src/Chartboard/demo.gif"/> 
+</p>
+
+GitHub Repository
+-----------------
+
+<p align="center"> 
+  <img alt="Chartboard ChartJS" src="https://github.com/the-maux/Chartboard/blob/develop/src/Chartboard/Chartboard.png"/> 
+</p>
+
+License
+-------
+
+Chartboard is licensed under the [Apache License, v2.0](http://Chartboard.readthedocs.org/en/latest/license.html). (like Carboard)
+
+Copyright (c) 2013-2017 [Allegro Group](http://allegro.pl).  
+Copyright (c) 2019-2024 the-maux
+
+Principales corrections :
+
+    Les balises <p align="center"> étaient imbriquées incorrectement. J'ai corrigé cela.
+    Les balises HTML commentées partiellement ont été supprimées pour éviter toute confusion.
+    Quelques corrections mineures sur la ponctuation et la grammaire du texte en anglais.
+
+Si tu as d'autres questions ou demandes, n'hésite pas à me le dire !
+
+ChatGPT peut faire des erreurs. Envisagez de vérifier les informations importantes.
+
