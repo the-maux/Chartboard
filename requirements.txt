@@ -1,6 +1,6 @@
 django==5.1.2
 PyYAML==6.0.2
-redis==5.0.8
+redis==5.1.1
 channels_redis==4.2.0
 channels==4.1.0
 
