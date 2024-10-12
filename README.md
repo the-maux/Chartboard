@@ -78,7 +78,8 @@ Vous avez dit :
         </br>
 </p>
 </p>
-
+                src="https://snyk.io/test/github/the-maux/Chartboard/badge.svg?targetFile=requirements.txt" alt="Known Vulnerabilities"
+                data-canonical-src="https://snyk.io/test/github/the-maux/Chartboard?targetFile=requirements.txt" style="max-width:100%;"></a>
 
 #### Chartboard was create to simplify the creation of your dashboards  
 Automaticaly **by scripts** (called sensors) **or manually** (*to let everyone use it*)   
