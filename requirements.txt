@@ -1,4 +1,4 @@
-django
+django==5.1.2
 PyYAML==6.0.2
 redis==5.0.8
 channels_redis==4.2.0
