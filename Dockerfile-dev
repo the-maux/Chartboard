@@ -9,6 +9,7 @@ RUN groupadd -g 1001 app && useradd -r -u 1001 -g app app
 RUN mkdir /home/app && chown 1001 /home/app
 WORKDIR /home/app
 
+
 COPY src/ src/
 
 COPY requirements-dev.txt .
