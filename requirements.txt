@@ -1,4 +1,4 @@
-django==5.1.2
+img.shields.io/badge/pipeline-todo-orangdjango==5.1.2
 PyYAML==6.0.2
 redis==5.1.1
 channels_redis==4.2.0
@@ -7,8 +7,6 @@ channels==4.1.0
 #### pyup-update-djangodjango=
 PyYAML
 redis==5.1.1
-channels_redis
-
 channels_redis
 
 whitenoise==6.7.0
