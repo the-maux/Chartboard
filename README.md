@@ -1,4 +1,7 @@
 <p align="center">
+    <img alt="Tipboard" src="https://i.ibb.co/Fx6FykP/image-5.png"/>
+<p align="center">
+<p align="center">
     <!--img alt="Chartboard" src="https://i.ibb.co/Fx6FykP/image-5.png"/-->
 <p align="center">
         <!-<a href=""><img alt="docker" src="https://img.shields.io/docker/pulls/themaux/Chartboart"></a>
@@ -20,11 +23,6 @@
         </br>
 </p>
 </p>
-
-
-<p align="center">
-    <img alt="Tipboard" src="https://i.ibb.co/Fx6FykP/image-5.png"/>
-<p align="center">
     <a href="https://gitter.im/tipboard-dev/community">
         <img alt="Chat" src="https://img.shields.io/gitter/room/DAVFoundation/DAV-Contributors.svg?style=flat-square"></a>
     <a href="https://github.com/the-maux/tipboard"> <img alt="Github" src="https://img.shields.io/github/v/release/the-maux/tipboard"></a>
