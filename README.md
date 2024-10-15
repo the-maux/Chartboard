@@ -21,38 +21,6 @@
 </p>
 </p>
 
-#### Chartboard was create to simplify the creation of your dashboards  
-Automaticaly **by scripts** (called sensors) **or manually** (*to let everyone use it*)   
-Core code is written in JavaScript and Python, and used many technology (*django, flexbox, bootstrap*).  
-Its widgets (called 'tiles' in Chartboard's terminology) have two categories 'text' and 'chart'  
-It's **responsive** but was made for big screen (optimized for larger screens in your office)  
- 
-Wiki is [here](https://github.com/the-maux/Chartboard/wiki) (in wip)
-ChartJS demo can be found [here](http://jerairrest.github.io/react-chartjs-2/)
-
-Quick Demo
------------
-
-
-<p align="center"> 
-  <img alt="Demo" src="https://raw.githubusercontent.com/the-maux/Chartboard/develop/src/Chartboard/demo.gif"/> 
-</p>
-
-
-Depot Github
-------------
-
-
-<p align="center"> 
-  <img alt="Chartboard ChartJS" src="https://github.com/the-maux/Chartboard/blob/develop/src/Chartboard/Chartboard.png"/> 
-</p>
-
-
-Chartboard is licensed under the [Apache License, v2.0](http://Chartboard.readthedocs.org/en/latest/license.html). (like Carboard)
-
-Copyright (c) 2013-2017 [Allegro Group](http://allegro.pl).  
-Copyright (c) 2019-2024 the-maux
-
 
 <p align="center">
     <img alt="Tipboard" src="https://i.ibb.co/Fx6FykP/image-5.png"/>
@@ -86,6 +54,41 @@ Copyright (c) 2019-2024 the-maux
         </br>
 </p>
 </p>
+
+
+
+#### Chartboard was create to simplify the creation of your dashboards  
+Automaticaly **by scripts** (called sensors) **or manually** (*to let everyone use it*)   
+Core code is written in JavaScript and Python, and used many technology (*django, flexbox, bootstrap*).  
+Its widgets (called 'tiles' in Chartboard's terminology) have two categories 'text' and 'chart'  
+It's **responsive** but was made for big screen (optimized for larger screens in your office)  
+ 
+Wiki is [here](https://github.com/the-maux/Chartboard/wiki) (in wip)
+ChartJS demo can be found [here](http://jerairrest.github.io/react-chartjs-2/)
+
+Quick Demo
+-----------
+
+
+<p align="center"> 
+  <img alt="Demo" src="https://raw.githubusercontent.com/the-maux/Chartboard/develop/src/Chartboard/demo.gif"/> 
+</p>
+
+
+Depot Github
+------------
+
+
+<p align="center"> 
+  <img alt="Chartboard ChartJS" src="https://github.com/the-maux/Chartboard/blob/develop/src/Chartboard/Chartboard.png"/> 
+</p>
+
+
+Chartboard is licensed under the [Apache License, v2.0](http://Chartboard.readthedocs.org/en/latest/license.html). (like Carboard)
+
+Copyright (c) 2013-2017 [Allegro Group](http://allegro.pl).  
+Copyright (c) 2019-2024 the-maux
+
 
 
 
