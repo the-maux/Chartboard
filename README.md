@@ -54,6 +54,41 @@ Copyright (c) 2013-2017 [Allegro Group](http://allegro.pl).
 Copyright (c) 2019-2024 the-maux
 
 
+<p align="center">
+    <img alt="Tipboard" src="https://i.ibb.co/Fx6FykP/image-5.png"/>
+<p align="center">
+    <a href="https://gitter.im/tipboard-dev/community">
+        <img alt="Chat" src="https://img.shields.io/gitter/room/DAVFoundation/DAV-Contributors.svg?style=flat-square"></a>
+    <a href="https://github.com/the-maux/tipboard"> <img alt="Github" src="https://img.shields.io/github/v/release/the-maux/tipboard"></a>
+    <a href="https://pypi.org/project/tipboard2.0/"> <img alt="Pypi" src="https://badge.fury.io/py/tipboard2.0.svg"></a>
+    </br>
+    <a href="https://allegro.tech/tipboard/">
+        <img src="http://hits.dwyl.io/themaux/tipboard.svg"></a>
+    <a href=""> <img alt="pypi" src="https://img.shields.io/pypi/dm/tipboard.svg"></a>
+    <a href=""><img alt="docker" src="https://img.shields.io/docker/pulls/themaux/tipboard"></a>
+        </br>
+        <a href="https://www.codefactor.io/repository/github/the-maux/chartboard"><img src="https://www.codefactor.io/repository/github/the-maux/chartboard/badge" alt="CodeFactor"/></a>
+        <a href="https://codebeat.co/projects/github-com-the-maux-chartboard-master"><img alt="" src="https://codebeat.co/badges/c4c5bd91-dff5-48f8-b7ba-828ad3a82d33"/></a>
+        <a href="https://www.codacy.com/manual/the-maux/Chartboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=the-maux/Chartboard&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/134c5656546240f5aa21d19583095de0"/></a>        
+        <a href="https://deepscan.io/dashboard#view=project&tid=6043&pid=10798&bid=154148"> <img src="https://deepscan.io/api/teams/6043/projects/10798/branches/154148/badge/grade.svg"  alt="DeepScan grade"></a>
+        </br>
+        <a href="https%3A%2F%2Fg.codefresh.io%2Fpipelines%2FProd%20mode%20unit%20test%2Fbuilds%3Ffilter%3Dtrigger%3Abuild~Build%3Bpipeline%3A5ecd47ed28b46d266427b4b5~Prod%20mode%20unit%20test"> <img alt="Codefresh" src="https://g.codefresh.io/api/badges/pipeline/themaux/chartboard%2FProd%20mode%20unit%20test?key=eyJhbGciOiJIUzI1NiJ9.NWQ5NDkxYzg1YzI5YzVmOWQyODQ0MDc4.rDj-1Rn5DxSkv_oE8p87ijZhoTelE_WjvbbKWMCI3ZA&type=cf-1"></a>
+        <a href="https://travis-ci.com/the-maux/tipboard"> <img alt="Travis" src="https://travis-ci.com/the-maux/tipboard.svg?branch=develop"></a>
+        <a> <img src="https://github.com/the-maux/Chartboard/workflows/Docker%20Unit-test/badge.svg">
+        </br>
+<a href="https://codeclimate.com/github/the-maux/Chartboard/maintainability"><img src="https://api.codeclimate.com/v1/badges/bed95ca87346ad080708/maintainability"/></a>
+        <a href="https://codeclimate.com/github/the-maux/Chartboard/test_coverage"><img src="https://api.codeclimate.com/v1/badges/bed95ca87346ad080708/test_coverage"/></a>
+        </br>
+        <a href="https://pyup.io/account/repos/github/the-maux/tipboard/"> <img alt="PyUp" src="https://pyup.io/repos/github/the-maux/Chartboard/shield.svg"></a>
+        <a href="https://snyk.io/test/github/the-maux/Chartboard?targetFile=requirements.txt"><img 
+                src="https://snyk.io/test/github/the-maux/Chartboard/badge.svg?targetFile=requirements.txt" alt="Known Vulnerabilities"
+                data-canonical-src="https://snyk.io/test/github/the-maux/Chartboard?targetFile=requirements.txt" style="max-width:100%;"></a>
+        </br>
+</p>
+</p>
+
+
+
 [1]: https://travis-ci.com/the-maux/Carboard.svg?branch=develop
 [2]: https://travis-ci.com/the-maux/Carboard
 [3]: https://g.codefresh.io/api/badges/pipeline/themaux/Carboard%2FMyPipeline?key=eyJhbGciOiJIUzI1NiJ9.NWQ5NDkxYzg1YzI5YzVmOWQyODQ0MDc4.rDj-1Rn5DxSkv_oE8p87ijZhoTelE_WjvbbKWMCI3ZA&type=cf-1
@@ -75,5 +110,10 @@ Copyright (c) 2019-2024 the-maux
 [26]: https://img.shields.io/badge/pipeline-todo-orange
 [27]: https://img.shields.io/badge/pipeline-todo-orange
 [28]: https://img.shields.io/badge/pipeline-todo-orange
+
+
+
+
+docker pull themaux/chartboard
 [31]: https://dev.azure.com/maximerenaud/Carboard/_apis/build/status/Carboard?branchName=master
 [33]: https://codebuild.eu-west-3.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiOXBBZTVtMk5nMmJFcG9vVFlGUVh3cHNoWUFoWXlCVjNjNkd1RE9ZWGtpVlBpazBLaHFKaFpsdXRuamdTc1d4ckNuTSttZnNoNzkwZHNyRUZrbndaaGdvPSIsIml2UGFyYW1ldGVyU3BlYyI6IjNHTnRyekcvWER0Wk1uRW4iLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master
