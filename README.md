@@ -1,4 +1,4 @@
-<p align="center"p
+
 <p align="center">
         <!-<a href=""><img alt="docker" src="https://img.shields.io/docker/pulls/themaux/Chartboart"></a>
     <!--a href="https://github.com/the-maux/Chartboard"> <img alt="Github" src="https://img.shields.io/github/v/release/themaux/Chartboard"></a-->
@@ -19,6 +19,7 @@
 </p>
 
 ©
+<p align="center"p
     <a href="https://gitter.im/tipboard-dev/community">
         <img alt="Chat" src="https://img.shields.io/gitter/room/DAVFoundation/DAV-Contributors.svg?style=flat-square"></a>
     <a href="https://github.com/the-maux/tipboard"> <img alt="Github" src="https://img.shields.io/github/v/release/the-maux/tipboard"></a>
@@ -29,6 +30,8 @@
     <a href=""> <img alt="pypi" src="https://img.shields.io/pypi/dm/tipboard.svg"></a>
     <a href=""><img alt="docker" src="https://img.shields.io/docker/pulls/themaux/tipboard"></a>
         <a href="https://www.codefactor.io/repository/github/the-maux/chartboard"><img src="https://www.codefactor.io/repository/github/the-maux/chartboard/badge" alt="CodeFactor"/></a>
+
+
         
 <a href="https://codebeat.co/projects/github-com-the-maux-chartboard-master"><img alt="" src="https://codebeat.co/badges/c4c5bd91-dff5-48f8-b7ba-828ad3a82d33"/></a>
 <a href="https://www.codacy.com/manual/the-maux/Chartboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=the-maux/Chartboard&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/134c5656546240f5aa21d19583095de0"/></a>        
