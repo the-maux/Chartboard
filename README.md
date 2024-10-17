@@ -50,8 +50,6 @@
 </p>
 </p>
 
-
-
 #### Chartboard was create to simplify the creation of your dashboards  
 Automaticaly **by scripts** (called sensors) **or manually** (*to let everyone use it*)   
 Core code is written in JavaScript and Python, and used many technology (*django, flexbox, bootstrap*).  
