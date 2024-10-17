@@ -16,7 +16,7 @@ il faut donc la set dans le reddis a la place de la valeur précédente
 - [ ] dans parser.py, si la variable est à False alors set la valeur de meta, sinon ne rien faire
 Si tu vas plus loin ca erase ecrite par les sensors car cest reload a chaque changement de screen
 
-
+ll
 
 REDIS INIT BUG:
 Depuis que tu as installé redis server sur windows en local... tu n'as plus le probleme
