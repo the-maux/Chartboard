@@ -10,8 +10,8 @@ RUN mkdir /home/app && chown 1001 /home/app
 WORKDIR /home/app
 
 COPY src/ src/
+COPY requirements.txt ./requirements.txt
 
-COPY requirements.txt .
 RUN chown -R 1001 /home/app
 
 ENV PATH="/home/app/.local/bin:${PATH}"
