@@ -9,7 +9,7 @@ whitenoise==6.8.2
 asgiref==3.8.1
 # ??? pyup-pin-requests-2.32.3
 
-apschedul
+apscheduler
 requests==2.32.3
 
 lorem==0.1.1
