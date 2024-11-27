@@ -25,4 +25,3 @@ jobs:
 
     - name: Push the Docker image
       run: docker push ${{ secrets.DOCKER_USERNAME }}/{{ APP_NAME }}:develop
-F
