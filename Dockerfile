@@ -1,4 +1,4 @@
-FROM bitnami/python:3.7
+FROM bitnami/python:3.8
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     redis-server \
