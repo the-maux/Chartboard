@@ -12,10 +12,10 @@ jobs:
     steps:
 
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4.2.2
       
     - name: Log in to Docker Hub
-      uses: docker/login-action@v2
+      uses: docker/login-action@v3.3.0
       with:
         username: themaux # Nom d'utilisateur Docker Hub (stocké dans les secrets GitHub)
         password: ${{ secrets.DOCKER_PASSWORD }}  # Mot de passe Docker Hub (stocké dans les secrets GitHub)
