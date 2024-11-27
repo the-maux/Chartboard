@@ -1,17 +1,7 @@
-img.shields.io/badge/pipeline-todo-orangdjango==5.1.2
 PyYAML==6.0.2
 redis==5.2.0
-
 
 channels==4.2.0
-
-channels_redis==4.2.1
-
-
-
-#### pyup-update-djangodjango=
-PyYAML==6.0.2
-redis==5.2.0
 channels_redis==4.2.1
 
 whitenoise==6.8.2
@@ -20,7 +10,6 @@ asgiref==3.8.1
 pyup-pin-requests-2.32.3
 
 apschedul
-pyup-pin-requests-2.32.3
 requests==2.32.3
 
 lorem==0.1.1
