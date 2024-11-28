@@ -99,16 +99,16 @@ function updateTileListing(id, data) {
 }
 
 /**
- * Build Tile stream with Hls and save it in Carboard.chartJsTile object
+ * Build Tile stream with Hls and save it in CHARTBOARD.chartJsTile object
  * @param tileId
  */
 function buildTileStream(tileId) {
-    Carboard.chartJsTile[tileId] = { // first creation of the tile
+    CHARTBOARD.chartJsTile[tileId] = { // first creation of the tile
         hls: new Hls(),
         container: document.getElementById(tileId + "-stream"),
         video: document.createElement("video")
     };
-    let stream_tile = Carboard.chartJsTile[tileId];
+    let stream_tile = CHARTBOARD.chartJsTile[tileId];
     stream_tile.container.appendChild(stream_tile.video);
     stream_tile.video.setAttribute("width", stream_tile.video.parentElement.clientWidth);
     stream_tile.video.setAttribute("height", stream_tile.video.parentElement.clientHeight);
@@ -121,17 +121,17 @@ function buildTileStream(tileId) {
  * @param data
  */
 function updateTileStream(tileId, data) {
-    if (!(tileId in Carboard.chartJsTile)) {
+    if (!(tileId in CHARTBOARD.chartJsTile)) {
         buildTileStream(tileId);
     } else { // update the tile to kill the actual media in order to replace it
-        Carboard.chartJsTile[tileId].hls.detachMedia();
-        Carboard.chartJsTile[tileId].hls.destroy();
-        Carboard.chartJsTile[tileId].hls = new Hls();
+        CHARTBOARD.chartJsTile[tileId].hls.detachMedia();
+        CHARTBOARD.chartJsTile[tileId].hls.destroy();
+        CHARTBOARD.chartJsTile[tileId].hls = new Hls();
     }
-    Carboard.chartJsTile[tileId].hls.loadSource(data.url); // start the media
-    Carboard.chartJsTile[tileId].hls.attachMedia(Carboard.chartJsTile[tileId].video);
-    Carboard.chartJsTile[tileId].hls.on(Hls.Events.MEDIA_ATTACHED, function () {
-        Carboard.chartJsTile[tileId].video.play();
+    CHARTBOARD.chartJsTile[tileId].hls.loadSource(data.url); // start the media
+    CHARTBOARD.chartJsTile[tileId].hls.attachMedia(CHARTBOARD.chartJsTile[tileId].video);
+    CHARTBOARD.chartJsTile[tileId].hls.on(Hls.Events.MEDIA_ATTACHED, function () {
+        CHARTBOARD.chartJsTile[tileId].video.play();
     });
     return true;
 }

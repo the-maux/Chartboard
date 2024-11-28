@@ -17,7 +17,7 @@ Change Log
 
 * add Gitlab-Ci to push new package on Github and to push image on docker hub
 
-* Create new package Carboard2.0 on pypi https://pypi.org/project/Carboard2.0/
+* Create new package CHARTBOARD2.0 on pypi https://pypi.org/project/CHARTBOARD2.0/
 
 * cleaning version
 
@@ -80,7 +80,7 @@ Change Log
     * reworking of the file redis_utils.py to a cache.py
     * Config for ASGI_APPLICATION
 
-* Moving the .Carboard directory to ./Carboard/Config/ to make it compatible with bitnami/python
+* Moving the .CHARTBOARD directory to ./CHARTBOARD/Config/ to make it compatible with bitnami/python
 
 * Adding dockerfile support
     * Using bitnami image in order to be cloud ready
@@ -118,7 +118,7 @@ Released on November 16, 2016.
 
 Released on August 28, 2014.
 
-* Carboard got open-sourced!
+* CHARTBOARD got open-sourced!
 
 
 1.3.1
@@ -230,6 +230,6 @@ This release contains mulCarle improvements and bugfixes:
 
 Released on November 06, 2013.
 
-This is the first release of Carboard.
+This is the first release of CHARTBOARD.
 
 * initial release

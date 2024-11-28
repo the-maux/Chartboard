@@ -19,6 +19,6 @@ def sonde5(tester=False, tile_id='sp_ex'):
     start_time = time.time()
     data = executeScriptToGetData()
     meta = dict(big_value_color=BACKGROUND_TAB[random.randrange(0, 3)], fading_background=random.choice([False, True]))
-    CarboardAnswer = sendUpdateByApi(tileId=tile_id, data=data, tileTemplate='simple_percentage',
+    CHARTBOARDAnswer = sendUpdateByApi(tileId=tile_id, data=data, tileTemplate='simple_percentage',
                                      tester=tester, meta=meta)
-    end(title=f'sensors5 -> {tile_id}', startTime=start_time, CarboardAnswer=CarboardAnswer, tileId=tile_id)
+    end(title=f'sensors5 -> {tile_id}', startTime=start_time, CHARTBOARDAnswer=CHARTBOARDAnswer, tileId=tile_id)

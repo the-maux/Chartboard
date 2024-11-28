@@ -12,5 +12,5 @@ def sonde14(tester=None, tile_id='radar_ex'):
         dataset['pointBackgroundColor'] = 'rgba(255, 255, 255, 0.5)'
         dataset['fill'] = True
         index = index + 1
-    CarboardAnswer = sendUpdateByApi(data=data, tileTemplate='radar_chart', tileId=tile_id, tester=tester)
-    end(title=f'sensors14 -> {tile_id}', startTime=start_time, CarboardAnswer=CarboardAnswer, tileId=tile_id)
+    CHARTBOARDAnswer = sendUpdateByApi(data=data, tileTemplate='radar_chart', tileId=tile_id, tester=tester)
+    end(title=f'sensors14 -> {tile_id}', startTime=start_time, CHARTBOARDAnswer=CHARTBOARDAnswer, tileId=tile_id)

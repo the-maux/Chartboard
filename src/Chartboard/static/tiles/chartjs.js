@@ -214,7 +214,7 @@ function createChartJSObj(chartId, tileData) {
     let chart = document.getElementById(chartId);
     chart.parentElement.style.paddingBottom = "9%";
     chart.height = "80%";
-    Carboard.chartJsTile[chartId] = new Chart(chart, {
+    CHARTBOARD.chartJsTile[chartId] = new Chart(chart, {
         type: getTypeOfChartJS(tileData["tile_template"]),
         data: buildData(tileData["tile_template"], tileData["data"]),
         options: buildMeta(tileData["tile_template"], tileData["meta"]),
@@ -227,12 +227,12 @@ function createChartJSObj(chartId, tileData) {
 function updateChartjsAndMiscTile(tileData, dashboardname) {
     let data = tileData["data"];
     let chartId = `${dashboardname}-${tileData["id"]}-chart`;
-    if (!(chartId in Carboard.chartJsTile)) { // tile not present in Carboard cache, so create it
+    if (!(chartId in CHARTBOARD.chartJsTile)) { // tile not present in CHARTBOARD cache, so create it
         createChartJSObj(chartId, tileData);
     } else { // update tile chart
         if (tileData["tile_template"] === "gauge_chart" || tileData["tile_template"] === "linear_gauge_chart" ||
             tileData["tile_template"] === "radial_gauge_chart") {
-            Carboard.chartJsTile[chartId].destroy();  //ChartPlugin don't update correctly, need to rebuild it
+            CHARTBOARD.chartJsTile[chartId].destroy();  //ChartPlugin don't update correctly, need to rebuild it
             document.getElementById(chartId);
             createChartJSObj(chartId, tileData);
             return;
@@ -240,6 +240,6 @@ function updateChartjsAndMiscTile(tileData, dashboardname) {
         if (tileData["tile_template"] === "line_chart") {
             data = updateDatasetLine(data, tileData["tile_template"]);
         }
-        updateDataOfChartJS(Carboard.chartJsTile[chartId], data, tileData["meta"]);
+        updateDataOfChartJS(CHARTBOARD.chartJsTile[chartId], data, tileData["meta"]);
     }
 }

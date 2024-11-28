@@ -5,7 +5,7 @@ import src.Chartboard.app.routing
 application = ProtocolTypeRouter({
     'websocket': AuthMiddlewareStack(
         URLRouter(
-            src.Carboard.app.routing.websocket_urlpatterns
+            src.CHARTBOARD.app.routing.websocket_urlpatterns
         )
     )
 })

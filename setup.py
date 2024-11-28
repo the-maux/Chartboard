@@ -25,12 +25,12 @@ with open(HERE / 'requirements.txt') as requirements:
 
 
 setup(
-    name='Carboard2.0',
+    name='CHARTBOARD2.0',
     version=__version__,
-    description='Carboard - a flexible solution for creating your dashboards.',
+    description='CHARTBOARD - a flexible solution for creating your dashboards.',
     long_description=README,
     long_description_content_type='text/markdown',
-    url='http://Carboard.allegrogroup.com',
+    url='http://CHARTBOARD.allegrogroup.com',
     author='Allegro Group and Contributors',
     author_email='pylabs@allegro.pl',
     license='Apache Software License v2.0',
