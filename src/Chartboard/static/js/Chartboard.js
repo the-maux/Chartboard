@@ -115,6 +115,8 @@ function initCHARTBOARDObject() {
             if (this.DEBUG_MODE) {
                 console.log(msg);
             }
+            console.log(msg);
+            console.log("(DEBUG) CHARTBOARD OBJECT INITED");
         }
     };
     registerUpdateFuction();

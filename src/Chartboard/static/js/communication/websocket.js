@@ -30,7 +30,7 @@ function sleep(ms) {
 }
 
 /**
- * Display button to inform user, server is disconnected
+ * Display button to inform user, server is diconnected
  * @param isRetry
  */
 function serverDisconnected(isRetry) {
