@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Chartboard</title>
+        <link type="text/css" rel="stylesheet" href="https://raw.githack.com/the-maux/Chartboard-CDN/master/bootstrap.min.css">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+        <script type="text/javascript" src="https://raw.githack.com/the-maux/Chartboard-CDN/master/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="https://raw.githack.com/the-maux/Chartboard-CDN/master/popper.min.js"></script>
+        <script type="text/javascript" src="https://raw.githack.com/the-maux/Chartboard-CDN/master/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://raw.githack.com/the-maux/Chartboard-CDN/master/chart.bundle.js"></script>
+        <script type="text/javascript" src="https://raw.githack.com/the-maux/Chartboard-CDN/master/chartjs-plugin-trendline.min.js"></script>
+        <script type="text/javascript" src="https://raw.githack.com/the-maux/Chartboard-CDN/master/chartjs-plugin-labels.min.js"></script>
+        <script type="text/javascript" src="https://raw.githack.com/the-maux/Chartboard-CDN/master/chartjs-plugin-tsgauge.js"></script>
+        <script type="text/javascript" src="https://raw.githack.com/the-maux/Chartboard-CDN/master/chartjs-plugin-radialgauge.js"></script>
+        <script type="text/javascript" src="https://raw.githack.com/the-maux/Chartboard-CDN/master/chart-plugin-test-linearradial.js"></script>
+
+
+            <link href="/static/css/layout.css" rel="stylesheet" media="screen">
+
+
+            <script type="text/javascript" src="/static/js/websocket.js"></script>
+
+            <script type="text/javascript" src="/static/js/style.js"></script>
+
+            <script type="text/javascript" src="/static/js/Chartboard.js"></script>
+
+            <script type="text/javascript" src="/static/tiles/chartjs.js"></script>
+
+            <script type="text/javascript" src="/static/tiles/text_value.js"></script>
+
+
+
+    </head>
+
+    <body class="flipboard fadeIn">
+        <div class="sticky-top alert alert-danger bouton-image monBouton" id="alertDeconnection"></div>
+
+
+      <div data-fliptime-interval="10" id="CarboardIframe">
+
+      </div>
+
+
+    <script> $("#alertDeconnection").hide(); </script>
+    </body>
+</html>

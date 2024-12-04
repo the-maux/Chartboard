@@ -126,7 +126,7 @@ function initCHARTBOARDObject() {
 (function ($) {
     $(document).ready(function () {
         initCHARTBOARDObject();
-        if (window.location.pathname === "/") {
+        if (window.location.pathname === "/") { // Flipboard mode activated
             initFlipboard();
             getDashboardsByApi();
         } else { // No dashboard rotation

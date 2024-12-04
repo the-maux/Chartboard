@@ -23,7 +23,7 @@ def get_tile(request, tile_key):
     if redis.exists(getRedisPrefix(tile_key)):
         if request.method == 'DELETE':
             redis.delete(tile_key)
-            httpMessage = 'Tile\'s data deleted.'
+            httpMessage = f"{tile_key}: tiles data deleted."
         if request.method == 'GET':
             httpMessage = redis.get(tile_key)
     else:

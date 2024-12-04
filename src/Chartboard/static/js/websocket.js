@@ -125,7 +125,7 @@ function initWebSocketManager() {
     };
     websocket.sendmessage = async function(nextDashboardPath) {
         while (this.readyState === 0) {
-            await sleep(200);
+            await sleep(2000);
         }
         this.send("first_connection:" + nextDashboardPath);
         websocket.lastDashboard = nextDashboardPath.substring(1);
