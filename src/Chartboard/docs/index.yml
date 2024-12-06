@@ -2,14 +2,14 @@ swagger: "2.0"
 info:
   description: "Full documentation & Wiki on the (github repo)[https://github.com/the-maux/Chartboard]"
   version: "1.0.0"
-  title: "Carboard API"
+  title: "CHARTBOARD API"
   termsOfService: "http://swagger.io/terms/"
   contact:
     email: "apiteam@swagger.io"
   license:
     name: "MIT License"
     url: "https://opensource.org/licenses/MIT"
-host: "http://0.0.0.0:8080"
+host: "http://0.0.0.0:8000"
 basePath: "/v2"
 tags:
   - name: "API"

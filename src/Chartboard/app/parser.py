@@ -54,12 +54,13 @@ def parseXmlLayout(layout_name='default_config'):
     cols = [col for col in [[col for col in list(row.values())[0]] for row in rows]]
     cols_data = [colsValue for colsList in cols for colsValue in colsList]
     config['tiles_conf'] = getTilesConfigFromXml(cols_data)
+    print(f"(TEST) Congig loaded: {config}")
     return config
 
 
 def getConfigNames():
     """ Return all dashboard file name from Config/ """
-    configs_names = list()
+    configs_names = list(),
     configs_dir = os.path.join(CONF_DIR, '*.yaml')
     for config_path in glob.glob(configs_dir):  # Get all name of different *.yml present in Config/ directory
         configs_names.append(config_path.split('/')[-1].replace('.yaml', ''))
@@ -82,6 +83,7 @@ def getDashboardName():
             title = config['details']['page_title']
         else:  # if mulCarle file, need to have the .yaml displayed for the client
             title = 'Flipboard Mode'
+        print(f"(TEST) Congig loaded title: {title}")
     except KeyError:
         print(f"[ERROR] config {config_names[0]} has no key: details/page_title'", flush=True)
     return title

@@ -30,7 +30,7 @@ function sleep(ms) {
 }
 
 /**
- * Display button to inform user, server is disconnected
+ * Display button to inform user, server is diconnected
  * @param isRetry
  */
 function serverDisconnected(isRetry) {
@@ -125,7 +125,7 @@ function initWebSocketManager() {
     };
     websocket.sendmessage = async function(nextDashboardPath) {
         while (this.readyState === 0) {
-            await sleep(2000);
+            await sleep(200);
         }
         this.send("first_connection:" + nextDashboardPath);
         websocket.lastDashboard = nextDashboardPath.substring(1);

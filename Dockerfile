@@ -24,5 +24,6 @@ EXPOSE 8080
 # Définir l'utilisateur non-root (décommenter si nécessaire)
 # USER 1001
 
+
 # Commande de démarrage
 CMD ["python", "src/manage.py", "runserver", "0.0.0.0:8080", "--noreload"]

@@ -30,5 +30,5 @@ def executeScriptToGetData():
 def sonde6(tester=False, tile_id='listing_ex'):
     start_time = time.time()
     data = executeScriptToGetData()
-    CarboardAnswer = sendUpdateByApi(data=data, tileTemplate='listing', tileId=tile_id, tester=tester)
-    end(title=f'sensors6 -> {tile_id}', startTime=start_time, CarboardAnswer=CarboardAnswer, tileId=tile_id)
+    CHARTBOARDAnswer = sendUpdateByApi(data=data, tileTemplate='listing', tileId=tile_id, tester=tester)
+    end(title=f'sensors6 -> {tile_id}', startTime=start_time, CHARTBOARDAnswer=CHARTBOARDAnswer, tileId=tile_id)
