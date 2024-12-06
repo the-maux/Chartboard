@@ -83,6 +83,7 @@ def getDashboardName():
             title = config['details']['page_title']
         else:  # if mulCarle file, need to have the .yaml displayed for the client
             title = 'Flipboard Mode'
+        print(f"(TEST) Congig loaded title: {title}")
     except KeyError:
         print(f"[ERROR] config {config_names[0]} has no key: details/page_title'", flush=True)
     return title
