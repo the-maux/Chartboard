@@ -50,10 +50,10 @@ Depot Github
 License
 -------
 
-Chartboard is licensed under the [Apache License, v2.0](http://Chartboard.readthedocs.org/en/latest/license.html). (like CHARTBOARD)
+Chartboard is licensed under the [Apache License, v2.0](http://Chartboard.readthedocs.org/en/latest/license.html). (like TIPBOARD)
 
 Copyright (c) 2013-2017 [Allegro Group](http://allegro.pl).  
-Copyright (c) 2019-2024 the-maux
+Copyright (c) 2019-2025 the-maux
 
 
 [1]: https://travis-ci.com/the-maux/CHARTBOARD.svg?branch=develop
