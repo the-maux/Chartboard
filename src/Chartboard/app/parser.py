@@ -54,12 +54,13 @@ def parseXmlLayout(layout_name='default_config'):
     cols = [col for col in [[col for col in list(row.values())[0]] for row in rows]]
     cols_data = [colsValue for colsList in cols for colsValue in colsList]
     config['tiles_conf'] = getTilesConfigFromXml(cols_data)
+    print(f"(TEST) Congig loaded: {config}")
     return config
 
 
 def getConfigNames():
     """ Return all dashboard file name from Config/ """
-    configs_names = list()
+    configs_names = list(),
     configs_dir = os.path.join(CONF_DIR, '*.yaml')
     for config_path in glob.glob(configs_dir):  # Get all name of different *.yml present in Config/ directory
         configs_names.append(config_path.split('/')[-1].replace('.yaml', ''))
