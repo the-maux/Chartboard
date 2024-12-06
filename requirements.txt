@@ -1,5 +1,5 @@
 PyYAML==6.0.2
-redis==5.2.0
+redis==5.2.1
 
 channels==4.2.0
 channels_redis==4.2.1
