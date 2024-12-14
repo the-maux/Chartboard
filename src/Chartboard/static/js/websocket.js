@@ -30,7 +30,7 @@ function sleep(ms) {
 }
 
 /**
- * Display button to inform user, server is disconnected
+ * Display button to inform user, server is diconnected
  * @param isRetry
  */
 function serverDisconnected(isRetry) {
@@ -95,6 +95,7 @@ function updateTile(tileData, dashboardname) {
 let testApiIsBack = function () {
     let Http = new XMLHttpRequest();
     Http.open("GET", window.location.protocol + "/api/info");
+    print(f"(TEST)testApiIsBack:: Http Code:{Http.status}")
     Http.onload = () => {
         if (Http.status === 200) {
             $("#alertDeconnection").hide();
@@ -113,7 +114,8 @@ let testApiIsBack = function () {
  */
 function initWebSocketManager() {
     let protocol = window.location.protocol === "https:" ? "wss://" : "ws://";
-    let websocket = new WebSocket(protocol + window.location.host + "/communication/websocket.js");
+    let websocket = new WebSocket(f"{protocol}{window.location.host}/js/communication/websocket.js");
+    print(f"(TEST) f"{protocol}{window.location.host}/js/communication/websocket.js"")
     websocket.onopen = function () {
         CHARTBOARD.log("[LOG] WEBSOCKET CONNECTION ONOPEN ");
     };
@@ -125,7 +127,7 @@ function initWebSocketManager() {
     };
     websocket.sendmessage = async function(nextDashboardPath) {
         while (this.readyState === 0) {
-            await sleep(2000);
+            await sleep(200);
         }
         this.send("first_connection:" + nextDashboardPath);
         websocket.lastDashboard = nextDashboardPath.substring(1);
