@@ -8,7 +8,7 @@ from src.Chartboard.app.views.api import push_api, project_info, tile_rest
 from src.Chartboard.app.views.flipboard import getDashboardsPaths, renderFlipboardHtml
 from src.Chartboard.app.views.flipboard import renderDashboardHtmlUniqueDashboard, renderDashboardHtmlForFlipboard
 
-favicon_view = RedirectView.as_view(url='/static/favicon.ico', permanent=True)
+favicon_view = RedirectView.as_view(url='/static/img/favicon.ico', permanent=True)
 
 urlpatterns = [
     re_path(r'^flipboard/getDashboardsPaths$', getDashboardsPaths),  # get all dashboard in Config/
