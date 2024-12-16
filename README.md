@@ -1,21 +1,21 @@
 <p align="center">
     <!--img alt="Chartboard" src="https://i.ibb.co/Fx6FykP/imagelllll-5.png"/-->
 <p align="center">
-    <a href=""><img alt="pypi" src="https://img.shields.io/pypi/dm/tipboard.svg"></a>
-    <a href=""><img alt="docker" src="https://img.shields.io/docker/pulls/themaux/chartboard"></a>
+        <a href=""><img alt="pypi" src="https://img.shields.io/pypi/dm/tipboard.svg"></a>
+        <a href=""><img alt="docker" src="https://img.shields.io/docker/pulls/themaux/chartboard"></a>
     </br>
-    <a href="https://codeclimate.com/github/the-maux/Chartboard/maintainability"><img src="https://api.codeclimate.com/v1/badges/bed95ca87346ad080708/maintainability"/></a>
-    <a href="https://codeclimate.com/github/the-maux/Chartboard/test_coverage"><img src="https://api.codeclimate.com/v1/badges/bed95ca87346ad080708/test_coverage"/></a>
+        <a href="https://codeclimate.com/github/the-maux/Chartboard/maintainability"><img src="https://api.codeclimate.com/v1/badges/bed95ca87346ad080708/maintainability"/></a>
+        <a href="https://codeclimate.com/github/the-maux/Chartboard/test_coverage"><img src="https://api.codeclimate.com/v1/badges/bed95ca87346ad080708/test_coverage"/></a>
     </br>
-    <a href="https://www.codefactor.io/repository/github/the-maux/chartboard"><img src="https://www.codefactor.io/repository/github/the-maux/chartboard/badge" alt="CodeFactor"/></a>
-    <a href="https://codebeat.co/projects/github-com-the-maux-chartboard-master"><img alt="" src="https://codebeat.co/badges/c4c5bd91-dff5-48f8-b7ba-828ad3a82d33"/></a>
-    <a href="https://www.codacy.com/manual/the-maux/Chartboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=the-maux/Chartboard&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/134c5656546240f5aa21d19583095de0"/></a>        
-    <a href="https://deepscan.io/dashboard#view=project&tid=6043&pid=10798&bid=154148"> <img src="https://deepscan.io/api/teams/6043/projects/10798/branches/154148/badge/grade.svg"  alt="DeepScan grade"></a>
+        <a href="https://www.codefactor.io/repository/github/the-maux/chartboard"><img src="https://www.codefactor.io/repository/github/the-maux/chartboard/badge" alt="CodeFactor"/></a>
+        <a href="https://codebeat.co/projects/github-com-the-maux-chartboard-master"><img alt="" src="https://codebeat.co/badges/c4c5bd91-dff5-48f8-b7ba-828ad3a82d33"/></a>
+        <a href="https://www.codacy.com/manual/the-maux/Chartboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=the-maux/Chartboard&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/134c5656546240f5aa21d19583095de0"/></a>        
+        <a href="https://deepscan.io/dashboard#view=project&tid=6043&pid=10798&bid=154148"> <img src="https://deepscan.io/api/teams/6043/projects/10798/branches/154148/badge/grade.svg"  alt="DeepScan grade"></a>
     </br>
-    <a href="https://pyup.io/account/repos/github/the-maux/Chartboard/"> <img alt="PyUp" src="https://pyup.io/repos/github/the-maux/Chartboard/shield.svg"></a>
-    <a href="https://snyk.io/test/github/the-maux/Chartboard?targetFile=requirements.txt"><img 
-            src="https://snyk.io/test/github/the-maux/Chartboard/badge.svg?targetFile=requirements.txt" alt="Known Vulnerabilities"
-            data-canonical-src="https://snyk.io/test/github/the-maux/Chartboard?targetFile=requirements.txt" style="max-width:100%;"></a>
+        <a href="https://pyup.io/account/repos/github/the-maux/Chartboard/"> <img alt="PyUp" src="https://pyup.io/repos/github/the-maux/Chartboard/shield.svg"></a>
+        <a href="https://snyk.io/test/github/the-maux/Chartboard?targetFile=requirements.txt"><img 
+                src="https://snyk.io/test/github/the-maux/Chartboard/badge.svg?targetFile=requirements.txt" alt="Known Vulnerabilities"
+                data-canonical-src="https://snyk.io/test/github/the-maux/Chartboard?targetFile=requirements.txt" style="max-width:100%;"></a>
     </br>  
 </p>
 #### Chartboard was create to simplify the creation of your dashboards  
@@ -73,7 +73,6 @@ Copyright (c) 2019-2024 the-maux
 [28]: https://img.shields.io/badge/pipeline-todo-orange
 [31]: https://dev.azure.com/maximerenaud/Carboard/_apis/build/status/Carboard?branchName=master
 [33]: https://codebuild.eu-west-3.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiOXBBZTVtMk5nMmJFcG9vVFlGUVh3cHNoWUFoWXlCVjNjNkd1RE9ZWGtpVlBpazBLaHFKaFpsdXRuamdTc1d4ckNuTSttZnNoNzkwZHNyRUZrbndaaGdvPSIsIml2UGFyYW1ldGVyU3BlYyI6IjNHTnRyekcvWER0Wk1uRW4iLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master
-
 
 <!--a href="https://github.com/the-maux/Chartboard"> <img alt="Github" src="https://img.shields.io/github/v/release/themaux/Chartboard"></a-->
 <!--a href="https://pypi.org/project/Chartboard/"> <img alt="Pypi" src="https://badge.fury.io/py/Chartboard.svg"></a-->
