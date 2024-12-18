@@ -46,7 +46,9 @@ def yamlFileToPythonDict(layout_name='default_config'):
 
 
 def parseXmlLayout(layout_name='default_config'):
-    """ Parse all tiles, cols, rows from a specific .yaml, return None if file not present """
+    """ Parse all tiles, cols, rows from a specific .yaml, return None if file not present 
+        TODO: FAIRE le print des col et row 
+    """
     config = yamlFileToPythonDict(layout_name=layout_name)
     if config is None:
         return None
@@ -54,6 +56,7 @@ def parseXmlLayout(layout_name='default_config'):
     cols = [col for col in [[col for col in list(row.values())[0]] for row in rows]]
     cols_data = [colsValue for colsList in cols for colsValue in colsList]
     config['tiles_conf'] = getTilesConfigFromXml(cols_data)
+    print((DEBUG) frows} cols:{cols})
     return config
 
 
