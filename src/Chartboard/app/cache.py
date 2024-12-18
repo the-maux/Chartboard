@@ -30,11 +30,6 @@ def update_data_by_type(tile_template, previousData, key, value):
     if dict, call again update_tile_data_from_redis in recursif
     if list, call update for list
     if not just override the value
-    :param tile_template:
-    :param previousData:
-    :param key:
-    :param value:
-    :return:
     """
     if isinstance(value, dict) and key != 'data' and key in previousData:
         update_tile_data_from_redis(previousData[key], value, tile_template)
@@ -42,6 +37,7 @@ def update_data_by_type(tile_template, previousData, key, value):
         update_dataset_from_tiles(value, previousData, key, tile_template)
     else:
         previousData[key] = value
+    print(f"(DEBUG) - [{tile_template}] updated")
 
 
 def update_meta_if_present(tile_id, meta):
