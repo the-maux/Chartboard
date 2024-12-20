@@ -21,3 +21,4 @@ REDIS INIT BUG:
 Depuis que tu as installé redis server sur windows en local... tu n'as plus le probleme
 Donc ce que le process windows pycharm a du mal a close le redis-server (in WSL)
 Je pense qu'il va falloir documenter et enlever du code les automatisation de lancement de server ...
+lm
