@@ -18,6 +18,7 @@
                 data-canonical-src="https://snyk.io/test/github/the-maux/Chartboard?targetFile=requirements.txt" style="max-width:100%;"></a>
     </br>  
 </p>
+
 #### Chartboard was create to simplify the creation of your dashboards  
 Automaticaly **by scripts** (called sensors) **or manually** (*to let everyone use it*)   
 Core code is written in JavaScript and Python, and used many technology (*django, flexbox, bootstrap*).  
@@ -29,17 +30,12 @@ ChartJS demo can be found [here](http://jerairrest.github.io/react-chartjs-2/)
 
 Quick Demo
 -----------
-
-
 <p align="center"> 
   <img alt="Demo" src="https://raw.githubusercontent.com/the-maux/Chartboard/develop/src/Chartboard/demo.gif"/> 
 </p>
 
-
 Depot Github
 ------------
-
-
 <p align="center"> 
   <img alt="Chartboard ChartJS" src="https://github.com/the-maux/Chartboard/blob/develop/src/Chartboard/Chartboard.png"/> 
 </p>
