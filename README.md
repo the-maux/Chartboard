@@ -64,9 +64,9 @@ Copyright (c) 2019-2024 the-maux
 [22]: https://img.shields.io/badge/pipeline-todo-orange
 [23]: https://circleci.com/gh/the-maux/Carboard/tree/master.svg?style=svg
 [25]: https://img.shields.io/badge/pipeline-todo-orange
-[26]: https://img.shields.io/badge/pipeline-todo-orange
-[27]: https://img.shields.io/badge/pipeline-todo-orange
-[28]: https://img.shields.io/badge/pipeline-todo-orange
+[26]: 
+[27]: 
+[28]: 
 [31]: https://dev.azure.com/maximerenaud/Carboard/_apis/build/status/Carboard?branchName=master
 [321]: https://codebuild.eu-west-3.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiOXBBZTVtMk5nMmJFcG9vVFlGUVh3cHNoWUFoWXlCVjNjNkd1RE9ZWGtpVlBpazBLaHFKaFpsdXRuamdTc1d4ckNuTSttZnNoNzkwZHNyRUZrbndaaGdvPSIsIml2UGFyYW1ldGVyU3BlYyI6IjNHTnRyekcvWER0Wk1uRW4iLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=masteruuid=eyJlbmNyeXB0ZWREYXRhIjoiOXBBZTVtMk5nMmJFcG9vVFlGUVh3cHNoWUFoWXlCVjNjNkd1RE9ZWGtpVlBpazBLaHFKaFpsdXRuamdTc1d4ckNuTSttZnNoNzkwZHNyRUZrbndaaGdvPSIsIml2UGFyYW1ldGVyU3BlYyI6IjNHTnRyekcvWER0Wk1uRW4iLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master
 
