@@ -80,7 +80,7 @@ class MyCache:
     """ Singleton redis object to handle (de)serialization of tiles and inform the channels to update websocket """
     instance = None
 
-    def __new__(cls):
+    def __new__(cls):&
         if cls.instance is None:
             inst = cls.instance = super(MyCache, cls).__new__(cls)
             try:
