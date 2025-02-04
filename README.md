@@ -40,7 +40,6 @@ Depot Github
   <img alt="Chartboard ChartJS" src="https://github.com/the-maux/Chartboard/blob/develop/src/Chartboard/Chartboard.png"/> 
 </p>
 
-
 License
 -------
 Copyright (c) 2013-2017 [Allegro Group](http://allegro.pl).  
