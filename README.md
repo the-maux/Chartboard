@@ -67,5 +67,5 @@ Copyright (c) 2019-2025 the-maux
 [321]: https://codebuild.eu-west-3.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiOXBBZTVtMk5nMmJFcG9vVFlGUVh3cHNoWUFoWXlCVjNjNkd1RE9ZWGtpVlBpazBLaHFKaFpsdXRuamdTc1d4ckNuTSttZnNoNzkwZHNyRUZrbndaaGdvPSIsIml2UGFyYW1ldGVyU3BlYyI6IjNHTnRyekcvWER0Wk1uRW4iLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=masteruuid=eyJlbmNyeXB0ZWREYXRhIjoiOXBBZTVtMk5nMmJFcG9vVFlGUVh3cHNoWUFoWXlCVjNjNkd1RE9ZWGtpVlBpazBLaHFKaFpsdXRuamdTc1d4ckNuTSttZnNoNzkwZHNyRUZrbndaaGdvPSIsIml2UGFyYW1ldGVyU3BlYyI6IjNHTnRyekcvWER0Wk1uRW4iLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master
 
 <!--a href="https://github.com/the-maux/Chartboard"> <img alt="Github" src="https://img.shields.io/github/v/release/themaux/Chartboard"></a-->
-<!--a href="https://pypi.org/project/Chartboard/"> <img alt="Pypi" src="https://badge.fury.io/py/Chartboard.svg"></a-->
+<!--a href="https://pypi.org/project/Chartboard/"> <img alt="Pypi" src="https://badge.fury.io/py/Chartboard.svg"></a New time-->
 <!--a href=""> <img alt="pypi" src="https://img.shields.io/pypi/dm/Chartboard.svg"></a-->
