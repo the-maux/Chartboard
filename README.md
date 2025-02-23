@@ -26,7 +26,7 @@ Its widgets (called 'tiles' in Chartboard's terminology) have two categories 'te
 It's **responsive** but was made for big screen (optimized for larger screens in your office)  
  
 Wiki is [here](https://github.com/the-maux/Chartboard/wiki) (in wip)
-ChartJS demo can be found [here](http://jerairrest.github.io/react-chartjs-2/)
+ChartJS demo can be found [here](http://jerairrest.github.io/react-chartjs-2/) (broken for now)
 
 Quick Demo
 -----------
