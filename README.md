@@ -42,8 +42,8 @@ Depot Github
 
 License
 -------
-Copyright (c) 2013-2017 [Allegro Group](http://allegro.pl).  
-Copyright (c) 2019-2025 the-maux
+Copyright 2013-2017 [Allegro Group](http://allegro.pl).  
+Copyright 2019-2025 the-maux
 
 
 [1]: https://travis-ci.com/the-maux/Carboard.svg?branch=develop
